@@ -1,0 +1,29 @@
+<div class="dialog">
+	<form data-attach-point="editForm" class="ui-form" method="post">
+		<input type="hidden" name="id">
+		<div class="ui-edit">
+			<div class="fitem">
+				<label>脚本名称：</label> <input name="scriptName" type="text" size="67" maxlength="40" class="easyui-validatebox" readonly="readonly">
+			</div>
+			<div class="fitem">
+				<label>脚本代码：</label> <input name="scriptCode" type="text" size="67" maxlength="40" class="easyui-validatebox" readonly="readonly">
+			</div>
+			<div class="fitem">
+				<label>脚本类型：</label> <input name="type" type="text" size="67" data-attach-point="typeCombobox" maxlength="4" class="easyui-combobox" readonly="readonly">
+			</div>
+			<div class="fitem">
+				<label>目标日期：</label> <input name="targetDate" type="text" size="67" data-attach-point="targetDateCombobox" maxlength="40" class="easyui-combobox"
+					readonly="readonly">
+			</div>
+			<div class="fitem">
+				<label>开始时间：</label> <input name="beginTime" type="text" size="67" maxlength="" data-attach-point="beginTime" class="easyui-datetimebox" readonly="readonly">
+			</div>
+			<div class="fitem">
+				<label>完成时间：</label> <input name="endTime" type="text" size="67" maxlength="" data-attach-point="endTime" class="easyui-datetimebox" readonly="readonly">
+			</div>
+			<div class="fitem">
+				<label>脚本参数：</label> <input name="param" type="text" size="67" maxlength="256" class="easyui-validatebox" readonly="readonly">
+			</div>
+		</div>
+	</form>
+</div>

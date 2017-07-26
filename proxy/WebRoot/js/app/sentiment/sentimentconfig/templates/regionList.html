@@ -1,0 +1,21 @@
+<div class="easyui-layout" data-options="fit:true"> 
+<div id="${uuid}_bar" class="app-regionSearchBar"
+	data-options="grid:'#${uuid}_grid'" data-attach-point="searchBar"
+	data-attach-event="regionsearchbaraction:_doAction"></div>
+
+<div style="width:100%;height:89%;height:-moz-calc(100% - 53px); height:-webkit-calc(100% - 53px); height:calc(100% - 53px);">
+<table id="${uuid}_grid" class="easyui-treegrid" data-attach-point="dataGrid" 
+        data-options="rownumbers: true,idField:'id',treeField:'name',fitColumns:true,animate:true,fit:true">
+	<thead>
+		<tr>
+			<th data-options="field:'id',width:60,align:'center',hidden:true" >唯一标识</th>
+			<th data-options="field:'name',width:60" >省（市）名称</th>
+			<th data-options="field:'code',width:60,align:'center'" >编码</th>
+			<th data-options="field:'type',width:60,align:'center',formatter:app.formatter.formatType" >类型</th>
+			<th data-options="field:'status',width:60,align:'center',formatter:app.formatter.formatSentimentStatus" >状态</th>
+			<th data-options="field:'ctime',width:60,align:'center',formatter:app.formatter.formatTime" >创建时间</th>
+		</tr>
+	</thead>
+</table>
+</div>
+</div>

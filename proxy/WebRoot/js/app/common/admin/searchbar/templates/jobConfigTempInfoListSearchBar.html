@@ -1,0 +1,25 @@
+<div class="datagrid-toolbar-tool"></div>
+<div class="datagrid-toolbar-filter"
+	style="display: none; height: 65px;">
+	<div class="criteria-panel">
+		<div>
+			<label>临时任务名称：</label> <input class="easyui-validatebox"
+				data-attach-point="jkey" />
+		</div>
+		<div>
+			<label>状态：</label>
+			<input data-attach-point="statuscombobox"  data-options="editable:false" 
+				class="easyui-combobox" />	
+		</div>
+		<div>
+			<label>开始时间：</label> <input class="easyui-datetimebox"
+				data-options="editable:false"
+				data-attach-point="fromStarttime" style="width:150px">
+		</div>
+		<div>
+			<label>至：</label> <input class="easyui-datetimebox"
+				data-options="editable:false"
+				data-attach-point="toStarttime" style="width:150px">
+		</div>
+	</div>
+</div>

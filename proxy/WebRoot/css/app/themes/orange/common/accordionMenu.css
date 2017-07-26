@@ -1,0 +1,174 @@
+.app-accordionMenu {
+	padding: 0px;
+	background-color: #fff;
+}
+
+.app-accordionMenu .clear {
+	clear: both;
+}
+
+.app-accordionMenu .menus {
+	margin: 0;
+	padding: 5px;
+	color: #333
+}
+
+.app-accordionMenu .menus * {
+	font-size: 12px;
+	font-family: "Microsoft Yahei", Verdana, Simsun, "Segoe UI Web Light",
+		"Segoe UI Light", "Segoe UI Web Regular", "Segoe UI",
+		"Segoe UI Symbol", "Helvetica Neue", Arial
+}
+
+.app-accordionMenu .menus li a {
+	width: 155px;
+	height: 20px;
+	padding-top: 0px;
+	padding: 8px 0px 0px 0px;
+	padding-bottom: 0px;
+	display: block;
+	color: #000;
+	text-decoration: none;
+}
+
+.app-accordionMenu .menus li a:hover,.app-accordionMenu .menus li.mega-hover a
+	{
+	text-decoration: none;
+	background-position: 0 -40px;
+	color: #28A7E1;
+	display: block;
+	background-position: 14px -112px;
+}
+
+.app-accordionMenu .menus li ul {
+	margin: 0;
+	padding: 0;
+	border: 0px silver solid;
+}
+
+.app-accordionMenu .menus ul {
+	width: 169px;
+}
+
+.app-accordionMenu .menus li span {
+	line-height: 16px;
+	margin-left: 20px
+}
+
+.app-accordionMenu .menus li span.button {
+	margin: -7px 0 0;
+}
+
+.app-accordionMenu .menus li a.curSelectedNode {
+	border: 0 solid #C0C0C0;
+	border-radius: 15px;
+	color: #000000;
+	height: 30px;
+	padding-left: 0px;
+	padding-top: 0;
+	font-weight: bold;
+}
+
+.app-accordionMenu .menus li a.curSelectedNode span {
+	line-height: 33px;
+}
+
+.app-accordionMenu .menus li a.level0 {
+	width: 155px;
+	height: 32px;
+	background: url(../images/leftsidebar.jpg) no-repeat;
+	background-position: 0 -150px;
+	line-height: 40px;
+	width: 169px;
+	height: 32px;
+	margin-bottom: 1px;
+	display: block;
+}
+
+.app-accordionMenu .menus li a.level0.hover {
+	color: #F60000;
+}
+
+.app-accordionMenu .menus li a.level0.cur {
+	background-color: #66A3D2;
+}
+
+.app-accordionMenu .menus li a.level0 span {
+	display: block;
+	padding-top: 3px;
+	font-size: 12px;
+	font-weight: bold;
+	word-spacing: 2px;
+}
+
+.app-accordionMenu .menus li a.level0 span.button {
+	float: right;
+	margin-left: 10px;
+	visibility: visible;
+	display: none;
+}
+
+.app-accordionMenu .menus li span.button.switch.level0 {
+	display: none;
+}
+
+.app-accordionMenu .menus li a.level0.curSelectedNode span {
+	line-height: 31px;
+	margin-left: 20px
+}
+
+.app-accordionMenu .menus li a.level0.curSelectedNode {
+	line-height: 16px;
+	width: 169px;
+	color: black;
+	background-position: 0 -200px;
+	height: 40px;
+}
+
+.app-accordionMenu .leftsidebar {
+	float: left;
+	width: 185px;
+	background-color: #fff;
+}
+
+.app-accordionMenu .leftsidebar .title,.app-accordionMenu .leftsidebar .leftsidebar_top,.app-accordionMenu .leftsidebar .leftsidebar_bottom
+	{
+	font-size: 12px;
+	font-family: "Microsoft Yahei", Verdana, Simsun, "Segoe UI Web Light",
+		"Segoe UI Light", "Segoe UI Web Regular", "Segoe UI",
+		"Segoe UI Symbol", "Helvetica Neue", Arial;
+	background: url(../images/leftsidebar.jpg) no-repeat;
+}
+
+.app-accordionMenu .leftsidebar .title,.app-accordionMenu .leftsidebar .leftsidebar_top_title
+	{
+	/*background: url(../images/icon_member.gif) no-repeat;*/
+}
+
+.app-accordionMenu .leftsidebar .leftsidebar_top {
+	background-position: 0 0;
+	width: 185px;
+	height: 35px;
+}
+
+.app-accordionMenu .leftsidebar .leftsidebar_top_title {
+	height: 40px;
+	font-size: 14px;
+	font-weight: bold;
+	background-position: 0 14px;
+	padding-left: 24px;
+	color: #28A7E1;
+	line-height: 45px;
+	margin: 0 auto auto 40px;
+}
+
+.app-accordionMenu .leftsidebar .leftsidebar_bottom {
+	background-position: 0 -130px;
+	width: 185px;
+	height: 13px;
+}
+
+.app-accordionMenu .leftsidebar .leftsidebar_content {
+	border-left: 4px solid #f5f5f5;
+	border-right: 4px solid #f5f5f5;
+}

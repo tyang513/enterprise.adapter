@@ -1,0 +1,34 @@
+{
+	"extendedAttriDefinition/list.do" : {
+		"type" : "post",
+		"url" : "extendedAttriDefinition/list.do",
+		"dataType" : "json"
+	},
+	"extendedAttriDefinition/save.do" : {
+		"type" : "post",
+		"url" : "extendedAttriDefinition/save.do",
+		"dataType" : "json"
+	},
+	"extendedAttriDefinition/saveData.do" : {
+		"type" : "POST",
+		"url" : "extendedAttriDefinition/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"extendedAttriDefinition/findById.do" : {
+		"type" : "post",
+		"url" : "extendedAttriDefinition/findById.do",
+		"dataType" : "json"
+	},
+	"extendedAttriDefinition/deleteById.do" : {
+		"type" : "post",
+		"url" : "extendedAttriDefinition/deleteById.do",
+		"dataType" : "json"
+	},
+	"extendedAttriDefinition/leadInExtendedAttriDef.do" : {
+		"type" : "post",
+		"url" : "extendedAttriDefinition/leadInExtendedAttriDef.do",
+		"dataType" : "json"
+	}
+}

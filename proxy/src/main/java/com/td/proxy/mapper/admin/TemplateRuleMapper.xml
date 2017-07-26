@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.td.proxy.dao.admin.TemplateRuleDao" > 
+  <!-- Result Map-->
+  <resultMap id="BaseResultMap" type="com.td.proxy.entity.admin.TemplateRule" >
+	<result column="id" property="id"/>
+	<result column="temp_id" property="tempId"/>
+	<result column="rule_definition_id" property="ruleDefinitionId"/>
+	<result column="c_time" property="ctime"/>
+	<result column="m_time" property="mtime"/>
+	<result column="description" property="description"/>
+	<result column="name" property="name"/>
+	<result column="rule_class_name" property="ruleClassName"/>
+	<result column="business_type" property="businessType"/>
+  </resultMap>
+       
+  <!-- STL_TEMPLATE_RULE table all fields -->
+  <sql id="Base_Column_List" >
+	 r.id,r.temp_id,r.rule_definition_id,r.c_time,r.m_time,r.description
+  </sql>
+  
+  <!-- 查询条件 -->
+  <sql id="Base_Where_Clause">
+    where 1=1
+    <trim suffixOverrides="," >
+	      <if test="id != null and id != ''" >
+        and id =  #{id}
+	  </if>
+	      <if test="tempId != null" >
+        and temp_id =  #{tempId}
+	  </if>
+	      <if test="ruleDefinitionId != null" >
+        and rule_definition_id =  #{ruleDefinitionId}
+	  </if>
+	      <if test="ctime != null and ctime != ''" >
+        and c_time =  #{ctime}
+	  </if>
+	      <if test="mtime != null and mtime != ''" >
+        and m_time =  #{mtime}
+	  </if>
+    </trim>
+  </sql>
+   
+  <!-- 插入记录 -->
+  <insert id="insert" parameterType="Object" >
+    <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+	  SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into SYS_TEMPLATE_RULE(id,temp_id,rule_definition_id,c_time,m_time,description)
+ values(#{id},#{tempId},#{ruleDefinitionId},#{ctime},#{mtime},#{description})
+  </insert>
+
+  <!-- 根据id，修改记录-->  
+  <update id="updateByPrimaryKey" parameterType="Object" >
+    update SYS_TEMPLATE_RULE set temp_id=#{tempId},rule_definition_id=#{ruleDefinitionId},c_time=#{ctime},m_time=#{mtime},description=${description} where id=#{id}
+  </update>
+ 
+  <!-- 修改记录，只修改只不为空的字段 -->
+  <update id="updateByPrimaryKeySelective" parameterType="Object" >
+    update SYS_TEMPLATE_RULE set 
+	<trim  suffixOverrides="," >
+	<if test="tempId != null  ">
+		temp_id=#{tempId},
+	</if>
+	<if test="ruleDefinitionId != null  ">
+		rule_definition_id=#{ruleDefinitionId},
+	</if>
+	<if test="ctime != null  ">
+		c_time=#{ctime},
+	</if>
+	<if test="mtime != null  ">
+		m_time=#{mtime},
+	</if>
+	<if test="description != null  ">
+		description=#{description},
+	</if>
+	</trim> where id=#{id}
+  </update>
+ 
+  <!-- 根据id查询 模板与规则关联关系 -->
+  <select id="selectByPrimaryKey"  resultMap="BaseResultMap" parameterType="Object">
+    select <include refid="Base_Column_List" /> 
+	 from SYS_TEMPLATE_RULE r where r.id = #{id}
+  </select>
+  
+  <!-- 删除记录 -->
+  <delete id="deleteByPrimaryKey" parameterType="Object">
+    delete 	 from SYS_TEMPLATE_RULE where id = #{id}
+  </delete>
+  
+  <!-- 删除记录 -->
+  <delete id="deleteByTemplateId" parameterType="Object">
+    delete 	 from SYS_TEMPLATE_RULE where temp_id = #{tempId}
+  </delete>
+
+  <!-- 模板与规则关联关系 列表总数-->
+  <select id="queryByCount" resultType="java.lang.Integer"  parameterType="Object">
+	select count(1) from SYS_TEMPLATE_RULE r
+	join SYS_RULE_DEFINITION d
+	on r.rule_definition_id = d.id
+	<include refid="Base_Where_Clause"/>
+	and d.status =#{status}
+  </select>
+  	
+  <!-- 查询模板与规则关联关系列表 -->
+  <select id="queryByList" resultMap="BaseResultMap"  parameterType="Object">
+	select 
+	<include refid="Base_Column_List"/>
+	, d.name,d.rule_class_name,d.business_type
+	from SYS_TEMPLATE_RULE r
+	join SYS_RULE_DEFINITION d
+	on r.rule_definition_id = d.id
+	<include refid="Base_Where_Clause"/>
+	and d.status =#{status}
+	<if test="pager.orderCondition != null and pager.orderCondition != ''" >
+       ${pager.orderCondition}
+    </if>
+    <if test="pager.mysqlQueryCondition != null and pager.mysqlQueryCondition != ''" >
+       ${pager.mysqlQueryCondition}
+    </if>
+  </select>
+  
+  <!-- 根据id查询 模板与规则关联关系 -->
+  <select id="selectByTemplateId"  resultMap="BaseResultMap" parameterType="Object">
+    select <include refid="Base_Column_List"/>
+	, d.name,d.rule_class_name,d.business_type
+	 from SYS_TEMPLATE_RULE r
+	join SYS_RULE_DEFINITION d
+	on r.rule_definition_id = d.id
+	 where r.temp_id = #{tempId}
+  </select>
+    <!-- 根据id查询 模板与规则关联关系 -->
+  <select id="findByTemplateIdAndbusinessType"  resultMap="BaseResultMap" parameterType="Object">
+    select <include refid="Base_Column_List"/>
+	, d.name,d.rule_class_name,d.business_type
+	 from SYS_TEMPLATE_RULE r
+	join SYS_RULE_DEFINITION d
+	on r.rule_definition_id = d.id
+	 where r.temp_id = #{tempId} and d.business_type = #{businessType}
+  </select>
+  
+  <select id="findByBusinessType" parameterType="Object" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/>,d.name,d.rule_class_name,d.business_type
+	from settle_test.SYS_TEMPLATE_RULE r
+	join settle_test.SYS_RULE_DEFINITION d
+	on r.rule_definition_id = d.id
+	left join settle_test.SYS_RULE_CONFIG c
+	on c.template_rule_id=r.id
+	where d.business_type = "5"
+	and d.id is not null
+  </select>
+  
+</mapper>   

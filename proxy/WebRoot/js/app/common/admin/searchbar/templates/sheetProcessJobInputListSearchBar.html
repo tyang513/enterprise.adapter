@@ -1,0 +1,26 @@
+<div class="datagrid-toolbar-tool"></div>
+<div class="datagrid-toolbar-filter"
+	style="display: none; height: 40px;">
+	<div class="criteria-panel">
+		<div>
+			<label>申请单号：</label> <input class="easyui-validatebox"
+				data-attach-point="sheetid" />
+		</div>
+		<div>
+			<label>申请单类型：</label>
+			<input data-attach-point="sheettypecombobox" 
+				class="easyui-combobox"  data-options="editable:false" />
+		</div>
+		<div>
+			<label>处理状态：</label>
+			<select data-attach-point="statuscombobox" data-options="panelHeight:135,editable:false"
+				class="easyui-combobox" >
+				<option value="" selected="selected">全部</option>
+				<option value="0">未处理</option>
+				<option value="1">正在处理</option>
+				<option value="2">处理完毕</option>
+				<option value="-1">异常</option>
+			</select>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,37 @@
+<div class="datagrid-toolbar-tool"></div>
+<div class="datagrid-toolbar-filter" style="display: none; height:90px;">
+	<div class="criteria-panel" >
+		<form data-attach-point="searchForm">
+		<div class="fitem">
+			<label>流程名：</label> 
+			<input class="easyui-validatebox"	data-options="max:999999999999"   maxlength="60"  data-attach-point="ipt_processname" />
+		</div >	
+		<div class="fitem">
+			<label>发起人：</label> 
+			<input class="easyui-validatebox"	data-options="max:999999999999"   maxlength="255"  data-attach-point="ipt_startername" />
+		</div>	
+		<div class="fitem">
+			<label>申请单号：</label> 
+			<input class="easyui-validatebox"	data-options="max:999999999999"   maxlength="20"  data-attach-point="ipt_sheetid" />
+		</div>	
+		<div class="fitem">
+			<label>流程状态：</label> <input class="easyui-combobox"   editable="false"   data-attach-point="ipt_processStatus">
+		</div>
+		<div class="fitem">
+			<label>申请单类型：</label> <input class="easyui-combobox"   editable="false"   data-attach-point="ipt_sheettype">
+		</div>
+		<div class="fitem">
+			<label>启动时间：</label> <input class="easyui-datebox"  data-options="editable:false,formatter:app.formatter.formatTime" data-attach-point="fromstarttime">
+		</div>
+		<div class="fitem">
+			<label>至：</label> <input class="easyui-datebox" data-options="editable:false,formatter:app.formatter.formatTime" data-attach-point="tostarttime">
+		</div>
+		<div class="fitem">
+			<label>结束时间：</label> <input class="easyui-datebox"  data-options="editable:false,formatter:app.formatter.formatTime" data-attach-point="fromendtime">
+		</div>
+		<div class="fitem">
+			<label>至：</label> <input class="easyui-datebox" data-options="editable:false,formatter:app.formatter.formatTime" data-attach-point="toendtime">
+		</div>
+		</form>
+	</div>
+</div>

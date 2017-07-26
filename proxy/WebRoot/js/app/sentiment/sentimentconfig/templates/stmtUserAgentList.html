@@ -1,0 +1,16 @@
+<table id="${uuid}_grid" class="listgrid" 
+	data-options="border:false,striped:true,singleSelect:true,fit:true,fitColumns:true,pagination:true,toolbar:'#${uuid}_bar'"
+	data-attach-point="dataGrid">
+	<thead>
+		<tr>
+			<th data-options="field:'id',width:60,align:'center',hidden:true" >唯一标识</th>
+			<th data-options="field:'name',width:100,align:'center'" >名称</th>
+			<th data-options="field:'description',width:60,align:'center'" >备注</th>
+			<th data-options="field:'ctime',width:15,align:'center',formatter:app.formatter.formatTime" >创建时间</th>
+		</tr>
+	</thead>
+</table>
+
+<div id="${uuid}_bar" class="app-stmtUserAgentSearchBar"
+	data-options="grid:'#${uuid}_grid'" data-attach-point="searchBar"
+	data-attach-event="stmtuseragentsearchbaraction:_doAction"></div>

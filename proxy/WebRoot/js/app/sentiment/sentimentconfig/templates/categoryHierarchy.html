@@ -1,0 +1,80 @@
+<div class="easyui-layout" data-options="fit:true"> 
+    <div data-options="region:'west',title:'类别',split:true,collapsible:false" style="width:260px">
+ 	   <ul id="ztree_${uuid}" class="ztree clear" data-attach-point="subTreeMenu"></ul>  
+		<div id="menu_${uuid}" class="easyui-menu" style="width:120px;">
+		    <div data-options="action:'addCategory'">新建同级类别</div>
+		    <div data-options="action:'addSubCategory'">新建子类别</div>
+		    <div data-options="action:'editCategory'">修改类别</div>
+		    <div data-options="action:'deleteCategory'">删除类别</div>
+		</div>
+    </div>
+   
+    <div data-options="region:'center',title:'类别信息',split:true">
+    	<div data-attach-point="subjectumDefaultDiv" hidden="ture">
+			<!-- <div class="categoryInfo" data-options="region:'north'"> -->
+				<!-- <div class="fitem">
+				<label>名称:</label>
+					<span class="bold" data-attach-point="name"></span>
+				</div>
+				
+				<div class="fitem"><label>代码:</label>
+					<span class="bold" data-attach-point="code"></span>
+				</div>
+				
+				<div class="fitem"> <label>描述:</label> <span class="bold"
+					data-attach-point="description"></span>
+				</div>
+				 -->
+				<div class="fitem" id="${uuid}_bar_subjectum" data-attach-point="toolbarTool">
+			   		<a href="javascript:void(0)" hidden="ture" data-attach-point="addButton" class="easyui-linkbutton" data-attach-event="click:_onAddTemplate">新建</a>
+			   		<a href="javascript:void(0)" hidden="ture" data-attach-point="deleteButton" class="easyui-linkbutton" data-attach-event="click:_onDeleteTemplate">删除</a>
+  		 		</div>			
+				<!-- <div id="${uuid}_bar" class="app-templateSearchBar"
+					data-options="grid:'#${uuid}_grid'" data-attach-point="searchBar"
+					data-attach-event="templatesearchbaraction:_doAction">
+				</div> -->
+				<!-- <div style="width:80%;height:50%;height:-moz-calc(100% - 53px); height:-webkit-calc(100% - 53px); height:calc(100% - 53px);"> -->
+					<table id="${uuid}_grid" class="easyui-treegrid" data-attach-point="dataGrid" 
+	       			 data-options="rownumbers: true,idField:'id',treeField:'mediaSource',pagination:true"  style="width:790px;height:330px">
+						<thead>
+							<tr>
+									<th data-options="field:'id',width:20,align:'center',hidden:true" >唯一标识</th>
+									<th data-options="field:'templateCategoryRelId',width:20,align:'center',hidden:true" >唯一标识</th>
+									<th	data-options="field:'mediaSource',width:95,align:'left', formatter:app.formatter.formatMediaSource">媒体来源</th>
+									<th data-options="field:'templateCode',width:100,align:'center'">模板编号</th>
+									<th data-options="field:'version',width:40,align:'center'">版本号</th>
+									<th	data-options="field:'url',width:180,align:'center'">站点地址</th>
+									<th	data-options="field:'urlName',width:55,align:'center'">站点名字</th>
+									<th	data-options="field:'urlCode',width:55,align:'center'">站点编码</th>
+									<th	data-options="field:'effectDate',width:70,align:'center',formatter:app.formatter.formatTime">生效时间</th>
+									<th	data-options="field:'expiryDate',width:70,align:'center',formatter:app.formatter.formatTime">失效时间</th>
+									<th data-options="field:'status',width:65,align:'center',formatter:app.formatter.formatStatus">状态</th>
+							</tr>
+						</thead>
+					</table>
+				<!-- </div> -->
+				<div style="font-size:12px;font-weight:bold;margin-top:10px;margin-bottom:5px;">爬虫关键词</div>
+				<table id="${uuid}_grid" class="listgrid" 
+				data-options="border:true,striped:true,singleSelect:true,pagination:true"
+				data-attach-point="keyWordsDataGrid"  style="width:790px;height:330px"  >
+					<thead>
+						<tr>
+							<th data-options="field:'keyWord',width:200,align:'center'" >关键字</th>
+							<th data-options="field:'categoryName',width:200,align:'center'" >类别名称</th>
+							<th data-options="field:'categoryCode',width:150,align:'center'" >类别编码</th>
+							<th data-options="field:'status',width:100,align:'center',formatter:app.formatter.formatSentimentStatus" >状态</th>
+							<th data-options="field:'ctime',width:117,align:'center',formatter:app.formatter.formatTime" >创建时间</th>
+						</tr>
+					</thead>
+				</table>
+
+				<!-- <div id="${uuid}_bar" class="app-stmtCrawlKeyWordsSearchBar"
+					data-options="grid:'#${uuid}_grid'" data-attach-point="keyWordsSearchBar"
+					data-attach-event="stmtcrawlkeywordssearchbaraction:_doAction">
+				</div> -->
+				
+			<!-- </div> -->
+		</div>
+	</div>
+</div>
+

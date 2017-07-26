@@ -1,0 +1,64 @@
+{
+	"ruleDefinition/list.do" : {
+		"type" : "post",
+		"url" : "ruleDefinition/list.do",
+		"dataType" : "json"
+	},
+	"ruleDefinition/save.do" : {
+		"type" : "post",
+		"url" : "ruleDefinition/save.do",
+		"dataType" : "json"
+	},
+	"ruleDefinition/update.do" : {
+		"type" : "POST",
+		"url" : "ruleDefinition/update.do",
+		"dataType" : "json"
+	},
+	"ruleDefinition/saveData.do" : {
+		"type" : "POST",
+		"url" : "ruleDefinition/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"ruleDefinition/findById.do" : {
+		"type" : "post",
+		"url" : "ruleDefinition/findById.do",
+		"dataType" : "json"
+	},
+	"deleteRuleDefinition" : {
+		"type" : "post",
+		"url" : "ruleDefinition/deleteById.do",
+		"dataType" : "json"
+	},
+	"updateRuleDefinition" : {
+		"type" : "post",
+		"url" : "ruleDefinition/updateRuleDefinition.do",
+		"dataType" : "json"
+	},
+	"queryRuleDefinitionList" : {
+		"type" : "post",
+		"url" : "ruleDefinition/queryRuleDefinitionList.do",
+		"dataType" : "json"
+	},
+	"queryRuleDefinitionListNoPage" : {
+		"type" : "post",
+		"url" : "ruleDefinition/queryRuleDefinitionListNoPage.do",
+		"dataType" : "json"
+	},
+	"ruleDefinition/leadOutRuleDefinition.do" : {
+		"type" : "post",
+		"url" : "ruleDefinition/leadOutRuleDefinition.do",
+		"dataType" : "json"
+	},
+	"ruleDefinition/leadInRuleDefinition.do" : {
+		"type" : "post",
+		"url" : "ruleDefinition/leadInRuleDefinition.do",
+		"dataType" : "json"
+	},
+	"category/queryAllSmallCategory.do" : {
+		"type" : "post",
+		"url" : "category/queryAllSmallCategory.do",
+		"dataType" : "json"
+	}
+}

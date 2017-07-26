@@ -1,0 +1,75 @@
+@charset "utf-8";
+/*easyui custome*/
+.panel-title {
+	font-size: 12px;
+	font-weight: bold;
+	color: #000; /*所有panel的标题字颜色*/
+	height: 16px;
+	line-height: 16px;
+}
+
+.combobox-item {
+	padding: 2px;
+	font-size: 12px;
+	padding: 3px;
+	padding-right: 0px;
+}
+
+.layout-split-proxy-v {
+	background-color: #28A7E1;
+}
+
+.layout-split-west {
+	border-right: 5px solid #fafafa;
+}
+
+.layout-expand {
+	background-color: #28A7E1; /*收放条上的颜色*/
+}
+
+.layout-expand-over {
+	background-color: #EF5924; /*鼠标放在收放条上的颜色*/
+}
+
+.tabs-scroller-left,.tabs-scroller-right {
+	position: absolute;
+	top: auto;
+	bottom: 0;
+	width: 18px;
+	height: 28px !important;
+	height: 30px;
+	font-size: 1px;
+	display: none;
+	cursor: pointer;
+	border-width: 1px;
+	border-style: solid;
+}
+
+.tabs-header-plain .tabs-scroller-left,.tabs-header-plain .tabs-scroller-right
+	{
+	height: 25px !important;
+	height: 27px;
+}
+
+.tabs-panels {
+	margin: 0px;
+	padding: 3px 0px 0px 0px; /*tab与tab中控件的间隔*/
+	border-width: 1px;
+	border-style: solid;
+	border-top-width: 0;
+	overflow: hidden;
+	background-color: #28A7E1; /*选中的tab背景颜色*/
+}
+
+.tabs li.tabs-selected a.tabs-inner { /*当选中tab时，标头的样式*/
+	background-color: #28A7E1;
+	color: #fff;
+}
+
+.tabs li.tabs-selected a.tabs-inner { /*tab标题下边框颜色*/
+	border-bottom: 1px solid #28A7E1;
+}
+
+.tabs-disabled {
+	display: none !important;
+}

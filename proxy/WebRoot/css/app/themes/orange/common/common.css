@@ -1,0 +1,490 @@
+@charset "utf-8";
+/*easyui custome*/
+.icon-filter-open {
+	background: url('../images/filteropen.png') no-repeat center center;
+}
+
+.icon-filter-close {
+	background: url('../images/filterclose.png') no-repeat center center;
+}
+
+.panel-title {
+	font-size: 12px;
+	font-weight: bold;
+	color: #000; /*所有panel的标题字颜色*/
+	height: 16px;
+	line-height: 16px;
+}
+
+.combobox-item {
+	padding: 2px;
+	font-size: 12px;
+	padding: 3px;
+	padding-right: 0px;
+}
+
+.layout-split-proxy-v {
+	background-color: #28A7E1;
+}
+
+.layout-split-west {
+	border-right: 5px solid #fafafa;
+}
+
+.layout-expand {
+	background-color: #28A7E1; /*收放条上的颜色*/
+}
+
+.layout-expand-over {
+	background-color: #EF5924; /*鼠标放在收放条上的颜色*/
+}
+
+.tabs-scroller-left,.tabs-scroller-right {
+	position: absolute;
+	top: auto;
+	bottom: 0;
+	width: 18px;
+	height: 28px !important;
+	height: 30px;
+	font-size: 1px;
+	display: none;
+	cursor: pointer;
+	border-width: 1px;
+	border-style: solid;
+}
+
+.tabs-header-plain .tabs-scroller-left,.tabs-header-plain .tabs-scroller-right
+	{
+	height: 25px !important;
+	height: 27px;
+}
+
+.tabs-panels {
+	margin: 0px;
+	padding: 3px 0px 0px 0px; /*tab与tab中控件的间隔*/
+	border-width: 1px;
+	border-style: solid;
+	border-top-width: 0;
+	overflow: hidden;
+	background-color: #28A7E1; /*选中的tab背景颜色*/
+}
+
+.tabs li.tabs-selected a.tabs-inner { /*当选中tab时，标头的样式*/
+	background-color: #28A7E1;
+	color: #fff;
+}
+
+.tabs li.tabs-selected a.tabs-inner { /*tab标题下边框颜色*/
+	border-bottom: 1px solid #28A7E1;
+}
+
+.datagrid-btn-separator {
+	float: left;
+	height: 24px;
+	border-left: 1px solid #000;
+	border-right: 1px solid #fff;
+	margin: 2px 1px;
+}
+
+.datagrid-header td,.datagrid-body td,.datagrid-footer td {
+	border-width: 0 1px 1px 0;
+	border-style: solid; /*表格中线的形式，solid 实线*/
+	margin: 0;
+	padding: 0;
+}
+
+.datagrid-cell,.datagrid-cell-group,.datagrid-header-rownumber,.datagrid-cell-rownumber
+	{
+	margin: 0;
+	padding: 0 4px;
+	white-space: nowrap;
+	word-wrap: normal;
+	overflow: hidden;
+	height: 18px;
+	line-height: 18px;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+.datagrid-header,.datagrid-td-rownumber { /*表头背景颜色，序号背景颜色*/
+	background-color: #F6F6F6;
+}
+
+.datagrid-row-over {
+	background: #FCF8DB;
+	color: #444;
+	cursor: default;
+}
+
+.datagrid-row-selected { /*表格选中时的颜色*/
+	background: #FEF5CA;
+	color: #000;
+}
+
+/* datagrid pagination */
+.pagination-first {
+	background: url('../images/pagination_icons.png') no-repeat 0 0;
+}
+
+.pagination-prev {
+	background: url('../images/pagination_icons.png') no-repeat -16px 0;
+}
+
+.pagination-next {
+	background: url('../images/pagination_icons.png') no-repeat -32px 0;
+}
+
+.pagination-last {
+	background: url('../images/pagination_icons.png') no-repeat -48px 0;
+}
+
+.pagination-load {
+	background: url('../images/pagination_icons.png') no-repeat -64px 0;
+}
+
+.datebox-current,.datebox-close,.datebox-ok {
+	text-decoration: none;
+	font-weight: bold;
+	opacity: 0.6;
+	filter: alpha(opacity =              60);
+}
+
+.datebox-button-hover {
+	opacity: 1.0;
+	filter: alpha(opacity =              100);
+}
+
+.datebox-current,.datebox-close,.datebox-ok {
+	color: #777;
+}
+
+.clendar-day-disabled {
+	text-decoration: line-through;
+}
+
+.custom-panel {
+	border-style: inherit;
+	padding-left: 34px;
+}
+
+.custom-line {
+	background-color: #D5D5D5;
+	display: inline-block;
+	height: 1px;
+	margin-left: 20px;
+	margin-top: 8px;
+	position: absolute;
+	width: 100%;
+}
+
+.custom-panel-tool {
+	left: 3px;
+}
+
+.custom-panel-title {
+	margin-left: 30px;
+}
+
+.custom-panel-header {
+	background: linear-gradient(to bottom, #FFFFFF 0px, #FFFFFF 100%)
+		repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+	border-style: inherit;
+}
+
+/*app class*/
+.line {
+	background-image: url("../images/line.png");
+	background-position: center center;
+	background-repeat: repeat-x;
+}
+
+.dialog {
+	width: 100%;
+	background: #fbfbfb;
+	height: 100%;
+}
+
+.dialog>form {
+	padding: 10px 10px 10px 20px;
+}
+
+.dialog>form  .app-partner{
+	display : inline;
+}
+
+.dialog td {
+	padding: 2px;
+}
+
+span.required {
+	color: red;
+	margin-right: 5px;
+}
+
+/* module */
+.form-module {
+	padding-right: 12px;
+	font-size: 11px;
+	padding-bottom: 25px;
+}
+
+.form-module .formtable {
+	width: 100%;
+}
+
+.form-module .formtable>tbody>tr {
+	height: 20px;
+}
+
+.form-module .formtable>tbody>tr>td:nth-child(even) {
+	width: 270px;
+	font-weight: bolder;
+}
+
+.form-module .formtable>tbody>tr>td:nth-child(odd) {
+	width: 110px;
+}
+
+.tableEvenTd {
+	width: 270px;
+	font-weight: bolder;
+}
+
+.tableOddTd {
+	width: 110px;
+}
+
+.form-module .formtable>tbody>tr>td>span {
+	padding-right: 10px;
+}
+
+/*   */
+.form-module .formtable3 {
+	width: 100%;
+}
+
+.form-module .formtable3>tbody>tr {
+	height: 20px;
+}
+
+.form-module .formtable3>tbody>tr>td:nth-child(even) {
+	width: 200px;
+	font-weight: bolder;
+}
+
+.form-module .formtable3>tbody>tr>td:nth-child(odd) {
+	width: 90px;
+}
+
+.tableEvenTd3 {
+	width: 200px;
+	font-weight: bolder;
+}
+
+.tableOddTd3 {
+	width: 90px;
+}
+/* searchBar */
+.datagrid-toolbar-tool {
+	
+}
+
+.datagrid-toolbar-tool .toolbar-btn-right {
+	float: right;
+	margin-right: 20px;
+}
+
+.datagrid-toolbar-filter {
+	display: none;
+}
+
+.datagrid-toolbar-filter .criteria-panel {
+	float: left;
+	display: inline-block;
+	position: absolute;
+	width: 90%;
+}
+
+.datagrid-toolbar-filter .button-panel {
+	float: right;
+	height: inherit;
+	/* min-height: 51px; */
+	border-left: 2px solid #DDDDDD;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	border-left: 2px solid #DDDDDD;
+}
+
+.datagrid-toolbar-filter .criteria-panel>div {
+	display: inline-block;
+	margin: 0 15px 6px;
+}
+
+.datagrid-toolbar-filter .criteria-panel div {
+	display: inline-block;
+	margin: 0 15px 6px;
+}
+
+.datagrid-toolbar-filter label {
+	width: 70px;
+}
+
+.datagrid-toolbar-filter input {
+	width: 128px;
+}
+
+.datagrid-toolbar-filter .datebox {
+	width: 128px;
+}
+
+.datagrid-toolbar-filter span.combo {
+	width: 140px;
+}
+
+/* datagrid custom */
+.lines-no {
+	border: 0px;
+}
+
+.lines-no td {
+	border-bottom: 1px dotted rgba(0, 0, 0, 0);
+	border-right: 1px dotted rgba(0, 0, 0, 0);
+}
+
+.lines-no .datagrid-htable,.lines-no td.datagrid-header-over {
+	background-color: #FFFFFF;
+}
+
+.lines-no .datagrid-header,.lines-no .datagrid-td-rownumber {
+	background-color: #FFFFFF;
+}
+
+/* message */
+.tip-msg {
+	background: none repeat scroll 0 0 #008000;
+	border-radius: 0 0 3px 3px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	left: 0;
+	line-height: 26px;
+	padding: 0 16px;
+	position: absolute;
+	top: 0;
+	z-index: 800;
+}
+
+.datagrid-toolbar-tool {
+	background-color: #F4F4F2;
+}
+
+.closeable {
+	float: right;
+	margin-right: 20px;
+	display: inline-block;
+}
+
+.tabs-disabled {
+	display: none !important;
+}
+
+/* code generater*/
+.ui-form {
+	margin: 0;
+	padding: 10px 15px;
+}
+
+.one-column {
+	
+}
+
+.two-column {
+	
+}
+
+.form-module .fitem span
+{
+	font-weight: bold;
+}
+
+.two-column .fitem{
+	float : left;
+	width: 50%;
+}
+.two-column .clearfloat{
+	clear : both;
+	width: 100%;
+}
+.two-column .clearfloatwid{
+	clear : both;
+	width: 50%;
+}
+
+.ftitle {
+	font-size: 14px;
+	font-weight: bold;
+	padding: 5px 0;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+.fitem {
+	margin-bottom: 5px;
+}
+
+
+.fitem textarea,.fitem label {
+	vertical-align: middle;
+}
+
+.fitem .bold
+{
+	font-weight: bold;
+}
+.fitem .red
+{
+	color:red;
+}
+.fitem .top {
+	vertical-align: top;
+	margin-top:4px;
+}
+
+
+.fitem label {
+	display: inline-block;
+	width: 60px;
+	text-align: left;
+	cursor : default;
+	vertical-align: middle;
+}
+
+.ui-fields {
+	vertical-align: middle;
+	display: inline-block;
+	float: left;
+	margin: 0;
+	padding: 5px
+}
+
+.ui-label {
+	vertical-align: middle;
+	padding-right: 3px
+}
+
+.ui-text {
+	vertical-align: middle;
+	border: 1px solid #A4BED4;
+	font-size: 12px;
+	line-height: 20px;
+	height: 20px;
+	padding: 0px;
+	_height: 18px;
+	_line-height: 18px;
+}
+
+.ui-search-panel {
+	padding: 10px;
+	border-bottom: 1px solid #D4D4D4;
+}

@@ -1,0 +1,70 @@
+<div class="dialog">
+	<form data-attach-point="editForm" class="ui-form"
+		method="post" enctype="multipart/form-data">
+		<div class="ui-edit">
+			<div class="fitem" data-attach-point="isDataDiv" style="display: none">
+				<label>是否覆盖导入：</label> <input name="flag" type="text"
+					style="width: 170px;" editable="false"
+					data-attach-point="logicCombobox" maxlength="4"
+					class="easyui-combobox" data-options="required:true"
+					missingMessage="请选择是否覆盖导入"> <span class="required">*</span>
+			</div>
+			<div class="fitem" data-attach-point="isCzscDataDiv" style="display: none">
+				<label>是否忽略：</label> <input name="flag1" type="text"
+					style="width: 170px;" editable="false"
+					data-attach-point="logicCombobox1" maxlength="4"
+					class="easyui-combobox" data-options="required:true"
+					missingMessage="请选择是否忽略导入"> <span class="required">*</span>
+			</div>
+			<div class="fitem" data-attach-point="subjectumTemplateDiv" style="display: none">
+				<label>数据模板：</label> 
+				<input type="text" name="code" style="width:170px;">
+ 			</div>
+			<div class="fitem">
+				<label>文件：</label>
+				<input data-attach-point="dataFile" type="file" name="dataFile" style="width:170px;">
+				<span class="required">*</span>
+ 			</div>
+ 			<div class="fitem" data-attach-point="subjectumInfo" style="display: none">
+				<span class="required">
+						结算主体导入说明：<br/>
+						1.选择覆盖导入时：数据会单条覆盖原有主体信息（但如果主体信息已被结算单、批次信息、虚拟结算主体使用，则导入失败）<br/>
+						2.选择不覆盖导入时：数据库中存在相同主体信息时，直接跳过执行下一条主体信息<br/>
+						3.不导入附件信息<br/>
+						4.不导入结算责任人信息
+				</span>
+			</div>
+ 			<div class="fitem" data-attach-point="czscSubjectumInfo" style="display: none">
+				<span class="required">
+						车主商城商户结算主体导入说明：<br/>
+						1.选择忽略时：商户未配置的信息，不生成结算主体<br/>
+						2.选择不忽略时：商户未配置的信息，先生成商户基本信息，再根据商户信息生成结算主体<br/>
+						3.已存在的结算主体信息，跳过执行下一条<br/>
+						4.如果配置了标准结算主体信息，则拷贝使用标准主体信息配置
+				</span>
+			</div>
+			<div class="fitem" data-attach-point="ruleDefinitionInfo" style="display: none">
+				<span class="required">
+						规则定义导入说明：<br/>
+						1.选择覆盖导入时：数据会单条覆盖原有规则定义信息（但如果规则定义信息已被计算规则使用，则导入失败）<br/>
+						2.选择不覆盖导入时：数据库中存在相同规则定义信息时，直接跳过执行下一条规则定义信息<br/>
+						3.不导入规则定义附件信息<br/>
+				</span>
+			</div>
+			<div class="fitem" data-attach-point="extendedAtrriDefInfo" style="display: none">
+				<span class="required">
+						扩展属性定义导入说明：<br/>
+						1.选择覆盖导入时：数据会单条覆盖原有扩展属性定义信息（但如果扩展属性定义已被模板扩展属性使用，则导入失败）<br/>
+						2.选择不覆盖导入时：数据库中存在相同扩展属性定义信息时，直接跳过执行下一条扩展属性定义信息<br/>
+				</span>
+			</div>
+			<div class="fitem" data-attach-point="templateSubjectumInfo" style="display: none">
+				<span class="required">
+						商户数据导入结算主体说明：<br/>
+						1.数据模板：指定待导入的数据，所使用的模板<br/>
+						2.模板必须填写结算主体的编码，否则无效；不填代表不使用模板<br/>
+				</span>
+			</div>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,1234 @@
+{
+	"getUserAcl" : {
+		"type" : "get",
+		"url" : "getUserAcl.do",
+		"dataType" : "json"
+	},
+	"getUsers": {
+		"type": "POST",
+		"url": "sales/getUsers.do",
+		"dataType": "json"
+	},
+	"querysysParam": {
+		"type": "POST",
+		"url": "param/getParams.do",
+		"dataType": "json"
+	},
+	"getMailTemplates" : {
+		"type" : "POST",
+		"url" : "mail/getMailTemplates.do",
+		"dataType" : "json"
+	},
+	"queryMailTemplate": {
+		"type": "POST",
+		"url": "mail/queryMailTemplate.do",
+		"dataType": "json"
+	},
+	"deleteMailTemplate": {
+		"type": "POST",
+		"url": "mail/deleteMailTemp.do",
+		"dataType": "json"
+	},
+	"addMailTemplate": {
+		"type": "POST",
+		"url": "mail/addMailTemplate.do",
+		"dataType": "json"
+	},
+	"updateMailTemplate": {
+		"type": "POST",
+		"url": "mail/updateMailTemplate.do",
+		"dataType": "json"
+	},
+	"querymailServerConfig": {
+		"type": "POST",
+		"url": "mail/queryMailServers.do",
+		"dataType": "json"
+	},
+	"querycache": {
+		"type": "POST",
+		"url": "cache/queryCache.do",
+		"dataType": "json"
+	},
+	"findDicItemForMap" : {
+		"type" : "get",
+		"url" : "cache/findDicItemForMap.do",
+		"dataType" : "json"
+	},
+	"querydic": {
+		"type": "POST",
+		"url": "dict/getAllDicts.do",
+		"dataType": "json"
+	},
+	"queryDicItemList" : {
+		"type" : "POST",
+		"url" : "dict/getDictItems.do",
+		"dataType" : "json"
+	},
+	"getDicts" : {
+		"type" : "GET",
+		"url" : "main/getDicts.do",
+		"dataType" : "json"
+	},
+	"getSheetInfo" : {
+		"type" : "POST",
+		"url" : "main/getSheetInfo.do",
+		"dataType" : "json"
+	},
+	"findDicItem" : {
+		"type" : "get",
+		"url" : "cache/findDicItem.do",
+		"dataType" : "json"
+	},
+	"adddic": {
+		"type": "POST",
+		"url": "dict/saveDict.do",
+		"dataType": "json"
+	},
+	"updatedic": {
+		"type": "POST",
+		"url": "dict/updateDict.do",
+		"dataType": "json"
+	},
+	"deletedic": {
+		"type": "POST",
+		"url": "dict/removeDict.do",
+		"dataType": "json"
+	},
+	"adddicItem": {
+		"type": "POST",
+		"url": "dict/saveDictItem.do",
+		"dataType": "json"
+	},
+	"updatedicItem": {
+		"type": "POST",
+		"url": "dict/updateDictItem.do",
+		"dataType": "json"
+	},
+	"deletedicItem": {
+		"type": "POST",
+		"url": "dict/removeDictItem.do",
+		"dataType": "json"
+	},
+	"queryprocessInstanceManage": {
+		"type": "POST",
+		"url": "workflow/queryProcessInstance.do",
+		"dataType": "json"
+	},
+	"querytaskManage": {
+		"type": "POST",
+		"url": "workflow/queryTask.do",
+		"dataType": "json"
+	},
+	"queryprocessConfigInfo": {
+		"type": "POST",
+		"url": "ProcessConfig/getAllProcessConfig.do",
+		"dataType": "json"
+	},
+	"deleteProcessConfigInfo": {
+		"type": "POST",
+		"url": "ProcessConfig/deleteProcessConfig.do",
+		"dataType": "json"
+	},
+	"addProcessConfig": {
+		"type": "POST",
+		"url": "ProcessConfig/saveProcessConfig.do",
+		"dataType": "json"
+	},
+	"updateProcessConfig": {
+		"type": "POST",
+		"url": "ProcessConfig/updateProcessConfig.do",
+		"dataType": "json"
+	},
+	"querytaskConfig": {
+		"type": "POST",
+		"url": "TaskConfig/getAllTaskConfig.do",
+		"dataType": "json"
+	},
+	"deleteTaskConfig": {
+		"type": "POST",
+		"url": "TaskConfig/deleteTaskConfig.do",
+		"dataType": "json"
+	},
+	"addTaskConfig": {
+		"type": "POST",
+		"url": "TaskConfig/saveTaskConfig.do",
+		"dataType": "json"
+	},
+	"updateTaskConfig": {
+		"type": "POST",
+		"url": "TaskConfig/updateTaskConfig.do",
+		"dataType": "json"
+	},
+	"queryjobConfigInfo": {
+		"type": "post",
+		"url": "JobConfig/queryJobConfigList.do",
+		"dataType": "json"
+	},
+	"queryAuditLog": {
+		"type": "post",
+		"url": "auditLog/find.do",
+		"dataType": "json"
+	},
+	"updatejobConfig": {
+		"type": "post",
+		"url": "JobConfig/updateJobConfig.do",
+		"dataType": "json"
+	},
+	"queryjobConfigErrorInfo": {
+		"type": "post",
+		"url": "JobConfig/queryJobConfigErrorList.do",
+		"dataType": "json"
+	},
+	"queryCalender": {
+		"type": "post",
+		"url": "calender/queryCalender.do",
+		"dataType": "json"
+	},
+	"editCalendar": {
+		"type": "post",
+		"url": "calender/edit.do",
+		"dataType": "json"
+	},
+	"deleteCalendar": {
+		"type": "post",
+		"url": "calender/delete.do",
+		"dataType": "json"
+	},
+	"queryBusinessSystem": {
+		"type": "GET",
+		"url": "businessSystem/findAll.do",
+		"dataType": "json"
+	},
+	"updateBusinessSystem": {
+		"type": "POST",
+		"url": "businessSystem/update.do",
+		"dataType": "json"
+	},
+	"querySheetProcessJobInput": {
+		"type": "POST",
+		"url": "sheetProcessJobInput/findAll.do",
+		"dataType": "json"
+	},
+	"reloadSheetProcessJobInput": {
+		"type": "POST",
+		"url": "sheetProcessJobInput/reload.do",
+		"dataType": "json"
+	},
+	"queryJobConfigTempList": {
+		"type": "POST",
+		"url": "JobConfig/queryJobConfigTempList.do",
+		"dataType": "json"
+	},
+	"updateJobConfigTemp": {
+		"type": "POST",
+		"url": "JobConfig/updateJobConfigTemp.do",
+		"dataType": "json"
+	},
+	"queryApprovalTemplate": {
+		"type": "POST",
+		"url": "approvalTemplate/queryApprovalTemplate.do",
+		"dataType": "json"
+	},
+	"deleteApprovalTemplate": {
+		"type": "POST",
+		"url": "approvalTemplate/deleteApprovalTemplate.do",
+		"dataType": "json"
+	},
+	"updateApprovalTemplate": {
+		"type": "POST",
+		"url": "approvalTemplate/updateApprovalTemplate.do",
+		"dataType": "json"
+	},
+	"queryOaInstance": {
+		"type": "POST",
+		"url": "oaInstance/find.do",
+		"dataType": "json"
+	},
+	"queryOaTask": {
+		"type": "POST",
+		"url": "oaTask/queryOaTask.do",
+		"dataType": "json"
+	},
+	"queryApprovalChain": {
+		"type": "POST",
+		"url": "approvalTemplate/queryApprovalChain.do",
+		"dataType": "json"
+	},
+	"getSalesTakeoverSettings": {
+		"type": "POST",
+		"url": "sales/getSalesTakeoverSettings.do",
+		"dataType": "json"
+	},
+	"saveSalesTakeoverSetting": {
+		"type": "POST",
+		"url": "sales/saveSalesTakeoverSetting.do",
+		"dataType": "json"
+	},
+	"updateSalesTakeoverSetting": {
+		"type": "POST",
+		"url": "sales/updateSalesTakeoverSetting.do",
+		"dataType": "json"
+	},
+	"removeSalesTakeoverSetting": {
+		"type": "POST",
+		"url": "sales/removeSalesTakeoverSetting.do",
+		"dataType": "json"
+	},
+	"queryMyCompleteTask" : {
+		"type" : "post",
+		"url" : "myTaskManage/queryMyCompleteTask.do",
+		"dataType" : "json"
+	},
+	"queryMyTask" : {
+		"type" : "get",
+		"url" : "myTaskManage/queryMyTask.do",
+		"dataType" : "json"
+	},
+	"queryMyTaskById" : {
+		"type" : "get",
+		"url" : "myTaskManage/queryMyTaskById.do",
+		"dataType" : "json"
+	},
+	"queryMyVerifyingTask" : {
+		"type" : "get",
+		"url" : "myTaskManage/queryMyVerifyingTask.do",
+		"dataType" : "json"
+	},
+	"initTaskApprove" : {
+		"type" : "POST",
+		"url" : "myTaskManage/initTaskApprove.do",
+		"dataType" : "json"
+	},
+	"querySuggestBackUser" : {
+		"type" : "POST",
+		"url" : "myTaskManage/querySuggestBackUser.do",
+		"dataType" : "json"
+	},
+	"completeApprove" : {
+		"type" : "POST",
+		"url" : "myTaskManage/completeApprove.do",
+		"dataType" : "json"
+	},
+	"forwardFrom" : {
+		"type" : "POST",
+		"url" : "myTaskManage/forwardOaTask.do",
+		"dataType" : "json"
+	},
+	"requestSuggestForm" : {
+		"type" : "POST",
+		"url" : "myTaskManage/askOther.do",
+		"dataType" : "json"
+	},
+	"claimTask" : {
+		"type" : "POST",
+		"url" : "myTaskManage/claimTask.do",
+		"dataType" : "json"
+	},	
+	"queryMyTaskByProcessId" : {
+		"type" : "GET",
+		"url" : "myTaskManage/queryMyTaskByProcessId.do",
+		"dataType" : "json"
+	},	
+	"queryByprocessId" : {
+		"type" : "GET",
+		"url" : "workflow/queryByprocessId.do",
+		"dataType" : "json"
+	},
+	"getBysheetId" : {
+		"type" : "GET",
+		"url" : "workflow/getBysheetId.do",
+		"dataType" : "json"
+	},
+	"getBysheetId2" : {
+		"type" : "GET",
+		"url" : "workflow/getBysheetId2.do",
+		"dataType" : "json"
+	},
+	"getBysheetIdAndProcessId" : {
+		"type" : "GET",
+		"url" : "workflow/getBysheetIdAndProcessId.do",
+		"dataType" : "json"
+	},
+	"getTaskByProcessId" : {
+		"type" : "POST",
+		"url" : "workflow/getTaskByProcessId.do",
+		"dataType" : "json"
+	},	
+	"queryBysheetId" : {
+		"type" : "GET",
+		"url" : "workflow/queryBysheetId.do",
+		"dataType" : "json"
+	},
+	"getUserInfo" : {
+		"type" : "get",
+		"url" : "main/getUserInfo.do",
+		"dataType" : "json"
+	},	
+	"uploadAttachment" : {
+		"type" : "POST",
+		"url" : "sysAttachment/upload.do",
+		"dataType" : "json"
+	},
+	"queryAttachment" : {
+		"type" : "POST",
+		"url" : "sysAttachment/list.do",
+		"dataType" : "json"
+	},
+	"delAttachmentById" : {
+		"type" : "GET",
+		"url" : "sysAttachment/delete.do",
+		"dataType" : "json"
+	},
+	"downloadAttachmentById" : {
+		"type" : "POST",
+		"url" : "sysAttachment/dowloadById.do",
+		"dataType" : "json"
+	},
+	"queryAttachmentBySheetId" : {
+		"type" : "GET",
+		"url" : "sysAttachment/queryAttachmentBySheetId.do",
+		"dataType" : "json"
+	},
+	"getTemplateApproveChain" : {
+		"type" : "POST",
+		"url" : "approvalTemplate/getApproveChain.do",
+		"dataType" : "json"
+	},
+	
+	"getApproveChain" : {
+		"type" : "POST",
+		"url" : "sysUserApproveChain/getApproveChain.do",
+		"dataType" : "json"
+	},
+	
+	"saveApproveChain" : {
+		"type" : "POST",
+		"url" : "sysUserApproveChain/saveApproveChain.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"changeUserPassword" : {
+		"type" : "post",
+		"url" : "main/changeUserPassword.do",
+		"dataType" : "json"
+	},
+	"saveSalesTakeoverSettingPerson" : {
+		"type" : "POST",
+		"url" : "sales/saveSalesTakeoverSettingPerson.do",
+		"dataType" : "json"
+	},
+	"removeSalesTakeoverSettingPerson" : {
+		"type" : "POST",
+		"url" : "sales/removeSalesTakeoverSettingPerson.do",
+		"dataType" : "json"
+	},
+	"sysFtpClientConfig/list.do" : {
+		"type" : "post",
+		"url" : "sysFtpClientConfig/list.do",
+		"dataType" : "json"
+	},
+	"sysFtpClientConfig/save.do" : {
+		"type" : "post",
+		"url" : "sysFtpClientConfig/save.do",
+		"dataType" : "json"
+	},
+	"sysFtpClientConfig/saveData.do" : {
+		"type" : "POST",
+		"url" : "sysFtpClientConfig/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"sysFtpClientConfig/delete.do" : {
+		"type" : "post",
+		"url" : "sysFtpClientConfig/delete.do",
+		"dataType" : "json"
+	},
+	"sysFtpServerConfig/list.do" : {
+		"type" : "post",
+		"url" : "sysFtpServerConfig/list.do",
+		"dataType" : "json"
+	},
+	"sysFtpServerConfig/save.do" : {
+		"type" : "post",
+		"url" : "sysFtpServerConfig/save.do",
+		"dataType" : "json"
+	},
+	"sysFtpServerConfig/saveData.do" : {
+		"type" : "POST",
+		"url" : "sysFtpServerConfig/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"sysFtpServerConfig/delete.do" : {
+		"type" : "post",
+		"url" : "sysFtpServerConfig/delete.do",
+		"dataType" : "json"
+	},
+	"getPartners" : {
+		"type" : "POST",
+		"url" : "partner/getPartners.do",
+		"dataType" : "json"
+	},
+	"getPartners1" : {
+		"type" : "POST",
+		"url" : "partner/getPartners1.do",
+		"dataType" : "json"
+	},
+	"getPartnerById" : {
+		"type" : "POST",
+		"url" : "partner/getPartnerById.do",
+		"dataType" : "json"
+	},
+	"getPartnerDetailById" : {
+		"type" : "POST",
+		"url" : "partner/getPartnerDetailById.do",
+		"dataType" : "json"
+	},
+	"partner/syncroJftgPartnerData.do" : {
+		"type" : "POST",
+		"url" : "partner/syncroJftgPartnerData.do",
+		"dataType" : "json"
+	},
+	"getAllConcats" : {
+		"type" : "POST",
+		"url" : "partner/getAllConcats.do",
+		"dataType" : "json",
+		"contentType" : "application/json"
+	},
+	"getAllAccounts" : {
+		"type" : "POST",
+		"url" : "partner/getAllAccounts.do",
+		"dataType" : "json",
+		"contentType" : "application/json"
+	},
+	"getAllAccountsPage" : {
+		"type" : "POST",
+		"url" : "partner/getAllAccountsPage.do",
+		"dataType" : "json",
+		"contentType" : "application/json"
+	},
+	"initCombogridAutoBank" : {
+		"type" : "POST",
+		"url" : "partner/initCombogridAutoBank.do",
+		"dataType" : "json"
+	},
+	"savePartner" : {
+		"type" : "POST",
+		"url" : "partner/savePartner.do",
+		"dataType" : "json"
+	},
+	"updatePartnerConcat" : {
+		"type" : "POST",
+		"url" : "partner/updatePartnerConcat.do",
+		"dataType" : "json"
+	},
+	"addPartnerConcat" : {
+		"type" : "POST",
+		"url" : "partner/addPartnerConcat.do",
+		"dataType" : "json"
+
+	},
+	"removePartnerConcat" : {
+		"type" : "POST",
+		"url" : "partner/removePartnerConcat.do",
+		"dataType" : "json"
+
+	},
+	"addPartnerAccount" : {
+		"type" : "POST",
+		"url" : "partner/addPartnerAccount.do",
+		"dataType" : "json"
+	},
+	"updatePartnerAccount" : {
+		"type" : "POST",
+		"url" : "partner/updatePartnerAccount.do",
+		"dataType" : "json"
+
+	},
+	"initCombogridAuto" : {
+		"type" : "POST",
+		"url" : "partner/initCombogridAuto.do",
+		"dataType" : "json"
+	},
+	"validPartner" : {
+		"type" : "POST",
+		"url" : "partner/validPartner.do",
+		"dataType" : "json"
+	},
+	"contractQuery" : {
+		"type" : "POST",
+		"url" : "contract/find.do",
+		"dataType" : "json"
+	},
+	"contractSave" : {
+		"type" : "POST",
+		"url" : "contract/save.do",
+		"dataType" : "json"
+	},
+	"contractUpdate" : {
+		"type" : "POST",
+		"url" : "contract/update.do",
+		"dataType" : "json"
+	},
+	"contractDelete" : {
+		"type" : "POST",
+		"url" : "contract/delete.do",
+		"dataType" : "json"
+	},
+	"getContractCode" : {
+		"type" : "POST",
+		"url" : "contract/getContractCode.do",
+		"dataType" : "json"
+	},
+	
+	
+	"merchantConfProcessSettleMerchantConfSubmit" : {
+		"type" : "POST",
+		"url" : "subjectum/completeMerchantSettleConf.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"merchantConfProcessSettleMerchantConfCheckSubmit" : {
+		"type" : "POST",
+		"url" : "subjectum/completeMerchantSettleConfReview.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"merchantConfProcessSettleMerchantSettleConfRollback" : {
+		"type" : "POST",
+		"url" : "subjectum/completeMerchantSettleConfRollback.do",
+		"dataType" : "json"
+	},
+	
+	"pointReconBatchStati/findByBatchNo.do" : {
+		"type" : "post",
+		"url" : "pointReconBatchStati/findByBatchNo.do",
+		"dataType" : "json"
+	},
+	"pointReconBatchResult/findByBatchNo.do" : {
+		"type" : "post",
+		"url" : "pointReconBatchResult/findByBatchNo.do",
+		"dataType" : "json"
+	},
+	
+	"b2cReconResult/findByBatchNo.do" : {
+		"type" : "post",
+		"url" : "b2cReconResult/findByBatchNo.do",
+		"dataType" : "json"
+	},
+	"b2cReconResult/updateByBatchNo.do" : {
+		"type" : "post",
+		"url" : "b2cReconResult/updateByBatchNo.do",
+		"dataType" : "json"
+	},
+	"b2cReconResult/findExtendedAttriByYj.do" : {
+		"type" : "post",
+		"url" : "b2cReconResult/findExtendedAttriByYj.do",
+		"dataType" : "json"
+	},
+	"b2cReconBatchStatistics/findByBatchNo.do" : {
+		"type" : "post",
+		"url" : "b2cReconBatchStatistics/findByBatchNo.do",
+		"dataType" : "json"
+	},
+	"reconResult/list.do" : {
+		"type" : "post",
+		"url" : "reconResult/list.do",
+		"dataType" : "json"
+	},
+	
+	
+	"settleTemplate/list.do" : {
+		"type" : "post",
+		"url" : "settleTemplate/list.do",
+		"dataType" : "json"
+	},
+	"settleTemplate/findById.do" : {
+		"type" : "post",
+		"url" : "settleTemplate/findById.do",
+		"dataType" : "json"
+	},
+	"subjectum/findSubjectumViewByCategoryCode.do" : {
+		"type" : "post",
+		"url" : "subjectum/findSubjectumViewByCategoryCode.do",
+		"dataType" : "json"
+	},"subjectum/findSubjectumViewById.do" : {
+		"type" : "post",
+		"url" : "subjectum/findSubjectumViewById.do",
+		"dataType" : "json"
+	},
+	"settlePrinciple/list.do" : {
+		"type" : "post",
+		"url" : "settlePrinciple/list.do",
+		"dataType" : "json"
+	},
+	
+	
+	
+	
+	"settlePrinciple/save.do" : {
+		"type" : "post",
+		"url" : "settlePrinciple/save.do",
+		"dataType" : "json"
+	},
+	"settlePrinciple/findById.do" : {
+		"type" : "post",
+		"url" : "settlePrinciple/findById.do",
+		"dataType" : "json"
+	},
+	"settlePrinciple/deleteById.do" : {
+		"type" : "post",
+		"url" : "settlePrinciple/deleteById.do",
+		"dataType" : "json"
+	},
+	
+	"settleTemplate/save.do" : {
+		"type" : "post",
+		"url" : "settleTemplate/save.do",
+		"dataType" : "json"
+	},
+	"settleTemplate/upgradeSettleTemplate.do" : {
+		"type" : "post",
+		"url" : "settleTemplate/upgradeSettleTemplate.do",
+		"dataType" : "json"
+	},
+	"settleTemplate/queryMaxVersionSettleTemplate.do" : {
+		"type" : "post",
+		"url" : "settleTemplate/queryMaxVersionSettleTemplate.do",
+		"dataType" : "json"
+	},
+	"settleTemplate/updateEnableDisableSettleTemplate.do" : {
+		"type" : "post",
+		"url" : "settleTemplate/updateEnableDisableSettleTemplate.do",
+		"dataType" : "json"
+	},
+	"subjectum/submitApprove.do" : {
+		"type" : "post",
+		"url" : "subjectum/submitApprove.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	
+	"settleItemGroup/save.do" : {
+		"type" : "post",
+		"url" : "settleItemGroup/save.do",
+		"dataType" : "json"
+	},
+	"settleItemGroup/querySettleItemGroup.do" : {
+		"type" : "post",
+		"url" : "settleItemGroup/querySettleItemGroup.do",
+		"dataType" : "json"
+	},
+	"settleItemGroup/querySettleItemGroupList.do" : {
+		"type" : "post",
+		"url" : "settleItemGroup/querySettleItemGroupList.do",
+		"dataType" : "json"
+	},
+	"settleItemGroup/deleteById.do" : {
+		"type" : "post",
+		"url" : "settleItemGroup/deleteById.do",
+		"dataType" : "json"
+	},
+	"settleItem/save.do" : {
+		"type" : "post",
+		"url" : "settleItem/save.do",
+		"dataType" : "json"
+	},
+	"settleItem/list.do" : {
+		"type" : "post",
+		"url" : "settleItem/list.do",
+		"dataType" : "json"
+	},
+	"settleItem/deleteById.do" : {
+		"type" : "post",
+		"url" : "settleItem/deleteById.do",
+		"dataType" : "json"
+	},
+	
+	"templateRule/list.do" : {
+		"type" : "post",
+		"url" : "templateRule/list.do",
+		"dataType" : "json"
+	},
+	"templateRule/queryTemplateRuleList.do" : {
+		"type" : "post",
+		"url" : "templateRule/queryTemplateRuleList.do",
+		"dataType" : "json"
+	},
+	"templateRule/saveData.do" : {
+		"type" : "post",
+		"url" : "templateRule/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"templateRule/deleteById.do" : {
+		"type" : "post",
+		"url" : "templateRule/deleteById.do",
+		"dataType" : "json"
+	},
+	
+	"ruleConfigDefinition/list.do" : {
+		"type" : "post",
+		"url" : "ruleConfigDefinition/list.do",
+		"dataType" : "json"
+	},
+	"ruleConfigDefinition/queryRuleConfigDefinitionList.do" : {
+		"type" : "post",
+		"url" : "ruleConfigDefinition/queryRuleConfigDefinitionList.do",
+		"dataType" : "json"
+	},
+	
+	"ruleConfig/list.do" : {
+		"type" : "post",
+		"url" : "ruleConfig/list.do",
+		"dataType" : "json"
+	},
+	"ruleConfig/queryRuleConfigList.do" : {
+		"type" : "post",
+		"url" : "ruleConfig/queryRuleConfigList.do",
+		"dataType" : "json"
+	},
+	
+	"ruleConfigDefinition/list.do" : {
+		"type" : "post",
+		"url" : "ruleConfigDefinition/list.do",
+		"dataType" : "json"
+	},
+	"ruleConfigDefinition/save.do" : {
+		"type" : "post",
+		"url" : "ruleConfigDefinition/save.do",
+		"dataType" : "json"
+	},
+	"ruleConfigDefinition/saveData.do" : {
+		"type" : "POST",
+		"url" : "ruleConfigDefinition/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"ruleConfigDefinition/findById.do" : {
+		"type" : "post",
+		"url" : "ruleConfigDefinition/findById.do",
+		"dataType" : "json"
+	},
+	"ruleConfigDefinition/deleteById.do" : {
+		"type" : "post",
+		"url" : "ruleConfigDefinition/deleteById.do",
+		"dataType" : "json"
+	},
+	
+	"getRuleConfigDefinitionByRuleId" : {
+		"type" : "post",
+		"url" : "ruleConfigDefinition/list.do",
+		"dataType" : "json"
+	},
+	"addRuleConfig" : {
+		"type" : "post",
+		"url" : "ruleConfigDefinition/save.do",
+		"dataType" : "json"
+	},
+	"updateRuleConfig" : {
+		"type" : "post",
+		"url" : "ruleConfigDefinition/save.do",
+		"dataType" : "json"
+	},
+	
+	"reconBatch/statisticsReconBatch.do" : {
+		"type" : "post",
+		"url" : "reconBatch/statisticsReconBatch.do",
+		"dataType" : "json"
+	},
+	"reconBatch/preReconciliationInitiated.do" : {
+		"type" : "post",
+		"url" : "reconBatch/preReconciliationInitiated.do",
+		"dataType" : "json"
+	},
+	"reconBatch/adjustCommission.do" : {
+		"type" : "post",
+		"url" : "reconBatch/adjustCommission.do",
+		"dataType" : "json"
+	},
+	"reconBatch/statisticsReport.do" : {
+		"type" : "post",
+		"url" : "reconBatch/statisticsReport.do",
+		"dataType" : "json"
+	},
+	"reconBatch/reportLoss.do" : {
+		"type" : "post",
+		"url" : "reconBatch/reportLoss.do",
+		"dataType" : "json"
+	},
+	"reconBatch/reconFillData.do" : {
+		"type" : "post",
+		"url" : "reconBatch/reconFillData.do",
+		"dataType" : "json"
+	},
+	"reconBatch/checkReconBatchFormButton.do" : {
+		"type" : "post",
+		"url" : "reconBatch/checkReconBatchFormButton.do",
+		"dataType" : "json"
+	},
+	"findByTemplateId.do" : {
+		"type" : "post",
+		"url" : "reconConfig/findByTemplateId.do",
+		"dataType" : "json"
+	},
+	"reconBatch/download.do" : {
+		"type" : "post",
+		"url" : "reconBatch/download.do",
+		"dataType" : "json"
+	},
+	"reconBatch/pretreatmentDownload.do" : {
+		"type" : "post",
+		"url" : "reconBatch/pretreatmentDownload.do",
+		"dataType" : "json"
+	},
+	"reconBatch/reconciliationInitiated.do" : {
+		"type" : "post",
+		"url" : "reconBatch/reconciliationInitiated.do",
+		"dataType" : "json"
+	},
+	"settleBatch/findByReconBatch.do" : {
+		"type" : "post",
+		"url" : "settleBatch/findByReconBatch.do",
+		"dataType" : "json"
+	},
+	"settleBatch/crtReportShell.do" : {
+		"type" : "post",
+		"url" : "settleBatch/crtReportShell.do",
+		"dataType" : "json"
+	},
+	"settleBatch/save.do" : {
+		"type" : "post",
+		"url" : "settleBatch/save.do",
+		"dataType" : "json"
+	},
+	"settleBatch/findByBatchNo.do" : {
+		"type" : "post",
+		"url" : "settleBatch/findByBatchNo.do",
+		"dataType" : "json"
+	},
+	"settleBatch/findSettleBatchByRel.do" : {
+		"type" : "post",
+		"url" : "settleBatch/findSettleBatchByRel.do",
+		"dataType" : "json"
+	},
+	"settleBatch/confirmSettleBatch.do" : {
+		"type" : "post",
+		"url" : "settleBatch/confirmSettleBatch.do",
+		"dataType" : "json"
+	},
+	
+	"finAdjustByBatchNo" : {
+		"type" : "post",
+		"url" : "adjustAmount/finAdjustByBatchNo.do",
+		"dataType" : "json"
+	},
+	"reconBatch/findByBatchNo" : {
+		"type" : "post",
+		"url" : "reconBatch/findByBatchNo.do",
+		"dataType" : "json"
+	},
+	"settleBatch/computeSettleBatch.do" : {
+		"type" : "post",
+		"url" : "settleBatch/computeSettleBatch.do",
+		"dataType" : "json"
+	},
+	"settleBatch/statisticsSettleBatch.do" : {
+		"type" : "post",
+		"url" : "settleBatch/statisticsSettleBatch.do",
+		"dataType" : "json"
+	},
+	"settleBatch/findById.do" : {
+		"type" : "post",
+		"url" : "settleBatch/findById.do",
+		"dataType" : "json"
+	},
+	"settleBatch/findByReconBatchCount.do" : {
+		"type" : "post",
+		"url" : "settleBatch/findByReconBatchCount.do",
+		"dataType" : "json"
+	},
+	"settleBatch/findReconBatchCountByConfig.do" : {
+		"type" : "post",
+		"url" : "settleBatch/findReconBatchCountByConfig.do",
+		"dataType" : "json"
+	},
+	
+	"reconBatch/confirmReconciliationFlat.do" : {
+		"type" : "post",
+		"url" : "reconBatch/confirmReconciliationFlat.do",
+		"dataType" : "json"
+	},
+	"reconBatch/cancelReconciliationFlat.do" : {
+		"type" : "post",
+		"url" : "reconBatch/cancelReconciliationFlat.do",
+		"dataType" : "json"
+	},
+	"reconBatch/pretreatmentReconciliationFlat.do" : {
+		"type" : "post",
+		"url" : "reconBatch/pretreatmentReconciliationFlat.do",
+		"dataType" : "json"
+	},
+	"reconBatch/businessReconResult.do" : {
+		"type" : "post",
+		"url" : "reconBatch/businessReconResult.do",
+		"dataType" : "json"
+	},
+	"reconBatch/confirmReconciliationAutomaticFlat.do" : {
+		"type" : "post",
+		"url" : "reconBatch/confirmReconciliationAutomaticFlat.do",
+		"dataType" : "json"
+	},
+	"reconBatch/cancelReconciliationAutomaticFlat.do" : {
+		"type" : "post",
+		"url" : "reconBatch/cancelReconciliationAutomaticFlat.do",
+		"dataType" : "json"
+	},
+	
+	"settleBatchItem/findBySettleBatchId.do" : {
+		"type" : "post",
+		"url" : "settleBatchItem/findBySettleBatchId.do",
+		"dataType" : "json"
+	},
+	"settleBatchItem/findSheetBatchItemRelBySheetId.do" : {
+		"type" : "post",
+		"url" : "settleBatchItem/findSheetBatchItemRelBySheetId.do",
+		"dataType" : "json"
+	},
+	"settleBatchItem/findSheetBatchItemRelDetailBySheetId.do" : {
+		"type" : "post",
+		"url" : "settleBatchItem/findSheetBatchItemRelDetailBySheetId.do",
+		"dataType" : "json"
+	},
+	
+	"sheetBatchRel/findSheetBatchRel.do" : {
+		"type" : "post",
+		"url" : "sheetBatchRel/findSheetBatchRel.do",
+		"dataType" : "json"
+	},
+	"sheetBatchRel/deleteByRelId.do" : {
+		"type" : "post",
+		"url" : "sheetBatchRel/deleteByRelId.do",
+		"dataType" : "json"
+	},
+	"sheetBatchRel/findSettleSheetByBatchId.do" : {
+		"type" : "post",
+		"url" : "sheetBatchRel/findSettleSheetByBatchId.do",
+		"dataType" : "json"
+	},
+	"settleItem/findBySettleBatch.do" : {
+		"type" : "post",
+		"url" : "settleItem/findBySettleBatch.do",
+		"dataType" : "json"
+	},
+	"settleItem/findById.do" : {
+		"type" : "post",
+		"url" : "settleItem/findById.do",
+		"dataType" : "json"
+	},
+	"settleItem/findExtendedAttriByYj.do" : {
+		"type" : "post",
+		"url" : "settleItem/findExtendedAttriByYj.do",
+		"dataType" : "json"
+	},
+	
+	"settleSheet/findById.do" : {
+		"type" : "post",
+		"url" : "settleSheet/findById.do",
+		"dataType" : "json"
+	},
+	"settleSheet/selectCashModeBySheetId.do" : {
+		"type" : "post",
+		"url" : "settleSheet/selectCashModeBySheetId.do",
+		"dataType" : "json"
+	},
+	"settleSheet/existDifferentHandle.do" : {
+		"type" : "post",
+		"url" : "settleSheet/existDifferentHandle.do",
+		"dataType" : "json"
+	},
+	"settleSheet/submitApprove.do" : {
+		"type" : "post",
+		"url" : "settleSheet/submitApprove.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"settleSheet/checkReconBatchAmountChange.do" : {
+		"type" : "post",
+		"url" : "settleSheet/checkReconBatchAmountChange.do",
+		"dataType" : "json"
+	},
+	"settleSheet/validateSettleSheet.do" : {
+		"type" : "post",
+		"url" : "settleSheet/validateSettleSheet.do",
+		"dataType" : "json"
+	},
+	"settleBatchItem/editSettleBatchItem.do" : {
+		"type" : "post",
+		"url" : "settleBatchItem/editSettleBatchItem.do",
+		"dataType" : "json"
+	},
+	"settleBatchItem/editSettleBatchItemFinalMoney.do" : {
+		"type" : "post",
+		"url" : "settleBatchItem/editSettleBatchItemFinalMoney.do",
+		"dataType" : "json"
+	},
+	"settleItemGroup/getDicItem.do" : {
+		"type" : "post",
+		"url" : "settleItemGroup/getDicItem.do",
+		"dataType" : "json"
+	},
+	"createAdjustId" : {
+		"type" : "post",
+		"url" : "adjustAmount/createAdjustId.do",
+		"dataType" : "json"
+	},
+	"partner/removePartnerAccount.do" : {
+		"type" : "post",
+		"url" : "partner/removePartnerAccount.do",
+		"dataType" : "json"
+	},
+	"keepLive" : {
+		"type" : "get",
+		"url" : "keepLive.do",
+		"dataType" : "json"
+	},
+	"partnerLoginAccount/list.do" : {
+		"type" : "post",
+		"url" : "partnerLoginAccount/list.do",
+		"dataType" : "json"
+	},
+	"partnerLoginAccount/save.do" : {
+		"type" : "post",
+		"url" : "partnerLoginAccount/save.do",
+		"dataType" : "json"
+	},
+	"partnerLoginAccount/saveData.do" : {
+		"type" : "POST",
+		"url" : "partnerLoginAccount/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"partnerLoginAccount/findById.do" : {
+		"type" : "post",
+		"url" : "partnerLoginAccount/findById.do",
+		"dataType" : "json"
+	},
+		"adjustAmount/cancelAdjust.do" : {
+		"type" : "post",
+		"url" : "adjustAmount/cancelAdjust.do",
+		"dataType" : "json"
+	},
+	"adjustAmount/effectAdjust.do" : {
+		"type" : "post",
+		"url" : "adjustAmount/effectAdjust.do",
+		"dataType" : "json"
+	},
+	"preReimbursement/list.do" : {
+		"type" : "post",
+		"url" : "preReimbursement/list.do",
+		"dataType" : "json"
+	},
+	"preReimbursement/synchronousStatus.do" : {
+		"type" : "post",
+		"url" : "preReimbursement/synchronousStatus.do",
+		"dataType" : "json"
+	},
+	"partnerLoginAccount/deleteById.do" : {
+		"type" : "post",
+		"url" : "partnerLoginAccount/deleteById.do",
+		"dataType" : "json"
+	},
+	"differentRecord/download.do" : {
+		"type" : "post",
+		"url" : "differentRecord/download.do",
+		"dataType" : "json"
+	},
+	
+	"handleHistory/list.do" : {
+		"type" : "post",
+		"url" : "handleHistory/list.do",
+		"dataType" : "json"
+	},
+	"settleSheet/settleSheetCancel.do" : {
+		"type" : "post",
+		"url" : "settleSheet/settleSheetCancel.do",
+		"dataType" : "json"
+	},
+	"merchantReconBatchStati/findByBatchNo.do" : {
+		"type" : "post",
+		"url" : "merchantReconBatchStati/findByBatchNo.do",
+		"dataType" : "json"
+	},
+	"merchantReconBatchResult/findByBatchNo.do" : {
+		"type" : "post",
+		"url" : "merchantReconBatchResult/findByBatchNo.do",
+		"dataType" : "json"
+	},
+	"b2cReconBatchStatisticsDetail/findByBatchNo.do" : {
+		"type" : "post",
+		"url" : "b2cReconBatchStatisticsDetail/findByBatchNo.do",
+		"dataType" : "json"
+	},
+	"downloadTemplate" : {
+		"type" : "post",
+		"url" : "reconBatch/downloadTemplate.do",
+		"dataType" : "json"
+	},
+	"b2cReconResultDetail/findByBatchNo.do" : {
+		"type" : "post",
+		"url" : "b2cReconResultDetail/findByBatchNo.do",
+		"dataType" : "json"
+	},
+	"settleSheetProcessInvoiceSubmit" : {
+		"type" : "POST",
+		"url" : "settleSheet/completeTask.do",
+		"dataType" : "json"
+	},
+	"template/queryTemplateByCategoryId.do" : {
+		"type" : "post",
+		"url" : "template/queryTemplateByCategoryId.do",
+		"dataType" : "json"
+	},
+	"template/saveTemplate.do" : {
+		"type" : "post",
+		"url" : "template/saveTemplate.do",
+		"dataType" : "json"
+	},
+	"templateCategoryRel/deleteById.do" : {
+		"type" : "post",
+		"url" : "templateCategoryRel/deleteById.do",
+		"dataType" : "json"
+	},
+	"stmtCrawlKeyWords/findByCategoryId.do" : {
+		"type" : "post",
+		"url" : "stmtCrawlKeyWords/findByCategoryId.do",
+		"dataType" : "json"
+	},
+	"template/list.do" : {
+		"type" : "post",
+		"url" : "template/list.do",
+		"dataType" : "json"
+	},
+	"templateCategoryRel/save.do" : {
+		"type" : "post",
+		"url" : "templateCategoryRel/save.do",
+		"dataType" : "json"
+	},
+	"stmtMap/imporMap.do" : {
+		"type" : "post",
+		"url" : "stmtMap/imporMap.do",
+		"dataType" : "json"
+	}
+	
+}

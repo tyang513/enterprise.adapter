@@ -1,0 +1,24 @@
+<div class="dialog">
+	<form data-attach-point="editForm" class="ui-form" method="post">  
+		<input type="hidden" name="id">
+		<input type="hidden" name="parentId" data-attach-point="parentId">
+		<div class="ui-edit">
+			<div class="fitem" data-attach-point="parent">
+				<label>省份：</label>
+				<input name="parentName" type="text" maxlength="64" class="easyui-combobox" size="44" data-attach-point="parentName"  data-options="required:true,editable:false" missingMessage="请选择省份">
+				<span class="required">*</span>			</div>
+			<div class="fitem">
+				<label>市：</label>
+				<input name="name" type="text" maxlength="64" class="easyui-combobox" size="44" data-attach-point="nameCombobox" data-options="required:true" missingMessage="请选择城市">
+				<span class="required">*</span>			</div>
+			<div class="fitem">
+				<label>类型：</label>
+				<input name="type" type="text" data-attach-point="typeCombobox" maxlength="" size="44" class="easyui-combobox" data-options="editable:false" missingMessage="请选择类型">
+							</div>
+			<div class="fitem">
+				<label>状态：</label>
+				<input name="status" type="text" data-attach-point="statusCombobox" maxlength=""  size="44" class="easyui-combobox" data-options="editable:false" missingMessage="请选择状态">
+							</div>
+		</div>
+	</form>
+</div>

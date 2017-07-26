@@ -1,0 +1,37 @@
+<!-- 已完成任务  当前流程处理人 -->
+<table id="${uuid}_doneTaskGrid" class="doneTaskGrid"  data-attach-point="doneTaskGrid" data-options='singleSelect:true,fit:true,fitColumns:true,pagination:true,loadMsg : "数据加载中请稍后……",toolbar:"#${uuid}_doneTaskSearchBar"'>
+	<thead>
+		<tr>
+			<th data-options="field:'fk',checkbox:true">#</th>
+			<th data-options="field:'id',width:50,align:'center'">任务ID</th>
+			<th data-options="field:'processname',width:150,align:'center'">流程名称</th>
+			<th data-options="field:'taskname',width:230, align:'center'">任务名称</th>
+			<th data-options="field:'assigneeName',width:120, align:'center'">当前流程处理人</th>
+			<th data-options="field:'currenttaskname',width:300, align:'center'">当前任务名称</th>
+			<th data-options="field:'pis',width:100, align:'center',formatter:function(value,row,index){
+				if(value==1){
+                    	return '运行中';
+                    }else if (value==2){
+                    	return '已结束';
+                    }else if (value==3){
+                    	return '被管理员结束';
+                    }else if (value==4){
+                    	return '被系统结束';
+                    }
+			}">流程状态</th>
+			<th data-options="field:'starterName',width:80, align:'center'">发起人</th>
+			<th data-options="field:'sheetId',hidden:true"></th>
+			<th data-options="field:'sheetType',hidden:true"></th>
+			<th data-options="field:'processcode',hidden:true"></th>
+			<th data-options="field:'status',hidden:true"></th>
+			<th data-options="field:'type',hidden:true"></th>
+			<th data-options="field:'operate',hidden:true"></th>
+			<th data-options="field:'taskCode',hidden:true"></th>
+			<th data-options="field:'processInstanceId',hidden:true"></th>
+			<th data-options="field:'processRemark',hidden:true"></th>
+		</tr>
+	</thead>
+</table>
+
+<div id="${uuid}_doneTaskSearchBar" data-attach-point="doneTaskSearchBar" class="app-doneTaskSearchBar" 
+	data-options="grid:'#${uuid}_doneTaskGrid'" data-attach-event="donetasksearchbaraction:_doAction"></div>

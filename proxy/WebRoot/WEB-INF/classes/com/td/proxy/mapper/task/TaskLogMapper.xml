@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.td.proxy.dao.task.TaskLogDao" > 
+  <!-- Result Map-->
+  <resultMap id="BaseResultMap" type="com.td.proxy.entity.task.TaskLog" >
+	<result column="id" property="id"/>
+	<result column="task_code" property="taskCode"/>
+	<result column="task_job_input_name" property="taskJobInputName"/>
+	<result column="task_job_input_id" property="taskJobInputId"/>
+	<result column="description" property="description"/>
+	<result column="type" property="type"/>
+	<result column="error_info" property="errorInfo"/>
+	<result column="start_time" property="startTime"/>
+	<result column="finish_time" property="finishTime"/>
+	<result column="c_time" property="cTime"/>
+	<result column="m_time" property="mTime"/>
+  </resultMap>
+       
+  <!-- TDP_TASK_LOG table all fields -->
+  <sql id="Base_Column_List" >
+	 id,task_code,task_job_input_name,task_job_input_id,description,type,error_info,start_time,finish_time,c_time,m_time
+  </sql>
+   
+  <!-- 查询条件 -->
+  <sql id="Base_Where_Clause">
+    where 1=1
+    <trim suffixOverrides="," >
+	      <if test="id != null and id != ''" >
+        and id =  #{id}
+	  </if>
+	      <if test="taskCode != null and taskCode != ''" >
+        and task_code =  #{taskCode}
+	  </if>
+	      <if test="taskJobInputName != null and taskJobInputName != ''" >
+        and task_job_input_name =  #{taskJobInputName}
+	  </if>
+	      <if test="taskJobInputId != null and taskJobInputId != ''" >
+        and task_job_input_id =  #{taskJobInputId}
+	  </if>
+	      <if test="description != null and description != ''" >
+        and description =  #{description}
+	  </if>
+	      <if test="type != null and type != ''" >
+        and type =  #{type}
+	  </if>
+	      <if test="errorInfo != null and errorInfo != ''" >
+        and error_info =  #{errorInfo}
+	  </if>
+	      <if test="startTime != null and startTime != ''" >
+        and start_time =  #{startTime}
+	  </if>
+	      <if test="finishTime != null and finishTime != ''" >
+        and finish_time =  #{finishTime}
+	  </if>
+	      <if test="cTime != null and cTime != ''" >
+        and c_time =  #{cTime}
+	  </if>
+	      <if test="mTime != null and mTime != ''" >
+        and m_time =  #{mTime}
+	  </if>
+    </trim>
+  </sql>
+   
+  <!-- 插入记录 -->
+  <insert id="insert" parameterType="Object" >
+    <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+	  SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into TDP_TASK_LOG(id,task_code,task_job_input_name,task_job_input_id,description,type,error_info,start_time,finish_time,c_time,m_time)
+ values(#{id},#{taskCode},#{taskJobInputName},#{taskJobInputId},#{description},#{type},#{errorInfo},#{startTime},#{finishTime},#{cTime},#{mTime})
+  </insert>
+
+  <!-- 根据id，修改记录-->  
+  <update id="updateByPrimaryKey" parameterType="Object" >
+    update TDP_TASK_LOG set task_code=#{taskCode},task_job_input_name=#{taskJobInputName},task_job_input_id=#{taskJobInputId},description=#{description},type=#{type},error_info=#{errorInfo},start_time=#{startTime},finish_time=#{finishTime},c_time=#{cTime},m_time=#{mTime} where id=#{id}
+  </update>
+ 
+  <!-- 修改记录，只修改只不为空的字段 -->
+  <update id="updateByPrimaryKeySelective" parameterType="Object" >
+    update TDP_TASK_LOG set 
+	<trim  suffixOverrides="," >
+	<if test="taskCode != null  ">
+		task_code=#{taskCode},
+	</if>
+	<if test="taskJobInputName != null  ">
+		task_job_input_name=#{taskJobInputName},
+	</if>
+	<if test="taskJobInputId != null  ">
+		task_job_input_id=#{taskJobInputId},
+	</if>
+	<if test="description != null  ">
+		description=#{description},
+	</if>
+	<if test="type != null  ">
+		type=#{type},
+	</if>
+	<if test="errorInfo != null  ">
+		error_info=#{errorInfo},
+	</if>
+	<if test="startTime != null  ">
+		start_time=#{startTime},
+	</if>
+	<if test="finishTime != null  ">
+		finish_time=#{finishTime},
+	</if>
+	<if test="cTime != null  ">
+		c_time=#{cTime},
+	</if>
+	<if test="mTime != null  ">
+		m_time=#{mTime},
+	</if>
+	</trim> where id=#{id}
+  </update>
+ 
+  <!-- 根据id查询 任务日志 -->
+  <select id="selectByPrimaryKey"  resultMap="BaseResultMap" parameterType="Object">
+    select <include refid="Base_Column_List" /> 
+	 from TDP_TASK_LOG where id = #{id}
+  </select>
+  
+  <!-- 删除记录 -->
+  <delete id="deleteByPrimaryKey" parameterType="Object">
+    delete 	 from TDP_TASK_LOG where id = #{id}
+  </delete>
+
+  <!-- 任务日志 列表总数-->
+  <select id="queryByCount" resultType="java.lang.Integer"  parameterType="Object">
+	select count(1) from TDP_TASK_LOG 
+	<include refid="Base_Where_Clause"/>
+  </select>
+  	
+  <!-- 查询任务日志列表 -->
+  <select id="queryByList" resultMap="BaseResultMap"  parameterType="Object">
+	select 
+	<include refid="Base_Column_List"/>
+	from TDP_TASK_LOG 
+	<include refid="Base_Where_Clause"/>
+	order by start_time desc, id desc
+	<if test="pager.orderCondition != null and pager.orderCondition != ''" >
+       ${pager.orderCondition}
+    </if>
+    <if test="pager.mysqlQueryCondition != null and pager.mysqlQueryCondition != ''" >
+       ${pager.mysqlQueryCondition}
+    </if>
+  </select>
+</mapper>   

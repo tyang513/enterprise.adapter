@@ -1,0 +1,29 @@
+{
+	"sysErrorRecordDetail/list.do" : {
+		"type" : "post",
+		"url" : "sysErrorRecordDetail/list.do",
+		"dataType" : "json"
+	},
+	"sysErrorRecordDetail/save.do" : {
+		"type" : "post",
+		"url" : "sysErrorRecordDetail/save.do",
+		"dataType" : "json"
+	},
+	"sysErrorRecordDetail/saveData.do" : {
+		"type" : "POST",
+		"url" : "sysErrorRecordDetail/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"sysErrorRecordDetail/findById.do" : {
+		"type" : "post",
+		"url" : "sysErrorRecordDetail/findById.do",
+		"dataType" : "json"
+	},
+	"sysErrorRecordDetail/deleteById.do" : {
+		"type" : "post",
+		"url" : "sysErrorRecordDetail/deleteById.do",
+		"dataType" : "json"
+	}
+}

@@ -1,0 +1,32 @@
+<div class="dialog">
+	<form data-attach-point="editForm" class="ui-form" method="post">
+		<input type="hidden" name="id">
+		<div class="ui-edit">
+			<div class="fitem">
+				<label>服务器名称：</label>
+				<input name="name" type="text" maxlength="40" class="easyui-validatebox" data-options="required:true" missingMessage="请填写服务器名称">
+				<span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label>服务器代码：</label>
+				<input name="code" type="text" maxlength="10" class="easyui-validatebox" data-options="required:true" missingMessage="请填写登录ssh的用户名">
+				<span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label>IP：</label>
+				<input name="serverIp" type="text" maxlength="40" class="easyui-validatebox" data-options="required:true" missingMessage="请填写服务器ip">
+				<span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label>端口号：</label>
+				<input name="serverPort" type="text" maxlength="" class="easyui-validatebox" data-options="required:true" missingMessage="请填写服务器端口">
+				<span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label>登录SSH用户名：</label>
+				<input name="userName" type="text" maxlength="10" class="easyui-validatebox" data-options="required:true" missingMessage="请填写登录ssh的用户名">
+				<span class="required">*</span>
+			</div>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project name="sentiment" default="war" basedir=".">
+	<!--主要的系统环境属性-->
+	<property environment="env" />
+	<!--取window,unix...的环境变量-->
+	<property name="java.home" value="${env.JAVA_HOME}" />
+	<property name="jre.home" value="/opt/jdk1.7.0_55" />
+	<!--主要的app环境属性-->
+	<property name="app.name" value="sentiment" />
+	<property name="app.jar" value="${app.name}.jar" />
+	<property name="app.war" value="${app.name}.war" />
+	<property name="app.copyright" value=" Copyright (c) 2010 GLOBAL-SAFETY Software Foundation.  All rights reserved." />
+	<!--app中src的属性-->
+	<property name="src.dir" value="src" />
+	<property name="classSavePath" value="WebRoot/WEB-INF/classes" />
+	<!--app用到的lib-->
+	<property name="extlib.dir" value="extlib" />
+	<property name="lib.dir" value="WebRoot/WEB-INF/lib" />
+	<!--app的build目录中-->
+	<property name="compressing.dir" value="./compressing" />
+	<property name="compressed.dir" value="./compressed" />
+	<property name="build.dir" value="./output" />
+	<property name="build.classes" value="${build.dir}/classes" />
+	<property name="build.lib" value="WebRoot/WEB-INF/lib" />
+	<property name="war.dir" value="${build.dir}/war" />
+	<property name="warsource.dir" value="WebRoot" />
+	<property name="buildscript.dir" value="WebRoot/buildscript" />
+
+	<tstamp>
+		<format property="DSTAMP" pattern="yyyyMMddHHmmss" />
+	</tstamp>
+	<property name="build.version" value="${DSTAMP}" />
+	<path id="classpath">
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar" />
+			<include name="*.zip" />
+		</fileset>
+		<fileset dir="${extlib.dir}">
+			<include name="**/*.jar" />
+			<include name="*.zip" />
+		</fileset>
+		<fileset dir="${java.home}/lib">
+			<include name="**/*.jar" />
+			<include name="*.zip" />
+		</fileset>
+	</path>
+
+	<!--
+	  ===================================================================
+	  init 准备目录(File Tasks)
+	  主要的目录结构通常是不会变的，一起生成他们
+	  ===================================================================
+	-->
+	<target name="init" depends="clean">
+		<echo message="环境信息:" />
+		<echo message="JAVA_HOME:${jre.home}" />
+		<echo message="version:${build.version}" />
+		<!--准备目录-->
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${compressing.dir}" />
+		<mkdir dir="${compressed.dir}" />
+
+	</target>
+	<!--
+	  ===================================================================
+	   clean 准备目录(File Tasks)
+	  主要的目录结构通常是不会变的，一起生成他们
+	  ===================================================================
+	-->
+	<target name="clean">
+		<!--清除以前目录-->
+		<delete dir="${build.dir}" failonerror="false" />
+		<delete dir="${compressing.dir}" failonerror="false" />
+		<delete dir="${compressed.dir}" failonerror="false" />
+	</target>
+
+	<!--
+	  ===================================================================
+	   precompress copy文件
+	  ===================================================================
+	-->
+	<target name="pre-compress" depends="init">
+		<echo message="复制${warsource.dir}下的所有文件和文件夹" />
+		<copy todir="${compressing.dir}">
+			<fileset dir="${warsource.dir}">
+				<exclude name="**/.svn/**" />
+			</fileset>
+		</copy>
+	</target>
+	<!--
+	  ===================================================================
+	  Build the javascript code (Compile Tasks,File Tasks)
+	  ===================================================================
+	-->
+	<target name="compress-js" depends="pre-compress">
+		<echo message="正在压缩前端代码，请稍候..." />
+		<copy tofile="${compressing.dir}/buildscript/build.sh" file="${compressing.dir}/buildscript/build.sh.tmp" />
+		<replace file="${compressing.dir}/buildscript/build.sh" token="@buildscript.dir@" value="${compressing.dir}/buildscript">
+		</replace>
+		<echo message="${compressing.dir}" />
+		<exec executable="sh">
+			<arg value="${compressing.dir}/buildscript/build.sh" />
+		</exec>
+		<echo message="压缩前端代码结束" />
+	</target>
+
+	<!--
+	  ===================================================================
+	  Build the code (Compile Tasks,File Tasks)
+	  ===================================================================
+	-->
+	<target name="build" depends="compress-js">
+		<echo message="正在编译java文件..." />
+		<mkdir dir="${compressed.dir}/WEB-INF/classes" />
+		<copy todir="${compressed.dir}/WEB-INF/classes">
+			<fileset dir="${src.dir}/main/resources" excludes="*.xml" />
+			<fileset dir="${src.dir}/main/resources" excludes="*.properties" />
+			<fileset dir="${src.dir}/main/java" excludes="*.xml" />
+		</copy>
+		<javac srcdir="${src.dir}" destdir="${compressed.dir}/WEB-INF/classes" source="1.7" target="1.7" includeantruntime="on" encoding="UTF-8" debug="true" deprecation="false" optimize="false" failonerror="true">
+			<compilerarg value="-Xlint:unchecked" />
+			<compilerarg value="-Xlint:deprecation" />
+			<classpath refid="classpath" />
+		</javac>
+	</target>
+
+	<!--
+	  ===================================================================
+	  打war包
+	  ===================================================================
+	-->
+	<target name="war" depends="build" description="生成war包">
+		<echo message="正在生成版本信息..." />
+		<copydir dest="${compressed.dir}/META-INF" src="${compressing.dir}/META-INF" />
+		<replace file="${compressed.dir}/META-INF/version.txt" token="@build.version@" value="${build.version}" encoding="UTF-8">
+		</replace>
+
+		<copy tofile="${compressed.dir}/js/zf/bootloader.min.js" file="${compressing.dir}/js/zf/bootloader.min.js" />
+		<copy tofile="${compressed.dir}/js/zf/apploader.min.js" file="${compressing.dir}/js/zf/apploader.min.js" />
+
+		<echo message="正在修改web.xml配置信息..." />
+		<copy file="${compressing.dir}/WEB-INF/web.xml" tofile="${compressed.dir}/WEB-INF/web.xml" />
+		<replace file="${compressed.dir}/WEB-INF/web.xml" token="&lt;!--//" value="" encoding="UTF-8" />
+		<replace file="${compressed.dir}/WEB-INF/web.xml" token="//--&gt;" value="" encoding="UTF-8" />
+
+		<war destfile="${build.dir}/${app.war}" encoding="UTF-8" webxml="${warsource.dir}/WEB-INF/web.xml">
+			<fileset dir="${compressed.dir}">
+				<exclude name="build.txt" />
+				<exclude name="**/web.xml" />
+				<exclude name="**/buildscript/**" />
+			</fileset>
+			<fileset dir="${src.dir}/main/resources">
+				<exclude name="*.xml" />
+				<exclude name="*.properties" />
+			</fileset>
+		</war>
+		<echo message="打war包结束" />
+		<echo message="build args is ${RuntimeEnvironment}" />
+		<condition property="isDev">
+			<equals arg1="${RuntimeEnvironment}" arg2="DEV" />
+		</condition>
+		<condition property="isTest">
+			<equals arg1="${RuntimeEnvironment}" arg2="TEST" />
+		</condition>
+		<antcall target="DEV" />
+		<antcall target="TEST" />
+	</target>
+	<target name="DEV" if="isDev">
+		<echo message="开发环境打包,自动部署." />
+		<echo message="自动部署始..........." />
+		<exec executable="sh" dir="/nfs/script">
+			<arg value="remoteDeploySentiment.sh" />
+		</exec>
+		<echo message="tomcat 启动完成......" />
+	</target>
+	<target name="TEST" if="isTest">
+		<echo message="测试环境打包,自动部署." />
+		<echo message="自动部署始..........." />
+		<!-- 
+			<exec executable="sh" dir="/home/dev/apache-tomcat-7.0.52-8780-settle-process/">
+				<arg value="deploySettleBase.sh" />
+			</exec>
+		-->
+		<echo message="tomcat 启动完成......" />
+	</target>
+</project>

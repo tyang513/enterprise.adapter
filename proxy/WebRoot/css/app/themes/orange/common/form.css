@@ -1,0 +1,323 @@
+.app-sysParamSearchBar .fitem label {
+	width: 80px;
+}
+
+.app-mailTemplateManageSearchBar .fitem label {
+	width: 80px;
+}
+
+.app-processInstanceManageSearchBar .fitem label {
+	width: 80px;
+}
+
+.app-processConfigInfoSearchBar .fitem label {
+	width: 90px;
+}
+
+.app-taskConfigSearchBar .fitem label {
+	width: 90px;
+}
+
+.app-jobConfigInfoSearchBar .fitem label {
+	width: 90px;
+}
+
+.app-jobConfigErrorInfoSearchBar .fitem label {
+	width: 90px;
+}
+
+.app-tempJobInputSearchBar .fitem label {
+	width: 90px;
+}
+
+.app-reconBatchInfo .fitem label {
+	width: 80px;
+}
+
+.app-reconBatchSummary .sheetInfo div{
+	width: 25%;
+	display: block;
+	float: left;
+}
+.app-settleBatchSummary .sheetInfo div{
+	width: 25%;
+	display: block;
+	float: left;
+}
+.app-pointReconBatchStati .fitem label {
+	width: 120px;
+}
+
+.app-pointReconResult .fitem label {
+	width: 120px;
+
+}
+.app-settleBatchInfo .fitem label {
+	width: 90px;
+}
+.app-settleBatchItem .fitem label {
+	width: 100px;
+}
+.app-settleSheetBatchItem .fitem label {
+	width: 100px;
+}
+
+.app-tempJobInputDialog .fitem label {
+    width: 90px;
+}
+
+.app-settleBatchDialog .fitem label {
+	width: 130px;
+}
+.app-categoryHierarchy .fitem label {
+	width: 40px;
+}
+.app-categoryHierarchy .categoryInfo{
+	padding : 10px;
+}
+.app-subjectumDefaultInfo .fitem label {
+	width: 120px;
+}
+.app-subjectumDialog .fitem label {
+	width: 100px;
+}
+.app-subjectumInfo .fitem label {
+	width: 90px;
+}
+.app-settleTemplateInfo .fitem label {
+	width: 90px;
+}
+.app-settlePrincipleDialog .fitem label {
+	width: 100px;
+}
+.app-subjectumInvoiceDialog .fitem label {
+	width: 70px;
+}
+ .app-settleSheetInfo .fitem label {
+	width: 90px;
+} 
+.app-settleTemplateDialog .fitem label {
+	width: 90px;
+}
+.app-reconConfig .fitem label {
+	width: 110px;
+}
+
+.app-viewContractDialog .fitem label {
+	width: 110px;
+}
+.app-openContractDialog .fitem label {
+	width: 110px;
+}
+.app-openContactDialog .fitem label {
+	width: 90px;
+}
+.app-openAccountDialog .fitem label {
+	width: 120px;
+}
+.app-settlePrincipleDialog .fitem label {
+	width: 110px;
+}
+.app-reconConfigDialog .fitem label {
+	width: 120px;
+}
+.app-settleItemDialog .fitem label {
+	width: 120px;
+}
+.app-subjectumVirDialog .fitem label {
+	width: 90px;
+}
+.app-addPartnerDialog .fitem label {
+	width: 40px;
+}
+.app-merchantReconFileConfiDialog .fitem label {
+	width: 100px;
+}
+.app-templateRuleDialog .fitem label {
+	width: 90px;
+}
+.app-subjectumDefaultDialog .fitem label {
+	width: 110px;
+}
+.app-ruleDefinitionDialog .fitem label {
+	width: 110px;
+}
+.app-extendedAttriDefinitionDialog .fitem label {
+	width: 80px;
+}
+.app-settleBatchItemDialog .fitem label {
+	width: 90px;
+}
+.app-subjectumSearchBar .fitem label {
+	width: 80px;
+}
+.app-subjectumSearchBar .fitem {
+	width: 265px;
+}
+.app-editSettleBatchFinalMoney .fitem label {
+	width: 90px;
+}
+.app-settleBatchItemAdjustLogDialog .fitem label {
+	width: 90px;
+}
+.app-invoiceInfo .fitem label {
+	width: 90px;
+}
+.app-ruleDefinitionSearchBar .fitem label {
+	width: 95px;
+}
+.app-contractListSearchBar .fitem label {
+	width: 100px;
+}
+.app-reconBatchSearchBar .fitem label {
+	width: 80px;
+}
+.app-settleBatchSearchBar .fitem label {
+	width: 80px;
+}
+.app-b2cReconResult .fitem label {
+	width: 160px;
+}
+.app-b2cReconBatchStati .fitem label {
+	width: 210px;
+}
+.app-transactionRecordDialog .fitem label {
+	width: 110px;
+}
+.app-adjustComissionDialog .fitem label {
+	width: 90px;
+}
+.app-merchantReconBatchStati .line {
+	height: 3px;
+	width: inherit;
+	padding-top: 20px;
+	clear: both;
+}
+.app-merchantReconResult .line {
+	height: 3px;
+	width: inherit;
+	padding-top: 20px;
+	clear: both;
+}
+.app-claimDetail .line {
+	height: 3px;
+	width: inherit;
+	padding-top: 20px;
+	clear: both;
+}
+.app-merchantReconBatchStati .fitem label {
+	width: 145px;
+}
+
+.app-merchantReconResult .fitem label {
+	width: 145px;
+
+}
+.app-b2cReconBatchStatistics .fitem label {
+	width: 220px;
+
+}
+.app-scriptCallJobInputDialog .fitem label {
+	width: 120px;
+
+}
+.app-scriptStepRecordSearchBar .fitem label {
+	width: 80px;
+}
+.app-statisticsDialog .fitem label {
+		width: 80px;
+}
+.app-b2cTransactionRecordSearchBar .fitem label {
+		width: 80px;
+}
+.app-reconciliationFlatDialog .fitem label {
+		width: 120px;
+}
+.app-transferRecordSearchBar .fitem label {
+		width: 85px;
+}
+
+.app-reconciliationInitiatedDialog .fitem label {
+		width: 120px;
+}
+.app-reportLossDialog .fitem label {
+		width: 90px;
+}
+.app-adjustAmountViewDialog .fitem label {
+		width: 90px;
+}
+.app-leadInDataDialog .fitem label {
+		width: 90px;
+}
+.app-fillDataDialog .fitem label {
+		width: 90px;
+}
+.app-taskApprovedDialog .fitem label {
+		width: 70px;
+}
+
+.app-userHandbookDownload .txtTitle label {
+	font-size: 20px;
+	margin-left: 50%;
+}
+
+.app-userHandbookDownload  .txtTitle  a {
+	color: #444444;
+	margin-left:6px;
+	text-decoration:underline;
+}
+.app-scriptInfoDialog .fitem label{
+	width:80px;
+}
+
+.app-scriptStepRecordDialog .fitem label{
+	width:86px;
+}
+
+.app-serverInfoSearchBar .fitem label{
+	width:86px;
+}
+.app-scriptInfoSearchBar .fitem label{
+	width:86px;
+}
+.app-scriptCallJobInputSearchBar .fitem label{
+	width:90px;
+}
+.app-sysFtpClientConfigDialog .fitem label{
+	width:95px;
+}
+.app-sysFtpServerConfigDialog .fitem label{
+	width:102px;
+}
+.app-secondaryIndexErrorRecordDialog .fitem label{
+	width:88px;
+}
+.app-secondaryIndexErrorRecordDetailDialog .fitem label{
+	width:88px;
+}
+.app-reconClaimInfoDialog .line {
+	height: 3px;
+	width: inherit;
+	padding-top: 20px;
+	clear: both;
+}
+
+.app-dataTemplateList .txtTitle label {
+	font-size: 20px;
+	margin-left: 50%;
+}
+
+.app-dataTemplateList  .txtTitle  a {
+	color: #444444;
+	margin-left:6px;
+	text-decoration:underline;
+}
+
+.app-czscDetailDialog .fitem label{
+	width:80px;
+}
+
+.app-czscReportDialog .fitem label{
+	width:88px;
+}
+

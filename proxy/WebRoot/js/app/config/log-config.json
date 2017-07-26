@@ -1,0 +1,8 @@
+{
+	"traceable": false,
+	"defaultWriter": "ConsoleLogWriter",
+	"defaultLevel": "finer",
+	"logLevel": {
+		"app.header": "debug"
+	}
+}

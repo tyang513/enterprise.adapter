@@ -1,0 +1,29 @@
+{
+	"taskLog/list.do" : {
+		"type" : "post",
+		"url" : "taskLog/list.do",
+		"dataType" : "json"
+	},
+	"taskLog/save.do" : {
+		"type" : "post",
+		"url" : "taskLog/save.do",
+		"dataType" : "json"
+	},
+	"taskLog/saveData.do" : {
+		"type" : "POST",
+		"url" : "taskLog/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"taskLog/findById.do" : {
+		"type" : "post",
+		"url" : "taskLog/findById.do",
+		"dataType" : "json"
+	},
+	"taskLog/deleteById.do" : {
+		"type" : "post",
+		"url" : "taskLog/deleteById.do",
+		"dataType" : "json"
+	}
+}

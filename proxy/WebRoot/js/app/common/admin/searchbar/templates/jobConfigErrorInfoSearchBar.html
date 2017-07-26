@@ -1,0 +1,23 @@
+<div class="datagrid-toolbar-tool"></div>
+
+<div class="datagrid-toolbar-filter" style="display: none; height:45px;">
+	<div class="criteria-panel" >
+		<form data-attach-point="searchForm">
+			<div class="fitem">
+				<label>任务中文名称：</label> <input class="easyui-validatebox"	   maxlength="128"  data-attach-point="ipt_name" />
+			</div>	
+			<div class="fitem">
+				<label>任务英文名称：</label> <input class="easyui-validatebox"	   maxlength="128"  data-attach-point="ipt_code" />
+			</div>	
+			<div class="fitem">
+				<label>状态：</label> 
+				<select class="easyui-combobox" style="width:50px" editable="false"   
+							data-attach-point="ipt_status"  name="ipt_status"  panelHeight = "auto" >	
+									<option value="1">有效</option>
+									<option value="0">无效</option>
+				</select>
+			</div>
+		</form>		
+	</div>
+</div>
+ 

@@ -1,0 +1,23 @@
+<div class="datagrid-toolbar-tool"></div>
+<div class="datagrid-toolbar-filter" style="display: none;">
+	<div class="criteria-panel">
+		<form data-attach-point="searchForm">
+			<div class="fitem">
+				<label>solr名称</label> <input name="solrCollectionName" type="text" maxlength="256" class="easyui-validatebox">
+			</div>
+			<div class="fitem">
+				<label>hbase表名</label> <input name="hbaseTableName" type="text" maxlength="256" class="easyui-validatebox">
+			</div>
+			<!-- 数据库数据保存为空，暂时不显示--赵帅兵20141013 -->
+			<!-- <div class="fitem">
+				<label>状态</label> <input name="status" data-attach-point="statusCombobox" type="text" maxlength="" class="easyui-combobox">
+			</div> -->
+			<div class="fitem">
+				<label>操作类型</label> <input name="operatorType" data-attach-point="operatorTypeCombobox" type="text" maxlength="" class="easyui-combobox">
+			</div>
+			<div class="fitem">
+				<label>错误日期</label> <input name="errorDate" data-attach-point="errorDate" editable="false" type="text" maxlength="40" class="easyui-datebox">
+			</div>
+		</form>
+	</div>
+</div>

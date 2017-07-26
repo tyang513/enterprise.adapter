@@ -1,0 +1,34 @@
+{
+	"stmtCrawlKeyWords/list.do" : {
+		"type" : "post",
+		"url" : "stmtCrawlKeyWords/list.do",
+		"dataType" : "json"
+	},
+	"stmtCrawlKeyWords/save.do" : {
+		"type" : "post",
+		"url" : "stmtCrawlKeyWords/save.do",
+		"dataType" : "json"
+	},
+	"stmtCrawlKeyWords/saveData.do" : {
+		"type" : "POST",
+		"url" : "stmtCrawlKeyWords/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"stmtCrawlKeyWords/findById.do" : {
+		"type" : "post",
+		"url" : "stmtCrawlKeyWords/findById.do",
+		"dataType" : "json"
+	},
+	"stmtCrawlKeyWords/deleteById.do" : {
+		"type" : "post",
+		"url" : "stmtCrawlKeyWords/deleteById.do",
+		"dataType" : "json"
+	},
+	"stmtCrawlKeyWords/enableOrDisableStmtCrawlKeyWords.do" : {
+		"type" : "post",
+		"url" : "stmtCrawlKeyWords/enableOrDisableStmtCrawlKeyWords.do",
+		"dataType" : "json"
+	},
+}

@@ -1,0 +1,27 @@
+<table id="${uuid}_grid"  class="easyui-datagrid"
+	data-options="nowrap:false,border:false,striped:true,singleSelect:true,fit:true,fitColumns:true,pagination:true,toolbar:'#${uuid}_bar'"
+	data-attach-point="dataGrid">
+	<thead>
+		<tr>
+			<th data-options="field:'jid',hidden:true"> </th>
+			<th data-options="field:'jkey',width:140,align:'center'">临时任务名称 </th>
+			<th data-options="field:'executorclassname',width:140,align:'center'">临时任务实现类 </th>
+			<th data-options="field:'starttime',width:140,align:'center',formatter:app.formatter.formatTimeStamp1">开始时间 </th>
+			<th data-options="field:'repeattime',width:110,align:'center'">最大执行次数 </th>
+			<th data-options="field:'executetime',width:110,align:'center'">已执行次数 </th>
+			<th data-options="field:'status',width:110,align:'center',formatter:function(value,row,index){
+			if(value==0){
+                   	return '未完成';
+                   }else if (value==1){
+                   	return '完成';
+                   }else if (value==-1){
+                   	return '错误';
+                   }
+			}">状态</th>
+			<th data-options="field:'param',width:140,align:'center'">参数</th>
+		</tr>
+	</thead>
+</table>
+<div id="${uuid}_bar" class="app-jobConfigTempInfoListSearchBar"
+	data-options="grid:'#${uuid}_grid'" data-attach-point="searchBar"
+	data-attach-event="jobconfigtempinfolistsearchbaraction:_doAction"></div>

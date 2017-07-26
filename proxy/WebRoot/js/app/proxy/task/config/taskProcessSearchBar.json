@@ -1,0 +1,15 @@
+{
+	"taskProcess" : {
+		"title" : "子系统管理",
+		"buttons" : [{
+			"text" : "查看异常",
+			"group" : "left",
+			"eventId" : "exception"
+		}, {
+			"text" : "重试",
+			"group" : "left",
+			"eventId" : "restart"
+		}]
+	}
+
+}

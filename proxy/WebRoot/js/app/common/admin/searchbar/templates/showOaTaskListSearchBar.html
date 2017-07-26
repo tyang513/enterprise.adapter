@@ -1,0 +1,44 @@
+<div class="datagrid-toolbar-tool"></div>
+<div class="datagrid-toolbar-filter"
+	style=" height: 85px;">
+	<div class="criteria-panel">
+		<div>
+			<label>审批流程名称：</label> <input class="easyui-validatebox"
+				data-attach-point="instancename" />
+		</div>
+		<div>
+			<label>任务名称：</label> <input class="easyui-validatebox"
+				data-attach-point="taskname" />
+		</div>
+		<div>
+			<label>是否同意：</label> <input class="easyui-combobox"  data-options="editable:false" 
+				data-attach-point="approve" />
+		</div>
+		<div>
+			<label>任务状态：</label> <input class="easyui-combobox"  data-options="editable:false" 
+				data-attach-point="status" />
+		</div>
+		
+		<div>
+			<label>开始时间：</label> <input class="easyui-datebox"
+				data-options="editable:false,formatter:app.formatter.formatTime"
+				data-attach-point="starttime">
+		</div>
+		<div>
+			<label>至：</label> <input class="easyui-datebox"
+				data-options="editable:false,formatter:app.formatter.formatTime"
+				data-attach-point="findStartTime">
+		</div>
+		<div>
+			<label>结束时间：</label> <input class="easyui-datebox"
+				data-options="editable:false,formatter:app.formatter.formatTime"
+				data-attach-point="endtime">
+		</div>
+		<div>
+			<label>至：</label> <input class="easyui-datebox"
+				data-options="editable:false,formatter:app.formatter.formatTime"
+				data-attach-point="findEndTime">
+		</div>
+		
+	</div>
+</div>

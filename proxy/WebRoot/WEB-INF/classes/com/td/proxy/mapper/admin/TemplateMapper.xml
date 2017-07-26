@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.td.proxy.dao.admin.TemplateDao">
+	<!-- Result Map -->
+	<resultMap id="BaseResultMap" type="com.td.proxy.entity.admin.Template">
+		<result column="id" property="id" />
+		<result column="templateCode " property="templateCode" />
+		<result column="ftpServerConfigId " property="ftpServerConfigId" />
+		<result column="partnerId " property="partnerId" />
+		<result column="partnerFullName " property="partnerFullName" />
+		<result column="version" property="version" />
+		<result column="status" property="status" />
+		<result column="effectDate" property="effectDate" />
+		<result column="expiryDate" property="expiryDate" />
+		<result column="c_time" property="ctime" />
+		<result column="m_time" property="mtime" />
+	</resultMap>
+
+	<!-- STL_SETTLE_TEMPLATE table all fields -->
+	<sql id="Base_Column_List">
+		id,templateCode,ftpServerConfigId,partnerId,version,status,effectDate,expiryDate,c_time,m_time,partnerFullName
+	</sql>
+
+	<!-- 查询条件 -->
+	<sql id="Base_Where_Clause">
+		where 1=1
+		<trim suffixOverrides=",">
+			<if test="id != null and id != ''">
+				and id = #{id}
+			</if>
+			<if test="templateCode != null and templateCode != ''">
+				and templateCode = #{templateCode}
+			</if>
+			<if test="ftpServerConfigId != null and ftpServerConfigId != ''">
+				and ftpServerConfigId = #{ftpServerConfigId}
+			</if>
+			<if test="partnerId != null and partnerId != ''">
+				and partnerId = #{partnerId}
+			</if>
+			<if test="version != null and version != ''">
+				and version = #{version}
+			</if>
+			<if test="status != null and status != ''">
+				and status = #{status}
+			</if>
+			<if test="effectDate != null and effectDate != ''">
+				and effectDate &gt;= #{effectDate}
+			</if>
+			<if test="expiryDate != null and expiryDate != ''">
+				and expiryDate &lt;= #{expiryDate}
+			</if>
+			<if test="ctime != null and ctime != ''">
+				and c_time = #{ctime}
+			</if>
+			<if test="mtime != null and mtime != ''">
+				and m_time = #{mtime}
+			</if>
+			<if test="partnerFullName != null and partnerFullName != ''">
+				and partnerFullName = #{partnerFullName}
+			</if>
+		</trim>
+	</sql>
+
+	<!-- 插入记录 -->
+	<insert id="insert" parameterType="Object">
+		<selectKey resultType="java.lang.Integer" order="AFTER"
+			keyProperty="id">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		insert into
+		SYS_TEMPLATE(id,templateCode,ftpServerConfigId,partnerId,version,status,effectDate,expiryDate,c_time,m_time,partnerFullName)
+		values(#{id},#{templateCode},#{ftpServerConfigId},#{partnerId},#{version},#{status},#{effectDate},#{expiryDate},#{ctime},#{mtime},#{partnerFullName})
+	</insert>
+
+	<!-- 根据id，修改记录 -->
+	<update id="updateByPrimaryKey" parameterType="Object">
+		update SYS_TEMPLATE set
+		templateCode=#{templateCode},ftpServerConfigId=#{ftpServerConfigId},partnerId=#{partnerId},version=#{version},status=#{status},effectDate=#{effectDate},expiryDate=#{expiryDate},c_time=#{ctime},m_time=#{mtime},partnerFullName=#{partnerFullName}
+		where id=#{id}
+	</update>
+
+	<!-- 修改记录，只修改只不为空的字段 -->
+	<update id="updateByPrimaryKeySelective" parameterType="Object">
+		update SYS_TEMPLATE set
+		<trim suffixOverrides=",">
+			<if test="templateCode != null  ">
+				templateCode=#{templateCode},
+			</if>
+			<if test="ftpServerConfigId != null  ">
+				ftpServerConfigId=#{ftpServerConfigId},
+			</if>
+			<if test="partnerId != null  ">
+				partnerId=#{partnerId},
+			</if>
+			<if test="version != null  ">
+				version=#{version},
+			</if>
+			<if test="status != null  ">
+				status=#{status},
+			</if>
+			<if test="effectDate != null  ">
+				effectDate=#{effectDate},
+			</if>
+			<if test="expiryDate != null  ">
+				expiryDate=#{expiryDate},
+			</if>
+			<if test="ctime != null  ">
+				c_time=#{ctime},
+			</if>
+			<if test="mtime != null  ">
+				m_time=#{mtime},
+			</if>
+			<if test="partnerFullName != null ">
+				partnerFullName=#{partnerFullName},
+			</if>
+		</trim>
+		where id=#{id}
+	</update>
+
+	<!-- 根据id查询 结算模板 -->
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="Object">
+		select
+		<include refid="Base_Column_List" />
+		from SYS_TEMPLATE where id = #{id}
+	</select>
+	<!-- 根据id查询 结算模板 <select id="findTemplateSubjectumIdAndStatus" resultMap="BaseResultMap" 
+		parameterType="java.util.HashMap"> select <include refid="Base_Column_List" 
+		/> from SYS_TEMPLATE </select> -->
+
+	<!-- 删除记录 -->
+	<delete id="deleteByPrimaryKey" parameterType="Object">
+		delete from SYS_TEMPLATE where id = #{id}
+	</delete>
+
+	<!-- 删除记录 <delete id="deleteBySubjectumId" parameterType="Object"> delete 
+		from SYS_TEMPLATE where subjectum_id = #{subjectumId} </delete> -->
+
+	<!-- 结算模板 列表总数 -->
+	<select id="queryByCount" resultType="java.lang.Integer"
+		parameterType="Object">
+		select count(1) from SYS_TEMPLATE
+		<include refid="Base_Where_Clause" />
+	</select>
+
+	<!-- 查询结算模板列表 -->
+	<select id="queryByList" resultMap="BaseResultMap"
+		parameterType="Object">
+		select
+		<include refid="Base_Column_List" />
+		from SYS_TEMPLATE
+		<include refid="Base_Where_Clause" />
+		<if test="pager.orderCondition != null and pager.orderCondition != ''">
+			${pager.orderCondition}
+		</if>
+		<if
+			test="pager.mysqlQueryCondition != null and pager.mysqlQueryCondition != ''">
+			${pager.mysqlQueryCondition}
+		</if>
+	</select>
+
+	<!-- 查询有效结算模板列表 -->
+	<select id="queryValidByList" resultMap="BaseResultMap"
+		parameterType="Object">
+		select
+		<include refid="Base_Column_List" />
+		from SYS_TEMPLATE
+		<if test="pager.orderCondition != null and pager.orderCondition != ''">
+			${pager.orderCondition}
+		</if>
+		<if
+			test="pager.mysqlQueryCondition != null and pager.mysqlQueryCondition != ''">
+			${pager.mysqlQueryCondition}
+		</if>
+	</select>
+
+
+	<!-- <select id="queryBySubjectumIdAndDate" resultMap="BaseResultMap" parameterType="java.util.HashMap"> 
+		select <include refid="Base_Column_List"/> from SYS_TEMPLATE where subjectum_id=#{subjectumId} 
+		and #{date} >= DATE_FORMAT(effect_date,'%Y-%m-%d') and #{date} <![CDATA[<]]> 
+		DATE_FORMAT(expiry_date,'%Y-%m-%d') <if test="status !=null and status != 
+		'' "> and status = #{status} </if> </select> -->
+
+	<!-- 判断指定时间是否存在记录 -->
+	<select id="queryByEffectDateExpiryDateCount" resultType="java.lang.Integer"
+		parameterType="Object">
+		select
+		count(1)
+		from SYS_TEMPLATE
+		where effectDate &gt;=#{effectDate} and expiryDate &lt;=#{expiryDate}
+	</select>
+	<select id="findTemplateByftpServerConfigId" resultMap="BaseResultMap"
+		parameterType="Object">
+		select
+		<include refid="Base_Column_List" />
+		from SYS_TEMPLATE where ftpServerConfigId = #{ftpServerConfigId}
+	</select>
+	<select id="findTemplateByTemplateCode" resultMap="BaseResultMap"
+		parameterType="Object">
+		select
+		<include refid="Base_Column_List" />
+		from SYS_TEMPLATE where templateCode = #{templateCode} and status = 1
+	</select>
+	<select id="findTemplateAll" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from SYS_TEMPLATE
+	</select>
+	<select id="findTemplateByPartnerId" resultMap="BaseResultMap" parameterType="Object">
+		select
+		<include refid="Base_Column_List" />
+		from SYS_TEMPLATE where partnerId = #{partnerId}
+	</select>
+</mapper>

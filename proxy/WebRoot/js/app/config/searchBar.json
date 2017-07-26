@@ -1,0 +1,712 @@
+{
+	"approvalTemplateManageList" : {
+		"title" : "OA审批模板管理",
+		"buttons" : [{
+					"text" : "新增模板",
+					"checkSelect" : false,
+					"group" : "left",
+					"eventId" : "add"
+				}, {
+					"text" : "修改模板",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "edit"
+				}, {
+					"text" : "启用模板",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "start"
+				}, {
+					"text" : "停用模板",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "stop"
+				}, {
+					"text" : "删除模板",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "delete"
+				}, {
+					"text" : "搜索",
+					"checkSelect" : false,
+					"group" : "filter",
+					"eventId" : "search"
+				}, {
+					"text" : "重置",
+					"checkSelect" : false,
+					"selfHandle" : true,
+					"group" : "filter",
+					"eventId" : "reset"
+				}]
+	},
+	"auditLogList" : {
+		"title" : "审计日志管理查询",
+		"buttons" : [{
+					"text" : "搜索",
+					"checkSelect" : false,
+					"group" : "filter",
+					"eventId" : "search"
+				}, {
+					"text" : "重置",
+					"checkSelect" : false,
+					"selfHandle" : true,
+					"group" : "filter",
+					"eventId" : "reset"
+				}]
+	},
+	"businessSystemList" : {
+		"title" : "子系统管理",
+		"buttons" : [{
+					"text" : "修改",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "edit"
+				}]
+	},
+	"cache" : {
+		"title" : "缓存管理",
+		"buttons" : [{
+					"text" : "刷新",
+					"group" : "left",
+					"checkSelect" : true,
+					"eventId" : "refresh"
+				}]
+	},
+	"calendarList" : {
+		"title" : "日历管理",
+		"buttons" : [{
+					"text" : "新增",
+					"checkSelect" : false,
+					"group" : "left",
+					"eventId" : "add"
+				}, {
+					"text" : "删除",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "delete"
+				}, {
+					"text" : "修改",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "edit"
+				}, {
+					"text" : "搜索",
+					"checkSelect" : false,
+					"group" : "filter",
+					"eventId" : "search"
+				}, {
+					"text" : "重置",
+					"checkSelect" : false,
+					"selfHandle" : true,
+					"group" : "filter",
+					"eventId" : "reset"
+				}]
+	},
+	"dicItem" : {
+		"title" : "字典项管理",
+		"buttons" : [{
+					"text" : "新增",
+					"group" : "left",
+					"checkSelect" : false,
+					"eventId" : "create"
+				}, {
+					"text" : "编辑",
+					"group" : "left",
+					"checkSelect" : true,
+					"eventId" : "edit"
+				}, {
+					"text" : "删除",
+					"group" : "left",
+					"eventId" : "delete"
+				}, {
+					"text" : "查看字典项",
+					"group" : "left",
+					"eventId" : "viewItem"
+				}]
+	},
+	"dicManage" : {
+		"title" : "数据字典管理",
+		"buttons" : [{
+					"text" : "新增",
+					"group" : "left",
+					"checkSelect" : false,
+					"eventId" : "create"
+				}, {
+					"text" : "编辑",
+					"group" : "left",
+					"checkSelect" : true,
+					"eventId" : "edit"
+				}, {
+					"text" : "删除",
+					"group" : "left",
+					"eventId" : "delete"
+				}, {
+					"text" : "查看字典项",
+					"group" : "left",
+					"eventId" : "viewItem"
+				}, {
+					"text" : "搜索",
+					"checkSelect" : false,
+					"group" : "filter",
+					"eventId" : "search"
+				}, {
+					"text" : "重置",
+					"checkSelect" : false,
+					"selfHandle" : true,
+					"group" : "filter",
+					"eventId" : "reset"
+				}]
+	},
+	"jobConfigInfo" : {
+		"title" : "定时任务设置查询",
+		"buttons" : [{
+					"text" : "修改",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "edit"
+				}, {
+					"text" : "搜索",
+					"checkSelect" : false,
+					"group" : "filter",
+					"eventId" : "search"
+				}, {
+					"text" : "重置",
+					"checkSelect" : false,
+					"selfHandle" : true,
+					"group" : "filter",
+					"eventId" : "reset"
+				}]
+	},
+	"jobConfigErrorInfo" : {
+		"title" : "定时任务错误信息查询",
+		"buttons" : [{
+					"text" : "查看",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "view"
+				}, {
+					"text" : "搜索",
+					"checkSelect" : false,
+					"group" : "filter",
+					"eventId" : "search"
+				}, {
+					"text" : "重置",
+					"checkSelect" : false,
+					"selfHandle" : true,
+					"group" : "filter",
+					"eventId" : "reset"
+				}]
+	},
+	"jobConfigTempInfoList" : {
+		"title" : "临时任务配置管理",
+		"buttons" : [{
+					"text" : "手动重试",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "retry"
+				}, {
+					"text" : "搜索",
+					"checkSelect" : false,
+					"group" : "filter",
+					"eventId" : "search"
+				}, {
+					"text" : "重置",
+					"checkSelect" : false,
+					"selfHandle" : true,
+					"group" : "filter",
+					"eventId" : "reset"
+				}]
+	},
+	"mailServerConfigManage" : {
+		"title" : "email服务器配置管理查询",
+		"buttons" : [{
+					"text" : "编辑",
+					"group" : "left",
+					"checkSelect" : true,
+					"eventId" : "edit"
+				}, {
+					"text" : "搜索",
+					"checkSelect" : false,
+					"group" : "filter",
+					"eventId" : "search"
+				}, {
+					"text" : "重置",
+					"checkSelect" : false,
+					"selfHandle" : true,
+					"group" : "filter",
+					"eventId" : "reset"
+				}]
+	},
+	"mailTemplateManage" : {
+		"title" : "email模板管理查询",
+		"buttons" : [{
+					"text" : "新增",
+					"group" : "left",
+					"checkSelect" : false,
+					"eventId" : "create"
+				}, {
+					"text" : "编辑",
+					"group" : "left",
+					"checkSelect" : true,
+					"eventId" : "edit"
+				}, {
+					"text" : "删除",
+					"group" : "left",
+					"eventId" : "delete"
+				}, {
+					"text" : "搜索",
+					"checkSelect" : false,
+					"group" : "filter",
+					"eventId" : "search"
+				}, {
+					"text" : "重置",
+					"checkSelect" : false,
+					"selfHandle" : true,
+					"group" : "filter",
+					"eventId" : "reset"
+				}]
+	},
+	"processConfigInfo" : {
+		"title" : "流程设置查询",
+		"buttons" : [{
+					"text" : "新增",
+					"checkSelect" : false,
+					"group" : "left",
+					"eventId" : "create"
+				}, {
+					"text" : "修改",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "edit"
+				}, {
+					"text" : "删除",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "delete"
+				}, {
+					"text" : "搜索",
+					"checkSelect" : false,
+					"group" : "filter",
+					"eventId" : "search"
+				}, {
+					"text" : "重置",
+					"checkSelect" : false,
+					"selfHandle" : true,
+					"group" : "filter",
+					"eventId" : "reset"
+				}]
+	},
+	"processInstanceManage" : {
+		"title" : "流程管理查询",
+		"buttons" : [{
+					"text" : "搜索",
+					"checkSelect" : false,
+					"group" : "filter",
+					"eventId" : "search"
+				}, {
+					"text" : "重置",
+					"checkSelect" : false,
+					"selfHandle" : true,
+					"group" : "filter",
+					"eventId" : "reset"
+				}]
+	},
+	"sheetProcessJobInputList" : {
+		"title" : "申请单处理定时任务管理",
+		"buttons" : [{
+					"text" : "搜索",
+					"checkSelect" : false,
+					"group" : "filter",
+					"eventId" : "search"
+				}, {
+					"text" : "重置",
+					"checkSelect" : false,
+					"selfHandle" : true,
+					"group" : "filter",
+					"eventId" : "reset"
+				}]
+	},
+	"showOaInstanceList" : {
+		"title" : "OA审批流程管理",
+		"buttons" : [{
+					"text" : "搜索",
+					"checkSelect" : false,
+					"group" : "filter",
+					"eventId" : "search"
+				}, {
+					"text" : "重置",
+					"checkSelect" : false,
+					"selfHandle" : true,
+					"group" : "filter",
+					"eventId" : "reset"
+				}]
+	},
+	"showOaTaskList" : {
+		"title" : "OA审批任务管理",
+		"buttons" : [{
+					"text" : "搜索",
+					"checkSelect" : false,
+					"group" : "filter",
+					"eventId" : "search"
+				}, {
+					"text" : "重置",
+					"checkSelect" : false,
+					"selfHandle" : true,
+					"group" : "filter",
+					"eventId" : "reset"
+				}]
+	},
+	"showTakeoverList" : {
+		"title" : "临时授权管理",
+		"buttons" : [{
+					"text" : "新增",
+					"checkSelect" : false,
+					"group" : "left",
+					"eventId" : "add"
+				}, {
+					"text" : "修改",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "edit"
+				}, {
+					"text" : "删除",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "delete"
+				}, {
+					"text" : "搜索",
+					"checkSelect" : false,
+					"group" : "filter",
+					"eventId" : "search"
+				}, {
+					"text" : "重置",
+					"checkSelect" : false,
+					"selfHandle" : true,
+					"group" : "filter",
+					"eventId" : "reset"
+				}]
+	},
+	"sysParam" : {
+		"title" : "系统参数查询",
+		"buttons" : [{
+					"text" : "编辑参数",
+					"group" : "left",
+					"eventId" : "edit"
+				}, {
+					"text" : "搜索",
+					"checkSelect" : false,
+					"group" : "filter",
+					"eventId" : "search"
+				}, {
+					"text" : "重置",
+					"checkSelect" : false,
+					"selfHandle" : true,
+					"group" : "filter",
+					"eventId" : "reset"
+				}]
+	},
+	"taskConfig" : {
+		"title" : "任务设置查询",
+		"buttons" : [{
+					"text" : "新增",
+					"checkSelect" : false,
+					"group" : "left",
+					"eventId" : "create"
+				}, {
+					"text" : "修改",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "edit"
+				}, {
+					"text" : "删除",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "delete"
+				}, {
+					"text" : "搜索",
+					"checkSelect" : false,
+					"group" : "filter",
+					"eventId" : "search"
+				}, {
+					"text" : "重置",
+					"checkSelect" : false,
+					"selfHandle" : true,
+					"group" : "filter",
+					"eventId" : "reset"
+				}]
+	},
+	"taskManage" : {
+		"title" : "任务管理查询",
+		"buttons" : [{
+					"text" : "分配任务",
+					"group" : "left",
+					"eventId" : "edit"
+				}, {
+					"text" : "搜索",
+					"checkSelect" : false,
+					"group" : "filter",
+					"eventId" : "search"
+				}, {
+					"text" : "重置",
+					"checkSelect" : false,
+					"selfHandle" : true,
+					"group" : "filter",
+					"eventId" : "reset"
+				}]
+	},
+	"todoTask" : {
+		"title" : "未完成任务查询",
+		"buttons" : [{
+			"text" : "查看",
+			"group" : "left",
+			"eventId" : "view"
+		},{
+			"text" : "搜索",
+			"checkSelect" : false,
+			"group" : "filter",
+			"eventId" : "search"
+		},{
+			"text" : "重置",
+			"checkSelect" : false,
+			"group" : "filter",
+			"eventId" : "reset",
+			"selfHandle" : true
+		}]
+	},
+	"doneTask" : {
+		"title" : "已完成任务查询",
+		"buttons" : [{
+			"text" : "查看",
+			"group" : "left",
+			"eventId" : "view"
+		},{
+			"text" : "搜索",
+			"checkSelect" : false,
+			"group" : "filter",
+			"eventId" : "search"
+		},{
+			"text" : "重置",
+			"checkSelect" : false,
+			"group" : "filter",
+			"eventId" : "reset",
+			"selfHandle" : true
+		}]
+	},
+	"verifyingTask" : {
+		"title" : "未完成任务查询",
+		"buttons" : [{
+			"text" : "查看",
+			"group" : "left",
+			"eventId" : "view"
+		},{
+			"text" : "搜索",
+			"checkSelect" : false,
+			"group" : "filter",
+			"eventId" : "search"
+		},{
+			"text" : "重置",
+			"checkSelect" : false,
+			"group" : "filter",
+			"eventId" : "reset",
+			"selfHandle" : true
+		}]
+	},
+	"temporaryAuthorize" : {
+		"title" : "临时授权",
+		"enableFilter" : false,
+		"buttons" : [{
+					"text" : "新增",
+					"checkSelect" : false,
+					"group" : "left",
+					"eventId" : "add"
+				}, {
+					"text" : "删除",
+					"group" : "left",
+					"eventId" : "delete"
+				}]
+	},
+	"sysFtpClientConfig" : {
+		"title" : "Ftp客户端配置",
+		"buttons" : [ {
+			"text" : "修改",
+			"group" : "left",
+			"eventId" : "edit"
+		}, {
+			"text" : "查看",
+			"group" : "left",
+			"eventId" : "view"
+		}, {
+			"text" : "搜索",
+			"checkSelect" : false,
+			"group" : "filter",
+			"eventId" : "search"
+		}, {
+			"text" : "重置",
+			"checkSelect" : false,
+			"selfHandle" : true,
+			"group" : "filter",
+			"eventId" : "reset"
+		}]
+	},
+	"sysFtpServerConfig" : {
+		"title" : "Ftp服务器配置",
+		"buttons" : [{
+			"text" : "修改",
+			"group" : "left",
+			"eventId" : "edit"
+		}, {
+			"text" : "修改密码",
+			"group" : "left",
+			"eventId" : "editPassword"
+		}, {
+			"text" : "查看",
+			"group" : "left",
+			"eventId" : "view"
+		}, {
+			"text" : "搜索",
+			"checkSelect" : false,
+			"group" : "filter",
+			"eventId" : "search"
+		}, {
+			"text" : "重置",
+			"checkSelect" : false,
+			"selfHandle" : true,
+			"group" : "filter",
+			"eventId" : "reset"
+		}]
+	},
+	"partnerList" : {
+		"title" : "合作伙伴基本信息",
+		"buttons" : [{
+					"text" : "新增",
+					"checkSelect" : false,
+					"group" : "left",
+					"eventId" : "add"
+				},{
+					"text" : "查看",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "view"
+				},{
+					"text" : "关联登录账户",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "partnerLoginAccount"
+				},{
+					"text" : "商户数据导入",
+					"checkSelect" : false,
+					"group" : "left",
+					"eventId" : "importMerchantData"
+				}, {
+					"text" : "搜索",
+					"checkSelect" : false,
+					"group" : "filter",
+					"eventId" : "search"
+				}, {
+					"text" : "重置",
+					"checkSelect" : false,
+					"selfHandle" : true,
+					"group" : "filter",
+					"eventId" : "reset"
+				}]
+	},
+	"contactList" : {
+		"title" : "联系人",
+		"buttons" : [{
+					"text" : "新增",
+					"checkSelect" : false,
+					"group" : "left",
+					"eventId" : "add"
+				}, {
+					"text" : "修改",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "edit"
+				}, {
+					"text" : "删除",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "delete"
+				},{
+					"text" : "查看",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "view"
+				}, {
+					"text" : "搜索",
+					"checkSelect" : false,
+					"group" : "filter",
+					"eventId" : "search"
+				}, {
+					"text" : "重置",
+					"checkSelect" : false,
+					"selfHandle" : true,
+					"group" : "filter",
+					"eventId" : "reset"
+				}]
+	},
+	"accountList" : {
+		"title" : "账户",
+		"buttons" : [{
+					"text" : "新增",
+					"checkSelect" : false,
+					"group" : "left",
+					"eventId" : "add"
+				}, {
+					"text" : "修改",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "edit"
+				}, {
+					"text" : "删除",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "delete"
+				},{
+					"text" : "查看",
+					"checkSelect" : true,
+					"group" : "left",
+					"eventId" : "view"
+				}, {
+					"text" : "搜索",
+					"checkSelect" : false,
+					"group" : "filter",
+					"eventId" : "search"
+				}, {
+					"text" : "重置",
+					"checkSelect" : false,
+					"selfHandle" : true,
+					"group" : "filter",
+					"eventId" : "reset"
+				}]
+	},
+	 
+	"partnerLoginAccount" : {
+		"title" : "子系统管理",
+		"buttons" : [{
+			"text" : "关联账户",
+			"checkSelect" : false,
+			"group" : "left",
+			"eventId" : "create"
+		}, {
+			"text" : "修改",
+			"group" : "left",
+			"eventId" : "edit"
+		}, {
+			"text" : "查看",
+			"group" : "left",
+			"eventId" : "view"
+		}, {
+			"text" : "搜索",
+			"checkSelect" : false,
+			"group" : "filter",
+			"eventId" : "search"
+		}, {
+			"text" : "重置",
+			"checkSelect" : false,
+			"selfHandle" : true,
+			"group" : "filter",
+			"eventId" : "reset"
+		}]
+	}
+}

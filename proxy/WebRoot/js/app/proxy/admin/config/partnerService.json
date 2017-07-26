@@ -1,0 +1,29 @@
+{
+	"partner/list.do" : {
+		"type" : "post",
+		"url" : "partner/list.do",
+		"dataType" : "json"
+	},
+	"partner/save.do" : {
+		"type" : "post",
+		"url" : "partner/save.do",
+		"dataType" : "json"
+	},
+	"partner/saveData.do" : {
+		"type" : "POST",
+		"url" : "partner/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"partner/findById.do" : {
+		"type" : "post",
+		"url" : "partner/findById.do",
+		"dataType" : "json"
+	},
+	"partner/deleteById.do" : {
+		"type" : "post",
+		"url" : "partner/deleteById.do",
+		"dataType" : "json"
+	}
+}

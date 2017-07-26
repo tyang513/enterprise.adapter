@@ -1,0 +1,50 @@
+<div class="dialog">
+	<form data-attach-point="createsysParamForm">
+		<input name="id" type="hidden" data-attach-point="id"/>
+				<div class="criteria-panel" >
+					<div>
+						<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;代码：</label> <label data-attach-point="ipt_code"></label>
+					</div>
+					<div>
+						<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名称：</label> <input class="easyui-validatebox"
+							data-attach-point="ipt_name"  name="ipt_name"  data-options="required:true" maxlength="128" />
+					</div>
+					<div>
+						<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;主机：</label> <input class="easyui-validatebox"
+							data-attach-point="ipt_mailhost"  name="ipt_mailhost"  data-options="required:true" maxlength="36" />
+					</div>
+					<div>
+						<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;端口：</label> <input class="easyui-validatebox"
+							data-attach-point="ipt_smtpport"  name="ipt_smtpport"  data-options="required:true"  maxlength="8" />
+					</div>
+					<div>
+						<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;加密：</label> 
+						<select class="easyui-combobox" style="width:40px" editable="false"   
+						data-attach-point="ipt_usessl"  name="ipt_usessl"  panelHeight = "auto" >	
+								<option value="true">是</option>
+								<option value="false">否</option>
+						</select>
+					</div>
+					<div>
+						<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用户：</label> <input class="easyui-validatebox"
+							data-attach-point="ipt_user" name="ipt_user"  data-options="required:true" maxlength="36" />
+					</div>
+					<div data-attach-point="ipt_Pw_Org_div" >
+						<label>&nbsp;&nbsp;原始密码：</label> <input class="easyui-validatebox"
+							data-attach-point="ipt_Pw_Org"  name="ipt_Pw_Org"  data-options="required:true" maxlength="36" />
+					</div>
+					<div>
+						<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码：</label> <input class="easyui-validatebox"
+							data-attach-point="ipt_Pw"  name="ipt_Pw"  data-options="required:true" maxlength="36" />
+					</div>
+					<div data-attach-point="ipt_Pw_Confirm_div" >
+						<label>密码(确认)：</label> <input class="easyui-validatebox"
+							data-attach-point="ipt_Pw_Confirm"  name="ipt_Pw_Confirm"  data-options="required:true" maxlength="36" />
+					</div>
+					<div>
+						<label>所属子系统：</label> <input class="easyui-combobox" style="width:168px" editable="false"   data-attach-point="ipt_systemName"  name="ipt_systemName">
+					</div>
+					
+				</div>
+	</form>
+</div>

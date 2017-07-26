@@ -1,0 +1,29 @@
+{
+	"serverInfo/list.do" : {
+		"type" : "post",
+		"url" : "serverInfo/list.do",
+		"dataType" : "json"
+	},
+	"serverInfo/save.do" : {
+		"type" : "post",
+		"url" : "serverInfo/save.do",
+		"dataType" : "json"
+	},
+	"serverInfo/saveData.do" : {
+		"type" : "POST",
+		"url" : "serverInfo/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"serverInfo/findById.do" : {
+		"type" : "post",
+		"url" : "serverInfo/findById.do",
+		"dataType" : "json"
+	},
+	"serverInfo/deleteById.do" : {
+		"type" : "post",
+		"url" : "serverInfo/deleteById.do",
+		"dataType" : "json"
+	}
+}

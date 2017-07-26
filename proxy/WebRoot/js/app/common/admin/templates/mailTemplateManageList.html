@@ -1,0 +1,17 @@
+<table id="${uuid}_grid"  class="easyui-datagrid"
+	data-options="nowrap:false,border:false,striped:true,singleSelect:true,fit:true,fitColumns:true,pagination:true,toolbar:'#${uuid}_bar'"
+	data-attach-point="dataGrid">
+	<thead>
+		<tr>
+			<th data-options="field:'id',hidden:true"></th>
+			<th data-options="field:'code',width:8,align:'left'">编码</th>
+			<th data-options="field:'title',width:8,align:'left'">标题</th>
+			<th data-options="field:'content',width:14,align:'left'">模版内容</th>
+			<th data-options="field:'systemcode',hidden:true">所属子系统CODE</th>
+			<th data-options="field:'systemName',width:8,align:'left'">所属子系统</th>
+		</tr>
+	</thead>
+</table>
+<div id="${uuid}_bar" class="app-mailTemplateManageSearchBar"
+	data-options="grid:'#${uuid}_grid'" data-attach-point="searchBar"
+	data-attach-event="mailtemplatemanagesearchbaraction:_doAction"></div>

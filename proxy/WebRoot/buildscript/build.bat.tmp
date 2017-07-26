@@ -1,0 +1,3 @@
+cd @buildscript.dir@
+node prebuild.js
+node r.js -o build.js

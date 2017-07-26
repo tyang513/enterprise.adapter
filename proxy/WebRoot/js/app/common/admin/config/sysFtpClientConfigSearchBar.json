@@ -1,0 +1,26 @@
+{
+	"sysFtpClientConfig" : {
+		"title" : "Ftp客户端配置",
+		"buttons" : [ {
+			"text" : "修改",
+			"group" : "left",
+			"eventId" : "edit"
+		}, {
+			"text" : "查看",
+			"group" : "left",
+			"eventId" : "view"
+		}, {
+			"text" : "搜索",
+			"checkSelect" : false,
+			"group" : "filter",
+			"eventId" : "search"
+		}, {
+			"text" : "重置",
+			"checkSelect" : false,
+			"selfHandle" : true,
+			"group" : "filter",
+			"eventId" : "reset"
+		}]
+	}
+
+}

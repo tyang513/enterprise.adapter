@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.td.proxy.dao.admin.ExtendedAttriDefinitionDao">
+	<!-- Result Map -->
+	<resultMap id="BaseResultMap"
+		type="com.td.proxy.entity.admin.ExtendedAttriDefinition">
+		<result column="id" property="id" />
+		<result column="name" property="name" />
+		<result column="code" property="code" />
+		<result column="description" property="description" />
+		<result column="c_time" property="ctime" />
+		<result column="m_time" property="mtime" />
+		<result column="type" property="type" />
+		<result column="default_value" property="defaultValue" />
+	</resultMap>
+
+	<!-- STL_EXTENDED_ATTRI_DEFINITION table all fields -->
+	<sql id="Base_Column_List">
+		id,name,code,description,c_time,m_time,type,default_value
+	</sql>
+
+	<!-- 查询条件 -->
+	<sql id="Base_Where_Clause">
+		where 1=1
+		<trim suffixOverrides=",">
+			<if test="id != null and id != ''">
+				and id = #{id}
+			</if>
+			<if test="name != null and name != ''">
+				AND name like CONCAT('%',#{name},'%')
+			</if>
+			<if test="code != null and code != ''">
+				AND code like CONCAT('%',#{code},'%')
+			</if>
+			<if test="description != null and description != ''">
+				and description = #{description}
+			</if>
+			<if test="type != null and type != ''">
+				AND type like CONCAT('%',#{type},'%')
+			</if>
+			<if test="defaultValue != null and defaultValue != ''">
+				and default_value = #{defaultValue}
+			</if>
+
+		</trim>
+	</sql>
+
+	<!-- 插入记录 -->
+	<insert id="insert" parameterType="Object">
+		<selectKey resultType="java.lang.Integer" order="AFTER"
+			keyProperty="id">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		insert into
+		SYS_EXTENDED_ATTRI_DEFINITION(id,name,code,description,c_time,m_time,type, default_value)
+		values(#{id},#{name},#{code},#{description},#{ctime},#{mtime},#{type}, #{defaultValue})
+	</insert>
+
+	<!-- 根据id，修改记录 -->
+	<update id="updateByPrimaryKey" parameterType="Object">
+		update SYS_EXTENDED_ATTRI_DEFINITION set
+		name=#{name},code=#{code},description=#{description},c_time=#{ctime},m_time=#{mtime},type=#{type},default_value=#{defaultValue}
+		where id=#{id}
+	</update>
+
+	<!-- 修改记录，只修改只不为空的字段 -->
+	<update id="updateByPrimaryKeySelective" parameterType="Object">
+		update SYS_EXTENDED_ATTRI_DEFINITION set
+		<trim suffixOverrides=",">
+			<if test="name != null  ">
+				name=#{name},
+			</if>
+			<if test="code != null  ">
+				code=#{code},
+			</if>
+			
+			<if test="description != null  ">
+				description=#{description},
+			</if>
+			<if test="ctime != null  ">
+				c_time=#{ctime},
+			</if>
+			<if test="mtime != null  ">
+				m_time=#{mtime},
+			</if>
+			<if test="type != null and type != ''">
+				type=#{type},
+			</if>
+			<if test="defaultValue != null and defaultValue != ''">
+				default_value = #{defaultValue}
+			</if>
+		</trim>
+		where id=#{id}
+	</update>
+
+	<!-- 根据id查询 扩展属性定义 -->
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="Object">
+		select
+		<include refid="Base_Column_List" />
+		from SYS_EXTENDED_ATTRI_DEFINITION where id = #{id}
+	</select>
+
+	<!-- 删除记录 -->
+	<delete id="deleteByPrimaryKey" parameterType="Object">
+		delete from SYS_EXTENDED_ATTRI_DEFINITION where id = #{id}
+	</delete>
+
+	<!-- 扩展属性定义 列表总数 -->
+	<select id="queryByCount" resultType="java.lang.Integer"
+		parameterType="Object">
+		select count(1) from SYS_EXTENDED_ATTRI_DEFINITION
+		<include refid="Base_Where_Clause" />
+	</select>
+
+	<!-- 查询扩展属性定义列表 -->
+	<select id="queryByList" resultMap="BaseResultMap"
+		parameterType="Object">
+		select
+		<include refid="Base_Column_List" />
+		from SYS_EXTENDED_ATTRI_DEFINITION
+		<include refid="Base_Where_Clause" />
+		<if test="pager.orderCondition != null and pager.orderCondition != ''">
+			${pager.orderCondition}
+		</if>
+		<if
+			test="pager.mysqlQueryCondition != null and pager.mysqlQueryCondition != ''">
+			${pager.mysqlQueryCondition}
+		</if>
+	</select>
+
+	<select id="findExtendedAttriDefinitionByCode" resultType="java.lang.Integer"
+		parameterType="java.lang.String">
+		select count(1) from SYS_EXTENDED_ATTRI_DEFINITION where code = #{code}
+	</select>
+</mapper>   

@@ -1,0 +1,19 @@
+<div class="dialog">
+	<form data-attach-point="editForm" class="ui-form" method="post">  
+		<input type="hidden" name="id">
+		<div class="ui-edit">
+			<div class="fitem">
+				<label>用户名：</label>
+				<input name="userName" type="text" maxlength="50" class="easyui-validatebox" data-options="required:true" missingMessage="请填写用户名">
+				<span class="required">*</span>			</div>
+			<div class="fitem">
+				<label>资源代码，即业务ID：</label>
+				<input name="userId" type="text" maxlength="50" class="easyui-validatebox" data-options="required:true" missingMessage="请填写资源代码，即业务ID">
+				<span class="required">*</span>			</div>
+			<div class="fitem">
+				<label>密码：</label>
+				<input name="password" type="text" maxlength="50" class="easyui-validatebox" data-options="required:true" missingMessage="请填写密码">
+				<span class="required">*</span>			</div>
+		</div>
+	</form>
+</div>

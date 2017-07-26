@@ -1,0 +1,174 @@
+
+<div class="easyui-tabs" style="height:400px">
+
+    <!-- echarts测试 -->	
+	<div title="echarts测试">
+		<div class="app-testECharts" data-attach-point="testA1"></div>
+	</div>
+	
+	<div title="fancybox测试">
+		<div data-attach-point="fancyboxDiv">
+			<h1>fancyBox</h1>
+
+			<p>This is a demonstration. More information and examples: <a href="http://fancyapps.com/fancybox/">www.fancyapps.com/fancybox/</a></p>
+		
+			<h3>Simple image gallery</h3>
+			<p>
+				<a class="fancybox" href="js/app/common/test/images/1_b.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="js/app/common/test/images/1_s.jpg" alt="" /></a>
+		
+				<a class="fancybox" href="js/app/common/test/images/2_b.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="js/app/common/test/images/2_s.jpg" alt="" /></a>
+		
+				<a class="fancybox" href="js/app/common/test/images/3_b.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="js/app/common/test/images/3_s.jpg" alt="" /></a>
+		
+				<a class="fancybox" href="js/app/common/test/images/4_b.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="js/app/common/test/images/4_s.jpg" alt="" /></a>
+			</p>
+		</div>	
+		
+		<a id="fancybox-manual-a" href="javascript:void(0)" data-attach-event="click:_showImage">Open single item</a>	
+	</div>
+	
+	
+	
+	
+	<!-- 引用模板对象 -->
+	<div title="引用模板对象">  
+			<div data-attach-point="title">title 名称</div>
+			<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" data-attach-event="click:_changeTitle">改变title值</a>
+	</div>  
+	
+	<div title="toolTip">
+		<a href="javascript:void(0)" data-attach-point="tipBtn" class="easyui-linkbutton" data-options="plain:true" data-attach-event="click:_addTooltip">添加tooltip</a>
+	</div>
+	
+	<!-- button事件绑定 -->
+	
+	<div title="button事件绑定">  
+	    <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,param:'aButton'" data-attach-event="click:_buttonClick">testAButon</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,param:'bButton'" data-attach-event="click:_buttonClick">testBButon</a>
+	</div>  
+	
+	
+	
+	<!-- 事件传递参数 -->
+	
+	<div  title="事件传递参数">
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" data-attach-event="click:_createHtml">创建按钮</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" data-attach-event="click:_deleteButton">删除按钮</a>
+		
+		<div data-attach-point="bttonNode">
+		</div>
+	</div>
+	
+	
+	<!-- 两个类之间的引用 -->
+	
+	<div  title="两个类之间的引用">
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" data-attach-event="click:_callTestAMethod">调用testA中方法</a>
+		<div class="app-testA" data-attach-point="testA"></div>
+	</div>
+	
+	
+	<!-- datagrid 使用 -->
+	
+	<div  title="datagrid 使用">
+		<!-- <table id="${uuid}_grid" data-attach-point="testDataGrid" data-options='toolbar:"#${uuid}_searchBarTest"'></table>
+		
+		<div id="${uuid}_searchBarTest" data-attach-point="searchBarTest" class="app-BaseSearchBar" 
+			data-options="grid:'#${uuid}_grid',searchBar:'test'" data-attach-event="basesearchbaraction:_doAction"></div> -->
+	
+	
+		
+		<table id="${uuid}_grid" data-attach-point="testDataGrid" data-options='toolbar:"#${uuid}_searchBarTest"'></table>
+		
+		<div id="${uuid}_searchBarTest" data-attach-point="searchBarTest" class="app-searchBarTest" 
+			data-options="grid:'#${uuid}_grid',searchBar:'test'" data-attach-event="searchbartestaction:_doAction"></div>
+		<div data-attach-point="xxx"></div>
+	</div>
+	
+	
+	
+	<!--dialog 使用 -->
+	
+	<div  title="dialog 使用">
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" data-attach-event="click:_showDialogTest">调用dialog</a>
+	</div>
+	
+	
+	<!--formMoudle 使用 -->
+	
+	<div  title="formMoudle 使用">
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" data-attach-event="click:_showFormModuleTest">调用formModule</a>
+	</div>
+	
+	<!--field组件 使用 -->
+	
+	<div  title="field组件 使用">
+		<div>
+			<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" data-attach-event="click:_onInitSaleType">初始化订单类型</a>
+		</div>
+		<div>
+			<label>订单类型：</label> <input id="${uuid}_saletype"
+				class="easyui-combobox" name="type" data-attach-point="saleType"
+				data-options="valueField: 'dicitemkey', textField: 'dicitemvalue', panelHeight : 'auto'" />
+		</div>
+		<div>
+			<label>购买方：</label>
+			<div class="app-partner" data-attach-point="partner"
+				data-attach-event="partneronselect:_onSelect"></div>
+		</div>		
+	</div>
+	
+	<!--div删除按钮 使用 -->
+	
+	<div title="div删除按钮 使用">
+		<div >
+			<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" data-attach-event="click:_onCreateDiv">使用模板创建Div</a>
+		</div>
+		<div data-attach-point="contentDiv"></div>
+	</div>
+	
+	<!--文档下载 使用 -->
+	
+	<div title="文档下载 使用">
+		<div >			
+			<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" data-attach-event="click:_onDownload">文档下载</a>
+		</div>
+	</div>
+	
+	<!--附件上传 使用 -->
+	
+	<div title="附件上传 使用">
+		<div >
+			<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" data-attach-event="click:_onInitUpload">上传附件</a>
+		</div>
+	</div>
+	
+	<div title="combotree 测试">
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" data-attach-event="click:_initComboTree">初始化数据</a>
+		<div>
+			<label>
+				商品分类：
+			</label>
+			<input  data-attach-point="categoryName" />
+		</div>
+	</div>
+	<div title="Panel custom  测试">
+		<div class="easyui-panel app-testA" data-options="custom:true,title:'ddd'">
+		</div>
+	</div>
+	
+	<div title="日历控件 测试">
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" data-attach-event="click:_onSetCC">设置</a>
+		<input data-attach-point="datebox" type="text" class="easyui-datebox" required="required">
+	</div>
+	
+	<div title="tabForm">
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" data-attach-event="click:_onOpenTabForm">设置</a>
+	</div>
+	
+	<div title="zTree拖拽">
+		<div class="app-salesHierarchy"></div>
+	</div>	
+	
+	
+</div>

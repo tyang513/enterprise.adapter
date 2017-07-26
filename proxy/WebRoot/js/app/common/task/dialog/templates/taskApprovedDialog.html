@@ -1,0 +1,16 @@
+<div class="dialog">
+	<form data-attach-point="approvedForm">
+		<div class="fitem">
+			<label >审批结果：</label>
+			<span data-attach-point="approveResult">同意</span>
+		</div>
+		<div data-attach-point="backApproveUserDiv" style="display:none"  class="fitem">
+			<label >退回人 ：</label><select class="easyui-combobox" panelHeight="auto" data-attach-point="backApproveUser" style="width:150px;"></select>
+		</div>
+		<div  class="fitem" style="margin-top:10px;">
+			
+			<label>备注：<span style="color: red; margin-right: 5px">*</span></label>
+			<textarea cols="30" rows="2" name="remark" class="easyui-validatebox" data-options="required:true,validType:'maxLength[512]'" data-attach-point="remark"></textarea>
+		</div>
+	</form>
+</div>

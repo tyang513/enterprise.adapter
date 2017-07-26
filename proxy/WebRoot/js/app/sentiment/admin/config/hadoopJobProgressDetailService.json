@@ -1,0 +1,29 @@
+{
+	"hadoopJobProgressDetail/list.do" : {
+		"type" : "post",
+		"url" : "hadoopJobProgressDetail/list.do",
+		"dataType" : "json"
+	},
+	"hadoopJobProgressDetail/save.do" : {
+		"type" : "post",
+		"url" : "hadoopJobProgressDetail/save.do",
+		"dataType" : "json"
+	},
+	"hadoopJobProgressDetail/saveData.do" : {
+		"type" : "POST",
+		"url" : "hadoopJobProgressDetail/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"hadoopJobProgressDetail/findById.do" : {
+		"type" : "post",
+		"url" : "hadoopJobProgressDetail/findById.do",
+		"dataType" : "json"
+	},
+	"hadoopJobProgressDetail/deleteById.do" : {
+		"type" : "post",
+		"url" : "hadoopJobProgressDetail/deleteById.do",
+		"dataType" : "json"
+	}
+}

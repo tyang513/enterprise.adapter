@@ -1,0 +1,29 @@
+{
+	"templateCategoryRel/list.do" : {
+		"type" : "post",
+		"url" : "templateCategoryRel/list.do",
+		"dataType" : "json"
+	},
+	"templateCategoryRel/save.do" : {
+		"type" : "post",
+		"url" : "templateCategoryRel/save.do",
+		"dataType" : "json"
+	},
+	"templateCategoryRel/saveData.do" : {
+		"type" : "POST",
+		"url" : "templateCategoryRel/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"templateCategoryRel/findById.do" : {
+		"type" : "post",
+		"url" : "templateCategoryRel/findById.do",
+		"dataType" : "json"
+	},
+	"templateCategoryRel/deleteById.do" : {
+		"type" : "post",
+		"url" : "templateCategoryRel/deleteById.do",
+		"dataType" : "json"
+	}
+}

@@ -1,0 +1,73 @@
+/* 结算主体配置表单 */
+.MerchantConfProcessMerchantReviewApproveIcon{
+	background: url(../images/icon/Approve.png) no-repeat center;
+}
+.MerchantConfProcessFinanceApproveIcon{
+	background: url(../images/icon/Approve.png) no-repeat center;
+}
+.MerchantConfProcessMerchantSettleConfIcon{
+	background: url(../images/icon/Approve.png) no-repeat center;
+}
+.MerchantConfProcessSettleMerchantConf1Icon{
+	background: url(../images/icon/Approve.png) no-repeat center;
+}
+.MerchantConfProcessMerchantSettleConfReviewIcon{
+	background: url(../images/icon/Approve.png) no-repeat center;
+}
+.MerchantConfProcessSettleMerchantConfIcon{
+	background: url(../images/icon/Approve.png) no-repeat center;
+} 
+.MerchantConfProcessSettleMerchantConfCheckIcon {
+	background: url(../images/icon/Approve.png) no-repeat center;
+}
+
+.metadataEntityFormmetadataEntityIcon {
+	background: url(../images/icon/entity.jpg) no-repeat center;
+}
+.partnerFormpartnerIcon {
+	background: url(../images/icon/account.png) no-repeat center;
+}
+ .SettleSheetProcessSettleCheckApprove1Icon {
+	background: url(../images/icon/SettleSheetProcessSettleCheckApproveIcon.jpg) no-repeat center;
+}
+
+
+
+/* 财务复核岗 */
+.SettleSheetProcessFinanceApprove1Icon, .SettleSheetProcessFinanceApproveIcon,.PartnerSettleApplyProcessSettleConfIcon,.PartnerSettleApplyProcessCheckSettleApplyIcon{
+	background: url(../images/icon/SettleSheetProcessFinanceApproveIcon.png) no-repeat center;
+}
+
+/* 财务复核岗 */
+.SettleSheetProcessSettleCheckApproveIcon{
+	background: url(../images/icon/FinanceApproveIcon.jpg) no-repeat center;
+}
+
+.SettleSheetProcessInvoiceIcon{
+	background: url(../images/icon/Invoice.png) no-repeat center;
+}
+.partnerFormeditDataIcon{
+	background: url(../images/icon/account.png) no-repeat center;
+}
+.partnerFormPartnerStaffIcon{
+	background: url(../images/icon/account.png) no-repeat center;
+}
+.partnerFormpartnerNoIcon{
+	background: url(../images/icon/account.png) no-repeat center;
+}
+
+.settleApplyFormpenddingIcon{
+	background: url(../images/icon/reconBatchForm.jpg) no-repeat center;
+}
+.settleApplyFormsubmittedIcon{
+	background: url(../images/icon/reconBatchForm.jpg) no-repeat center;
+}
+.settleApplyFormapprovedIcon{
+	background: url(../images/icon/reconBatchForm.jpg) no-repeat center;
+}
+.taskInfoFormtaskInfoIcon{
+	background: url(../images/icon/account.png) no-repeat center;
+}
+.templateFormviewDataIcon{
+	background: url(../images/icon/Approve.png) no-repeat center;
+}

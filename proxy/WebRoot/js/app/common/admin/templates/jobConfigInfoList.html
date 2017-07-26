@@ -1,0 +1,21 @@
+<table id="${uuid}_grid"  class="easyui-datagrid"
+	data-options="nowrap:false,border:false,striped:true,singleSelect:true,fit:true,fitColumns:true,pagination:true,toolbar:'#${uuid}_bar'"
+	data-attach-point="dataGrid">
+	<thead>
+		<tr>
+			<th data-options="field:'id',hidden:true"></th>
+			<th data-options="field:'name',width:12,align:'left'">任务名称</th>
+			<th data-options="field:'jkey',width:12,align:'left'">英文代码</th>
+			<th data-options="field:'classname',width:12,align:'left'">任务实现类</th>
+			<th data-options="field:'intervall',width:5,align:'center'">间隔时间（秒）</th>
+			<th data-options="field:'starttime',width:8,align:'center',formatter:app.formatter.formatTimeStamp">开始时间</th>
+			<th data-options="field:'endtime',width:8,align:'center',formatter:app.formatter.formatTimeStamp">结束时间</th>
+			<th data-options="field:'status',width:4,align:'center',formatter:app.formatter.formatJobStatus">状态</th>
+			<th data-options="field:'systemcode',hidden:true">所属子系统CODE</th>
+			<th data-options="field:'sysname',width:8,align:'center'">所属子系统</th>
+		</tr>
+	</thead>
+</table>
+<div id="${uuid}_bar" class="app-jobConfigInfoSearchBar"
+	data-options="grid:'#${uuid}_grid'" data-attach-point="searchBar"
+	data-attach-event="jobconfiginfosearchbaraction:_doAction"></div>

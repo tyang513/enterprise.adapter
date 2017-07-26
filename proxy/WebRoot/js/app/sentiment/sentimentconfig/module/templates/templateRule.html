@@ -1,0 +1,23 @@
+<div class="form-module">
+<div id="${uuid}_bar">
+		<div data-attach-point="readOnlyDiv">
+			<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" data-attach-event="click:_onSave">新增计算规则</a>
+			<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" data-attach-event="click:_onEdit">修改计算规则</a>
+			<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" data-attach-event="click:_onDelete">删除计算规则</a>
+		</div>
+</div>
+<table class="listgrid"
+	data-options="nowrap:false,border:true,striped:true,singleSelect:true,fit:false,fitColumns:true,pagination:true,loadMsg :'数据加载中请稍后……'"
+	data-attach-point="dataGrid">
+	<thead>
+		<tr>
+		<input type="hidden" name="id" />
+		<input type="hidden" name="templateId" />
+			<th data-options="field:'name',width:80,align:'left'">规则名称</th>
+			<th data-options="field:'businessType',width:50,align:'left',formatter:app.formatter.formatBusinessType">规则业务类型</th>
+			<th data-options="field:'ruleClassName',width:120,align:'left'">规则实现类</th>
+			<th data-options="field:'description',width:100,align:'left'">描述</th>
+		</tr>
+	</thead>
+</table>
+</div>

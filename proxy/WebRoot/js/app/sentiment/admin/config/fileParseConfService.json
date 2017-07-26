@@ -1,0 +1,29 @@
+{
+	"fileParseConf/list.do" : {
+		"type" : "post",
+		"url" : "fileParseConf/list.do",
+		"dataType" : "json"
+	},
+	"fileParseConf/save.do" : {
+		"type" : "post",
+		"url" : "fileParseConf/save.do",
+		"dataType" : "json"
+	},
+	"fileParseConf/saveData.do" : {
+		"type" : "POST",
+		"url" : "fileParseConf/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"fileParseConf/findById.do" : {
+		"type" : "post",
+		"url" : "fileParseConf/findById.do",
+		"dataType" : "json"
+	},
+	"fileParseConf/deleteById.do" : {
+		"type" : "post",
+		"url" : "fileParseConf/deleteById.do",
+		"dataType" : "json"
+	}
+}

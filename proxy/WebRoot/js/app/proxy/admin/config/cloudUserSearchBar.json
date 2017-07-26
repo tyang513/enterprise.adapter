@@ -1,0 +1,35 @@
+{
+	"cloudUser" : {
+		"title" : "子系统管理",
+		"buttons" : [{
+			"text" : "新建",
+			"checkSelect" : false,
+			"group" : "left",
+			"eventId" : "create"
+		}, {
+			"text" : "修改",
+			"group" : "left",
+			"eventId" : "edit"
+		}, {
+			"text" : "查看",
+			"group" : "left",
+			"eventId" : "view"
+		}, {
+			"text" : "删除",
+			"group" : "left",
+			"eventId" : "delete"
+		}, {
+			"text" : "搜索",
+			"checkSelect" : false,
+			"group" : "filter",
+			"eventId" : "search"
+		}, {
+			"text" : "重置",
+			"checkSelect" : false,
+			"selfHandle" : true,
+			"group" : "filter",
+			"eventId" : "reset"
+		}]
+	}
+
+}

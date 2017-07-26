@@ -1,0 +1,17 @@
+<div class="dialog">
+	<form enctype="multipart/form-data" method="post" data-attach-point="forwardFrom" >
+		<div>
+			<span style="color: red;">* </span>
+			<span>转发人 ：</span>
+			<input class="easyui-combogrid" width="300px"  data-options="required:true" data-attach-point="searchUserInput"></input>
+		</div>
+		<br>
+		<div>
+			<span>备注 ：</span>
+			<textarea cols="30" rows="5" name="remark" class="easyui-validatebox" data-options="validType:'maxLength[512]'" data-attach-point="remark"></textarea>
+		</div>
+		<input type="hidden" name="finTaskId" data-options="required:true" data-attach-point="finTaskId">
+		<input type="hidden" name="userId" data-options="required:true" data-attach-point="userId">
+		<input type="hidden" name="memo" data-options="required:true" data-attach-point="memo">
+	</form>
+</div>

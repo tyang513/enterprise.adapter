@@ -1,0 +1,34 @@
+{
+	"reportConfig/list.do" : {
+		"type" : "post",
+		"url" : "reportConfig/list.do",
+		"dataType" : "json"
+	},
+	"reportConfig/save.do" : {
+		"type" : "post",
+		"url" : "reportConfig/save.do",
+		"dataType" : "json"
+	},
+	"reportConfig/saveData.do" : {
+		"type" : "POST",
+		"url" : "reportConfig/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"reportConfig/findById.do" : {
+		"type" : "post",
+		"url" : "reportConfig/findById.do",
+		"dataType" : "json"
+	},
+	"reportConfig/deleteById.do" : {
+		"type" : "post",
+		"url" : "reportConfig/deleteById.do",
+		"dataType" : "json"
+	},
+	"reportConfig/reportExecute.do" : {
+		"type" : "post",
+		"url" : "reportConfig/reportExecute.do",
+		"dataType" : "json"
+	}
+}

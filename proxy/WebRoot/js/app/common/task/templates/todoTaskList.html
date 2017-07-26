@@ -1,0 +1,29 @@
+<!-- 未完成任务 -->
+<table id="${uuid}_finTaskGrid" class="listGrid"  data-attach-point="dataGrid" data-options='singleSelect:true,fit:true,fitColumns:true,pagination:true,loadMsg : "数据加载中请稍后……",toolbar:"#${uuid}_todoTaskSearchBar"'>
+	<thead>
+		<tr>
+			<th data-options="field:'fk',checkbox:true">#</th>
+			<th data-options="field:'id',width:2,align:'center'">任务ID</th>
+			<th data-options="field:'processname',width:8,align:'center'">流程名称</th>
+			<th data-options="field:'taskname',width:15, align:'center'">任务名称</th>
+			<th data-options="field:'startusername',width:8, align:'center'">发起人</th>
+			<th data-options="field:'starttime',width:8, align:'center',formatter:app.formatter.formatTimeStamp">创建时间</th>
+			<th data-options="field:'assignerumid',width:8, align:'center',formatter:function(value,row,index){
+				if(value!=''){
+                    	return '处理中';
+                    }else{
+                    	return '未处理';
+                    } 
+			}">处理状态</th>
+			<th data-options="field:'operate',hidden:true"></th>
+			<th data-options="field:'taskCode',hidden:true"></th>
+			<th data-options="field:'sheetId',hidden:true"></th>
+			<th data-options="field:'sheetType',hidden:true"></th>
+			<th data-options="field:'processInstanceId',hidden:true"></th>
+			<th data-options="field:'processRemark',hidden:true"></th>
+		</tr>
+	</thead>
+</table>
+
+<div id="${uuid}_todoTaskSearchBar" data-attach-point="todoTaskSearchBar" class="app-todoTaskSearchBar" 
+	data-options="grid:'#${uuid}_finTaskGrid'" data-attach-event="todotasksearchbaraction:_doAction"></div>

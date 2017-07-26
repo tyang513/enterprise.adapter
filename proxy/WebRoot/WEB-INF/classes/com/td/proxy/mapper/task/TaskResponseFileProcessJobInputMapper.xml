@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.td.proxy.dao.task.TaskResponseFileProcessJobInputDao">
+	<!-- Result Map -->
+	<resultMap id="BaseResultMap"
+		type="com.td.proxy.entity.task.TaskResponseFileProcessJobInput">
+		<result column="id" property="id" />
+		<result column="task_code" property="taskCode" />
+		<result column="job_input_name" property="jobInputName" />
+		<result column="status" property="status" />
+		<result column="trigger_type" property="triggerType" />
+		<result column="start_date" property="startDate" />
+		<result column="end_date" property="endDate" />
+		<result column="error_info" property="errorInfo" />
+		<result column="retry" property="retry" />
+		<result column="max_retry" property="maxRetry" />
+		<result column="timeout" property="timeout" />
+		<result column="c_time" property="cTime" />
+		<result column="m_time" property="mTime" />
+	</resultMap>
+
+	<!-- tdp_task_response_file_process_job_input table all fields -->
+	<sql id="Base_Column_List">
+		id,task_code,job_input_name,status,trigger_type,start_date,end_date,error_info,retry,max_retry,timeout,c_time,m_time
+	</sql>
+
+	<!-- 查询条件 -->
+	<sql id="Base_Where_Clause">
+		where 1=1
+		<trim suffixOverrides=",">
+			<if test="id != null and id != ''">
+				and id = #{id}
+			</if>
+			<if test="taskCode != null and taskCode != ''">
+				and task_code = #{taskCode}
+			</if>
+			<if test="jobInputName != null and jobInputName != ''">
+				and job_input_name = #{jobInputName}
+			</if>
+			<if test="status != null and status != ''">
+				and status = #{status}
+			</if>
+			<if test="triggerType != null and triggerType != ''">
+				and trigger_type = #{triggerType}
+			</if>
+			<if test="startDate != null and startDate != ''">
+				and start_date = #{startDate}
+			</if>
+			<if test="endDate != null and endDate != ''">
+				and end_date = #{endDate}
+			</if>
+			<if test="errorInfo != null and errorInfo != ''">
+				and error_info = #{errorInfo}
+			</if>
+			<if test="retry != null and retry != ''">
+				and retry = #{retry}
+			</if>
+			<if test="maxRetry != null and maxRetry != ''">
+				and max_retry = #{maxRetry}
+			</if>
+			<if test="timeout != null and timeout != ''">
+				and timeout = #{timeout}
+			</if>
+			<if test="cTime != null and cTime != ''">
+				and c_time = #{cTime}
+			</if>
+			<if test="mTime != null and mTime != ''">
+				and m_time = #{mTime}
+			</if>
+		</trim>
+	</sql>
+
+	<!-- 插入记录 -->
+	<insert id="insert" parameterType="Object">
+		<selectKey resultType="java.lang.Integer" order="AFTER"
+			keyProperty="id">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		insert into
+		tdp_task_response_file_process_job_input(id,task_code,job_input_name,status,trigger_type,start_date,end_date,error_info,retry,max_retry,timeout,c_time,m_time)
+		values(#{id},#{taskCode},#{jobInputName},#{status},#{triggerType},#{startDate},#{endDate},#{errorInfo},#{retry},#{maxRetry},#{timeout},#{cTime},#{mTime})
+	</insert>
+
+	<!-- 根据id，修改记录 -->
+	<update id="updateByPrimaryKey" parameterType="Object">
+		update
+		tdp_task_response_file_process_job_input set
+		task_code=#{taskCode},job_input_name=#{jobInputName},status=#{status},trigger_type=#{triggerType},start_date=#{startDate},end_date=#{endDate},error_info=#{errorInfo},retry=#{retry},max_retry=#{maxRetry},timeout=#{timeout},c_time=#{cTime},m_time=#{mTime}
+		where id=#{id}
+	</update>
+
+	<!-- 修改记录，只修改只不为空的字段 -->
+	<update id="updateByPrimaryKeySelective" parameterType="Object">
+		update tdp_task_response_file_process_job_input set
+		<trim suffixOverrides=",">
+			<if test="taskCode != null  ">
+				task_code=#{taskCode},
+			</if>
+			<if test="jobInputName != null  ">
+				job_input_name=#{jobInputName},
+			</if>
+			<if test="status != null  ">
+				status=#{status},
+			</if>
+			<if test="triggerType != null  ">
+				trigger_type=#{triggerType},
+			</if>
+			<if test="startDate != null  ">
+				start_date=#{startDate},
+			</if>
+			<if test="endDate != null  ">
+				end_date=#{endDate},
+			</if>
+			<if test="errorInfo != null  ">
+				error_info=#{errorInfo},
+			</if>
+			<if test="retry != null  ">
+				retry=#{retry},
+			</if>
+			<if test="maxRetry != null  ">
+				max_retry=#{maxRetry},
+			</if>
+			<if test="timeout != null  ">
+				timeout=#{timeout},
+			</if>
+			<if test="cTime != null  ">
+				c_time=#{cTime},
+			</if>
+			<if test="mTime != null  ">
+				m_time=#{mTime},
+			</if>
+		</trim>
+		where id=#{id}
+	</update>
+
+	<!-- 根据id查询 用户 -->
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="Object">
+		select
+		<include refid="Base_Column_List" />
+		from tdp_task_response_file_process_job_input where id = #{id}
+	</select>
+
+	<!-- 删除记录 -->
+	<delete id="deleteByPrimaryKey" parameterType="Object">
+		delete from
+		tdp_task_response_file_process_job_input where id = #{id}
+	</delete>
+
+	<!-- 用户 列表总数 -->
+	<select id="queryByCount" resultType="java.lang.Integer"
+		parameterType="Object">
+		select count(1) from tdp_task_response_file_process_job_input
+		<include refid="Base_Where_Clause" />
+	</select>
+
+	<!-- 查询用户列表 -->
+	<select id="queryByList" resultMap="BaseResultMap"
+		parameterType="Object">
+		select
+		<include refid="Base_Column_List" />
+		from tdp_task_response_file_process_job_input
+		<include refid="Base_Where_Clause" />
+		<if test="pager.orderCondition != null and pager.orderCondition != ''">
+			${pager.orderCondition}
+		</if>
+		<if
+			test="pager.mysqlQueryCondition != null and pager.mysqlQueryCondition != ''">
+			${pager.mysqlQueryCondition}
+		</if>
+	</select>
+	<update id="updateStatusByPrimaryKeySelective" parameterType="Object">
+		update TDP_TASK_RESPONSE_FILE_PROCESS_JOB_INPUT set
+		<trim suffixOverrides=",">
+			<if test="status != null  ">
+				status=#{status},
+			</if>
+			<if test="errorInfo != null  ">
+				error_info=#{errorInfo},
+				retry=retry+1,
+			</if>
+		</trim>
+		where id=#{id}
+	</update>
+	<select id="findReady2RunJobInput" resultMap="BaseResultMap" parameterType="Object">
+		select
+		<include refid="Base_Column_List" />
+		from TDP_TASK_RESPONSE_FILE_PROCESS_JOB_INPUT where status in (0, -1)
+		and retry &lt; max_retry and trigger_type = #{triggerType}
+	</select>
+	<select id="selectByTaskCode" resultMap="BaseResultMap"
+		parameterType="Object">
+		select
+		<include refid="Base_Column_List" />
+		from TDP_TASK_RESPONSE_FILE_PROCESS_JOB_INPUT where task_code =
+		#{taskCode}
+	</select>
+</mapper>   

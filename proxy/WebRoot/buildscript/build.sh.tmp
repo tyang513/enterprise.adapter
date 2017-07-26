@@ -1,0 +1,7 @@
+#!/bin/bash
+
+pwd
+
+cd /home/dev/.hudson/jobs/Settle/workspace/compressing/buildscript
+node prebuild.js
+node r.js -o build.js

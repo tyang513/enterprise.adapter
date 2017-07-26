@@ -1,0 +1,49 @@
+{
+	"template/list.do" : {
+		"type" : "post",
+		"url" : "template/list.do",
+		"dataType" : "json"
+	},
+	"template/save.do" : {
+		"type" : "post",
+		"url" : "template/save.do",
+		"dataType" : "json"
+	},
+	"template/saveData.do" : {
+		"type" : "POST",
+		"url" : "template/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"template/findById.do" : {
+		"type" : "post",
+		"url" : "template/findById.do",
+		"dataType" : "json"
+	},
+	"template/deleteById.do" : {
+		"type" : "post",
+		"url" : "template/deleteById.do",
+		"dataType" : "json"
+	},
+	"template/updateEnableDisableTemplate.do" : {
+		"type" : "post",
+		"url" : "template/updateEnableDisableTemplate.do",
+		"dataType" : "json"
+	},
+	"template/queryMaxVersionTemplate.do" : {
+		"type" : "post",
+		"url" : "template/queryMaxVersionTemplate.do",
+		"dataType" : "json"
+	},
+	"template/upgradeTemplate.do" : {
+		"type" : "post",
+		"url" : "template/upgradeTemplate.do",
+		"dataType" : "json"
+	},
+	"template/queryTemplateByCategoryId.do" : {
+		"type" : "post",
+		"url" : "template/queryTemplateByCategoryId.do",
+		"dataType" : "json"
+	}					
+}

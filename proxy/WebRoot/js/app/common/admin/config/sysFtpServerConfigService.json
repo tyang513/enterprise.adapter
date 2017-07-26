@@ -1,0 +1,24 @@
+{
+	"sysFtpServerConfig/list.do" : {
+		"type" : "post",
+		"url" : "sysFtpServerConfig/list.do",
+		"dataType" : "json"
+	},
+	"sysFtpServerConfig/save.do" : {
+		"type" : "post",
+		"url" : "sysFtpServerConfig/save.do",
+		"dataType" : "json"
+	},
+	"sysFtpServerConfig/saveData.do" : {
+		"type" : "POST",
+		"url" : "sysFtpServerConfig/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"sysFtpServerConfig/delete.do" : {
+		"type" : "post",
+		"url" : "sysFtpServerConfig/delete.do",
+		"dataType" : "json"
+	}
+}

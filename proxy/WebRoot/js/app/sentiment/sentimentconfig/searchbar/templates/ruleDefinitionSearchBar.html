@@ -1,0 +1,29 @@
+<div class="datagrid-toolbar-tool"></div>
+<div class="datagrid-toolbar-filter" style="display: none;">
+	<div class="criteria-panel">
+		<form data-attach-point="searchForm">
+			<div class="fitem">
+				<label>规则名称</label>
+				<input name="name" type="text" maxlength="40" class="easyui-validatebox">
+			</div>
+			<div class="fitem">
+				<label>规则实现类名称</label>
+				<input name="ruleClassName" type="text" class="easyui-validatebox">
+			</div>
+			<div class="fitem">
+				<label>规则的业务类型</label>
+				<input name="businessType" type="text" editable="false" data-attach-point="businessTypeCombobox" class="easyui-combobox">
+			</div>
+		
+			<div class="fitem">
+				<label>规则说明</label>
+				<input name="description" type="text" maxlength="256" class="easyui-validatebox">
+			</div>
+			<div class="fitem">
+				<label>状态</label>
+				<input name="status" type="text" editable="false" data-attach-point="statusCombobox" maxlength="4" class="easyui-combobox">
+			</div>
+			
+      </form>		
+	</div>
+</div>

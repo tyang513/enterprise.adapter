@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.td.proxy.dao.admin.CloudUserDao" > 
+  <!-- Result Map-->
+  <resultMap id="BaseResultMap" type="com.td.proxy.entity.admin.CloudUser" >
+	<result column="id" property="id"/>
+	<result column="code" property="code"/>
+	<result column="company_name" property="companyName"/>
+	<result column="name" property="name"/>
+	<result column="tel" property="tel"/>
+	<result column="mail" property="mail"/>
+	<result column="token" property="token"/>
+	<result column="appkey" property="appkey"/>
+	<result column="c_time" property="cTime"/>
+	<result column="m_time" property="mTime"/>
+  </resultMap>
+       
+  <!-- SYS_CLOUD_USER table all fields -->
+  <sql id="Base_Column_List" >
+	 id,code,company_name,name,tel,mail,token,appkey,c_time,m_time
+  </sql>
+   
+  <!-- 查询条件 -->
+  <sql id="Base_Where_Clause">
+    where 1=1
+    <trim suffixOverrides="," >
+	      <if test="id != null" >
+        and id =  #{id}
+	  </if>
+	      <if test="code != null and code != ''" >
+        and code =  #{code}
+	  </if>
+	      <if test="companyName != null and companyName != ''" >
+        and company_name =  #{companyName}
+	  </if>
+	      <if test="name != null and name != ''" >
+        and name =  #{name}
+	  </if>
+	      <if test="tel != null and tel != ''" >
+        and tel =  #{tel}
+	  </if>
+	      <if test="mail != null and mail != ''" >
+        and mail =  #{mail}
+	  </if>
+	      <if test="token != null and token != ''" >
+        and token =  #{token}
+	  </if>
+	      <if test="appkey != null and appkey != ''" >
+        and appkey =  #{appkey}
+	  </if>
+	      <if test="cTime != null and cTime != ''" >
+        and c_time =  #{cTime}
+	  </if>
+	      <if test="mTime != null and mTime != ''" >
+        and m_time =  #{mTime}
+	  </if>
+    </trim>
+  </sql>
+   
+  <!-- 插入记录 -->
+  <insert id="insert" parameterType="Object" >
+    <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+	  SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into SYS_CLOUD_USER(id,code,company_name,name,tel,mail,token,appkey,c_time,m_time)
+ values(#{id},#{code},#{companyName},#{name},#{tel},#{mail},#{token},#{appkey},#{cTime},#{mTime})
+  </insert>
+
+  <!-- 根据id，修改记录-->  
+  <update id="updateByPrimaryKey" parameterType="Object" >
+    update SYS_CLOUD_USER set code=#{code},company_name=#{companyName},name=#{name},tel=#{tel},mail=#{mail},token=#{token},appkey=#{appkey},c_time=#{cTime},m_time=#{mTime} where id=#{id}
+  </update>
+ 
+  <!-- 修改记录，只修改只不为空的字段 -->
+  <update id="updateByPrimaryKeySelective" parameterType="Object" >
+    update SYS_CLOUD_USER set 
+	<trim  suffixOverrides="," >
+	<if test="code != null  ">
+		code=#{code},
+	</if>
+	<if test="companyName != null  ">
+		company_name=#{companyName},
+	</if>
+	<if test="name != null  ">
+		name=#{name},
+	</if>
+	<if test="tel != null  ">
+		tel=#{tel},
+	</if>
+	<if test="mail != null  ">
+		mail=#{mail},
+	</if>
+	<if test="token != null  ">
+		token=#{token},
+	</if>
+	<if test="appkey != null  ">
+		appkey=#{appkey},
+	</if>
+	<if test="cTime != null  ">
+		c_time=#{cTime},
+	</if>
+	<if test="mTime != null  ">
+		m_time=#{mTime},
+	</if>
+	</trim> where id=#{id}
+  </update>
+ 
+  <!-- 根据id查询 云用户 -->
+  <select id="selectByPrimaryKey"  resultMap="BaseResultMap" parameterType="Object">
+    select <include refid="Base_Column_List" /> 
+	 from SYS_CLOUD_USER where id = #{id}
+  </select>
+  
+  <!-- 删除记录 -->
+  <delete id="deleteByPrimaryKey" parameterType="Object">
+    delete 	 from SYS_CLOUD_USER where id = #{id}
+  </delete>
+
+  <!-- 云用户 列表总数-->
+  <select id="queryByCount" resultType="java.lang.Integer"  parameterType="Object">
+	select count(1) from SYS_CLOUD_USER 
+	<include refid="Base_Where_Clause"/>
+  </select>
+  	
+  <!-- 查询云用户列表 -->
+  <select id="queryByList" resultMap="BaseResultMap"  parameterType="Object">
+	select 
+	<include refid="Base_Column_List"/>
+	from SYS_CLOUD_USER 
+	<include refid="Base_Where_Clause"/>
+	<if test="pager.orderCondition != null and pager.orderCondition != ''" >
+       ${pager.orderCondition}
+    </if>
+    <if test="pager.mysqlQueryCondition != null and pager.mysqlQueryCondition != ''" >
+       ${pager.mysqlQueryCondition}
+    </if>
+  </select>
+  <select id="getCloudUserByCode"  resultMap="BaseResultMap" parameterType="Object">
+    select <include refid="Base_Column_List" /> 
+	 from SYS_CLOUD_USER where code = #{code}
+  </select>
+</mapper>   

@@ -1,0 +1,22 @@
+{
+	"sysErrorRecord" : {
+		"title" : "子系统管理",
+		"buttons" : [{
+			"text" : "查看异常详细信息",
+			"group" : "left",
+			"eventId" : "viewErrorDetail"
+		},{
+			"text" : "搜索",
+			"checkSelect" : false,
+			"group" : "filter",
+			"eventId" : "search"
+		}, {
+			"text" : "重置",
+			"checkSelect" : false,
+			"selfHandle" : true,
+			"group" : "filter",
+			"eventId" : "reset"
+		}]
+	}
+
+}

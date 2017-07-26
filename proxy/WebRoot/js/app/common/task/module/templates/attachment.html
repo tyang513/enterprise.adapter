@@ -1,0 +1,30 @@
+<!-- 按钮下移 start 
+<div id="${uuid}_bar">
+		<div data-attach-point="editBtn">
+			<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" data-attach-event="click:_openFileUploadDialog">上传附件</a>
+		</div>
+</div>
+ 按钮下移 end -->
+
+
+<div class="form-module">
+	<div data-options="custom:true" data-attach-point="attachmentGrid"></div>
+	<span data-attach-point="attachmentErrorMsg"></span>
+	
+</div>
+<!-- <div data-attach-point="attachmentDiv">
+	<div class="easyui-panel" data-options="custom:true,title:'附件信息'" style="width: 1000px;" >
+	    <table class="easyui-datagrid" data-options="custom:true,border:false,singleSelect:true,fitColumns:true,rownumbers:true"
+			   data-attach-point="attachmentGrid">
+	       <thead>
+	        <tr>
+	                <th data-options="field:'id',width:1,align:'center',hidden:true"></th>
+	                <th data-options="field:'name',width:15,align:'center',formatter:'_downloadAttachment'">附件名称</th>
+					<th data-options="field:'submitUserName',width:8,align:'center'">上传人</th>
+					<th data-options="field:'ctime',width:8,align:'center',formatter:app.utils.formatTime">上传时间</th>
+					<th	data-options="field:'operate',width:8,align:'center',formatter:'_deleteAttachment'">操作</th>
+			 </tr>
+			</thead>  
+	    </table>
+	</div> 
+	</div>  -->

@@ -1,0 +1,40 @@
+{
+	"taskInfo/list.do" : {
+		"type" : "post",
+		"url" : "taskInfo/list.do",
+		"dataType" : "json"
+	},
+	"taskInfo/save.do" : {
+		"type" : "post",
+		"url" : "taskInfo/save.do",
+		"dataType" : "json"
+	},
+	"taskInfo/saveData.do" : {
+		"type" : "POST",
+		"url" : "taskInfo/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"taskInfo/findById.do" : {
+		"type" : "post",
+		"url" : "taskInfo/findById.do",
+		"dataType" : "json"
+	},
+	"taskInfo/deleteById.do" : {
+		"type" : "post",
+		"url" : "taskInfo/deleteById.do",
+		"dataType" : "json"
+	},
+	"taskLog/list.do" : {
+		"type" : "post",
+		"url" : "taskLog/list.do",
+		"dataType" : "json"
+	},
+	"taskInfo/taskProcessList.do" : {
+		"type" : "post",
+		"url" : "taskInfo/taskProcessList.do",
+		"dataType" : "json"
+	}
+	
+}

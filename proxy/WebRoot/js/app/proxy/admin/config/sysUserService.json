@@ -1,0 +1,29 @@
+{
+	"sysUser/list.do" : {
+		"type" : "post",
+		"url" : "sysUser/list.do",
+		"dataType" : "json"
+	},
+	"sysUser/save.do" : {
+		"type" : "post",
+		"url" : "sysUser/save.do",
+		"dataType" : "json"
+	},
+	"sysUser/saveData.do" : {
+		"type" : "POST",
+		"url" : "sysUser/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"sysUser/findById.do" : {
+		"type" : "post",
+		"url" : "sysUser/findById.do",
+		"dataType" : "json"
+	},
+	"sysUser/deleteById.do" : {
+		"type" : "post",
+		"url" : "sysUser/deleteById.do",
+		"dataType" : "json"
+	}
+}

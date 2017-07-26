@@ -1,0 +1,22 @@
+{
+	"scriptStepRecord" : {
+		"title" : "子系统管理",
+		"buttons" : [{
+			"text" : "查看",
+			"group" : "left",
+			"eventId" : "view"
+		}, {
+			"text" : "搜索",
+			"checkSelect" : false,
+			"group" : "filter",
+			"eventId" : "search"
+		}, {
+			"text" : "重置",
+			"checkSelect" : false,
+			"selfHandle" : true,
+			"group" : "filter",
+			"eventId" : "reset"
+		}]
+	}
+
+}

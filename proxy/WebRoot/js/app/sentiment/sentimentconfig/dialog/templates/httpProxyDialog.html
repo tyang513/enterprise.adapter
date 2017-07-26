@@ -1,0 +1,23 @@
+<div class="dialog">
+	<form data-attach-point="editForm" class="ui-form" method="post">  
+		<input type="hidden" name="id">
+		<div class="ui-edit">
+			<div class="fitem">
+				<label>ip：</label>
+				<input name="ip" type="text" maxlength="" size="44" class="easyui-numberbox" data-options="required:true" missingMessage="请填写ip">
+				<span class="required">*</span>			</div>
+			<div class="fitem">
+				<label>端口号：</label>
+				<input name="port" type="text" maxlength="8" size="44" class="easyui-numberbox" data-options="required:true" missingMessage="请填写端口号">
+				<span class="required">*</span>			</div>
+			<div class="fitem">
+				<label>类型：</label>
+				<input name="type" type="text" size="44" data-attach-point="typeCombobox" maxlength="8" class="easyui-combobox" data-options="editable:false" missingMessage="请填写类型">
+							</div>
+			<div class="fitem">
+				<label>描述：</label>
+				<textarea  name="description" cols="45" rows="5" maxlength="255" class="easyui-validatebox" data-attach-point ="describe" ></textarea>
+			</div>
+		</div>
+	</form>
+</div>

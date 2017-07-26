@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.td.um.dao.ResourceDao">
+	<!-- Result Map -->
+	<resultMap id="BaseResultMap" type="com.td.um.entity.Resource">
+		<result column="rid" property="rid" />
+		<result column="app_rid" property="appRid" />
+		<result column="resource_type_rid" property="resourceTypeRid" />
+		<result column="parent_resource_rid" property="parentResourceRid" />
+		<result column="resource_code" property="resourceCode" />
+		<result column="resource_name" property="resourceName" />
+		<result column="resource_desc" property="resourceDesc" />
+		<result column="resource_order" property="resourceOrder" />
+		<result column="resource_uri" property="resourceUri" />
+		<result column="is_action" property="isAction" />
+		<result column="action" property="action" />
+		<result column="ext_attr1" property="extAttr1" />
+		<result column="ext_attr2" property="extAttr2" />
+		<result column="ext_attr3" property="extAttr3" />
+		<result column="ext_attr4" property="extAttr4" />
+		<result column="ext_attr5" property="extAttr5" />
+		<result column="ext_attr6" property="extAttr6" />
+		<result column="create_time" property="createTime" />
+		<result column="update_time" property="updateTime" />
+		<result column="op_umid" property="opUmid" />
+		<result column="parentResourceName" property="parentResourceName" />
+		<result column="appName" property="appName" />
+		<result column="resourceTypeName" property="resourceTypeName" />
+		<result column="parentId" property="parentId" />
+		<result column="appCode" property="appCode" />
+		<result column="parentResourceCode" property="parentResourceCode" />
+		<result column="resourceTypeCode" property="resourceTypeCode" />
+	</resultMap>
+
+	<!-- UM_RESOURCE table all fields -->
+	<sql id="Base_Column_List">
+		rid,app_rid,resource_type_rid,parent_resource_rid,resource_code,resource_name,resource_desc,resource_order,resource_uri,is_action,action,ext_attr1,ext_attr2,ext_attr3,ext_attr4,ext_attr5,ext_attr6,create_time,update_time,op_umid
+	</sql>
+
+	<!-- 查询条件 -->
+	<sql id="Base_Where_Clause">
+		where 1=1
+		<trim suffixOverrides=",">
+			<if test="rid != null and rid != ''">
+				and re.rid = #{rid}
+			</if>
+			<if test="appRid != null and appRid != ''">
+				and re.app_rid = #{appRid}
+			</if>
+			<if test="resourceTypeRid != null and resourceTypeRid != ''">
+				and re.resource_type_rid = #{resourceTypeRid}
+			</if>
+			<if test="parentResourceRid != null">
+				and re.parent_resource_rid = #{parentResourceRid}
+			</if>
+			<if test="resourceCode != null and resourceCode != ''">
+				and re.resource_code = #{resourceCode}
+			</if>
+			<if test="resourceName != null and resourceName != ''">
+				and re.resource_name = #{resourceName}
+			</if>
+			<if test="resourceDesc != null and resourceDesc != ''">
+				and re.resource_desc = #{resourceDesc}
+			</if>
+			<if test="resourceOrder != null and resourceOrder != ''">
+				and re.resource_order = #{resourceOrder}
+			</if>
+			<if test="resourceUri != null and resourceUri != ''">
+				and re.resource_uri = #{resourceUri}
+			</if>
+			<if test="isAction != null and isAction != ''">
+				and re.is_action = #{isAction}
+			</if>
+			<if test="action != null and action != ''">
+				and re.action = #{action}
+			</if>
+			<if test="extAttr1 != null and extAttr1 != ''">
+				and re.ext_attr1 = #{extAttr1}
+			</if>
+			<if test="extAttr2 != null and extAttr2 != ''">
+				and re.ext_attr2 = #{extAttr2}
+			</if>
+			<if test="extAttr3 != null and extAttr3 != ''">
+				and re.ext_attr3 = #{extAttr3}
+			</if>
+			<if test="extAttr4 != null and extAttr4 != ''">
+				and re.ext_attr4 = #{extAttr4}
+			</if>
+			<if test="extAttr5 != null and extAttr5 != ''">
+				and re.ext_attr5 = #{extAttr5}
+			</if>
+			<if test="extAttr6 != null and extAttr6 != ''">
+				and re.ext_attr6 = #{extAttr6}
+			</if>
+			<if test="createTime != null and createTime != ''">
+				and re.create_time = #{createTime}
+			</if>
+			<if test="updateTime != null and updateTime != ''">
+				and re.update_time = #{updateTime}
+			</if>
+			<if test="opUmid != null and opUmid != ''">
+				and re.op_umid = #{opUmid}
+			</if>
+			<if test="editMark != null and editMark != ''">
+				and re.resource_code not in (#{editMark})
+			</if>
+		</trim>
+	</sql>
+
+	<!-- 插入记录 -->
+	<insert id="insert" parameterType="Object">
+		<selectKey resultType="java.lang.Integer" order="AFTER"
+			keyProperty="rid">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		insert into
+		UM_RESOURCE(rid,app_rid,resource_type_rid,parent_resource_rid,resource_code,resource_name,resource_desc,resource_order,resource_uri,is_action,action,ext_attr1,ext_attr2,ext_attr3,ext_attr4,ext_attr5,ext_attr6,create_time,update_time,op_umid)
+		values(#{rid},#{appRid},#{resourceTypeRid},#{parentResourceRid},#{resourceCode},#{resourceName},#{resourceDesc},#{resourceOrder},#{resourceUri},#{isAction},#{action},#{extAttr1},#{extAttr2},#{extAttr3},#{extAttr4},#{extAttr5},#{extAttr6},now(),now(),#{opUmid})
+	</insert>
+
+	<!-- 根据id，修改记录 -->
+	<update id="updateByPrimaryKey" parameterType="Object">
+		update UM_RESOURCE set
+		app_rid=#{appRid},resource_type_rid=#{resourceTypeRid},parent_resource_rid=#{parentResourceRid},resource_code=#{resourceCode},resource_name=#{resourceName},resource_desc=#{resourceDesc},resource_order=#{resourceOrder},resource_uri=#{resourceUri},is_action=#{isAction},action=#{action},ext_attr1=#{extAttr1},ext_attr2=#{extAttr2},ext_attr3=#{extAttr3},ext_attr4=#{extAttr4},ext_attr5=#{extAttr5},ext_attr6=#{extAttr6},create_time=now(),update_time=now(),op_umid=#{opUmid}
+		where rid=#{rid}
+	</update>
+
+	<!-- 修改记录，只修改只不为空的字段 -->
+	<update id="updateByPrimaryKeySelective" parameterType="Object">
+		update UM_RESOURCE set
+		<trim suffixOverrides=",">
+			<if test="appRid != null  ">
+				app_rid=#{appRid},
+			</if>
+			<if test="resourceTypeRid != null  ">
+				resource_type_rid=#{resourceTypeRid},
+			</if>
+			<if test="parentResourceRid != null  ">
+				parent_resource_rid=#{parentResourceRid},
+			</if>
+			<if test="resourceCode != null  ">
+				resource_code=#{resourceCode},
+			</if>
+			<if test="resourceName != null  ">
+				resource_name=#{resourceName},
+			</if>
+			<if test="resourceDesc != null  ">
+				resource_desc=#{resourceDesc},
+			</if>
+			<if test="resourceOrder != null  ">
+				resource_order=#{resourceOrder},
+			</if>
+			<if test="resourceUri != null  ">
+				resource_uri=#{resourceUri},
+			</if>
+			<if test="isAction != null  ">
+				is_action=#{isAction},
+			</if>
+			<if test="action != null  ">
+				action=#{action},
+			</if>
+			<if test="extAttr1 != null  ">
+				ext_attr1=#{extAttr1},
+			</if>
+			<if test="extAttr2 != null  ">
+				ext_attr2=#{extAttr2},
+			</if>
+			<if test="extAttr3 != null  ">
+				ext_attr3=#{extAttr3},
+			</if>
+			<if test="extAttr4 != null  ">
+				ext_attr4=#{extAttr4},
+			</if>
+			<if test="extAttr5 != null  ">
+				ext_attr5=#{extAttr5},
+			</if>
+			<if test="extAttr6 != null  ">
+				ext_attr6=#{extAttr6},
+			</if>
+			<if test="createTime != null  ">
+				create_time=#{createTime},
+			</if>
+			<if test="updateTime != null  ">
+				update_time=#{updateTime},
+			</if>
+			<if test="opUmid != null  ">
+				op_umid=#{opUmid},
+			</if>
+		</trim>
+		where rid=#{rid}
+	</update>
+
+	<!-- 根据id查询 资源 -->
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="Object">
+		SELECT re.*,(SELECT resource_name FROM UM_RESOURCE WHERE
+		rid=re.parent_resource_rid) AS
+		parentResourceName,ty.resource_type_code AS resourceTypeName FROM
+		UM_RESOURCE AS re
+		LEFT JOIN UM_RESOURCE_TYPE ty ON ty.rid=re.resource_type_rid
+		where re.rid = #{rid}
+	</select>
+
+	<!-- 删除记录 -->
+	<delete id="deleteByPrimaryKey" parameterType="Object">
+		delete from UM_RESOURCE where rid = #{rid}
+	</delete>
+
+	<!-- 资源 列表总数 -->
+	<select id="queryByCount" resultType="java.lang.Integer"
+		parameterType="Object">
+		select count(1) from UM_RESOURCE as re
+		<include refid="Base_Where_Clause" />
+	</select>
+
+	<!-- 查询资源列表 -->
+	<select id="queryByList" resultMap="BaseResultMap"
+		parameterType="Object">
+
+
+
+		SELECT re.*,(app.app_name) AS appName,ret.resource_type_name AS
+		resourceTypeName,ree.resource_name AS parentResourceName FROM
+		UM_RESOURCE AS re
+		LEFT JOIN UM_APP app ON app.rid=re.app_rid
+		LEFT JOIN UM_RESOURCE_TYPE ret ON re.resource_type_rid=ret.rid
+		LEFT JOIN UM_RESOURCE ree ON ree.rid=re.parent_resource_rid
+
+		<!-- select <include refid="Base_Column_List"/> from UM_RESOURCE -->
+		<include refid="Base_Where_Clause" />
+		<if test="pager.orderCondition != null and pager.orderCondition != ''">
+			${pager.orderCondition}
+		</if>
+		<if
+			test="pager.mysqlQueryCondition != null and pager.mysqlQueryCondition != ''">
+			${pager.mysqlQueryCondition}
+		</if>
+	</select>
+
+
+	<!-- 查询列表 -->
+	<select id="findList" resultMap="BaseResultMap" parameterType="Object">
+
+		SELECT re.*,(app.app_name) AS appName,ret.resource_type_name AS
+		resourceTypeName,ree.resource_name AS parentResourceName FROM
+		UM_RESOURCE AS re
+		LEFT JOIN UM_APP app ON app.rid=re.app_rid
+		LEFT JOIN UM_RESOURCE_TYPE ret ON re.resource_type_rid=ret.rid
+		LEFT JOIN UM_RESOURCE ree ON ree.rid=re.parent_resource_rid
+
+		<include refid="Base_Where_Clause" />
+		order by re.resource_order
+	</select>
+
+
+
+	<!-- 查询列表 -->
+	<select id="getResourceByIds" resultMap="BaseResultMap"
+		parameterType="Object">
+		SELECT re.*,(app.app_name) AS appName,ret.resource_type_name AS
+		resourceTypeName,ree.resource_name AS parentResourceName FROM
+		UM_RESOURCE AS re
+		LEFT JOIN UM_APP app ON app.rid=re.app_rid
+		LEFT JOIN UM_RESOURCE_TYPE ret ON re.resource_type_rid=ret.rid
+		LEFT JOIN UM_RESOURCE ree ON ree.rid=re.parent_resource_rid
+		where 1=1
+		<if test="resourIds != null">
+			and re.status in
+			<foreach collection="statusArray" open="(" separator=","
+				close=")" item="item">
+				#{item}
+			</foreach>
+		</if>
+	</select>
+
+
+	<!-- 查询列表 -->
+	<select id="getResourceByArray" resultMap="BaseResultMap"
+		parameterType="Object">
+		SELECT re.*,app.app_name AS appName,
+		ret.resource_type_name AS resourceTypeName,
+		ree.resource_name AS parentResourceName
+		,ret.resource_type_code AS resourceTypeCode
+		,ree.resource_code AS parentResourceCode
+		,app.app_code AS appCode
+		FROM UM_RESOURCE AS re
+		LEFT JOIN UM_APP app ON app.rid=re.app_rid
+		LEFT JOIN UM_RESOURCE_TYPE ret ON re.resource_type_rid=ret.rid
+		LEFT JOIN UM_RESOURCE ree ON ree.rid=re.parent_resource_rid
+
+		where 1=1
+		<if test="ids != null">
+			and re.rid in
+			<foreach collection="ids" open="(" separator="," close=")"
+				item="item">
+				#{item}
+			</foreach>
+		</if>
+	</select>
+
+
+	<!-- 查询列表 -->
+	<select id="getAuthMenu" resultMap="BaseResultMap"
+		parameterType="Object">
+		select * from (
+		SELECT re.*,(app.app_name) AS appName,ret.resource_type_name AS
+		resourceTypeName,ree.resource_name AS parentResourceName
+		,ree.resource_code as parentId FROM UM_RESOURCE AS re
+		LEFT JOIN UM_APP app ON app.rid=re.app_rid
+		LEFT JOIN UM_RESOURCE_TYPE ret
+		ON re.resource_type_rid=ret.rid
+		LEFT JOIN UM_RESOURCE ree ON
+		ree.rid=re.parent_resource_rid
+		WHERE
+		re.rid IN
+		(SELECT DISTINCT resource_rid FROM UM_ROLE_RESOURCE AS tempc
+		LEFT JOIN UM_RESOURCE tempr ON tempr.rid=tempc.resource_rid
+		WHERE tempc.role_rid IN (
+		SELECT role_rid FROM UM_ROLE_USER WHERE user_rid=#{userId}) AND
+		tempr.app_rid IN
+		(SELECT rid FROM UM_APP WHERE app_code=#{sysCode}) AND
+		tempr.resource_type_rid IN
+		(SELECT rid FROM UM_RESOURCE_TYPE WHERE resource_type_code=#{type})
+
+		)
+		UNION
+		SELECT re.*,(app.app_name) AS appName,ret.resource_type_name AS
+		resourceTypeName,ree.resource_name AS parentResourceName
+		,ree.resource_code as parentId FROM V_COMMON_MENU AS re
+		LEFT JOIN UM_APP app ON app.rid=re.app_rid
+		LEFT JOIN UM_RESOURCE_TYPE ret ON re.resource_type_rid=ret.rid
+		LEFT JOIN UM_RESOURCE ree ON ree.rid=re.parent_resource_rid where
+		re.resource_type_rid IN
+		(SELECT rid FROM UM_RESOURCE_TYPE WHERE resource_type_code=#{type})
+		and re.app_rid IN
+		(SELECT rid FROM UM_APP WHERE app_code=#{sysCode})
+
+
+		) AS result ORDER BY result.resource_order
+	</select>
+
+	<select id="getExtResourceByType" resultMap="BaseResultMap"
+		parameterType="Object">
+
+		SELECT re.*,(app.app_name) AS appName,ret.resource_type_name AS
+		resourceTypeName,ree.resource_name AS parentResourceName FROM
+		UM_RESOURCE AS re
+		LEFT JOIN UM_APP app ON app.rid=re.app_rid
+		LEFT JOIN UM_RESOURCE_TYPE ret
+		ON re.resource_type_rid=ret.rid
+		LEFT JOIN UM_RESOURCE ree ON
+		ree.rid=re.parent_resource_rid
+		WHERE
+		re.rid IN
+		(SELECT DISTINCT resource_rid FROM UM_ROLE_RESOURCE AS tempc
+		LEFT JOIN UM_RESOURCE tempr ON tempr.rid=tempc.resource_rid
+		WHERE tempc.role_rid IN (
+		SELECT role_rid FROM UM_ROLE_USER WHERE user_rid=#{umid}) AND
+		tempr.ext_attr2 = #{resourceTypeId}
+		)
+		<!-- AND re.parent_resource_rid!=0 -->
+		order by re.resource_order
+	</select>
+
+
+
+	<!-- 查询列表 -->
+	<select id="getSystemMenu" resultMap="BaseResultMap"
+		parameterType="Object">
+
+		SELECT re.*,(app.app_name) AS appName,ret.resource_type_name AS
+		resourceTypeName,ree.resource_name AS parentResourceName FROM
+		V_SYSTEM_MENU AS re
+		LEFT JOIN UM_APP app ON app.rid=re.app_rid
+		LEFT JOIN UM_RESOURCE_TYPE ret ON re.resource_type_rid=ret.rid
+		LEFT JOIN UM_RESOURCE ree ON ree.rid=re.parent_resource_rid order by
+		re.resource_order
+	</select>
+
+	<!-- 查询列表 -->
+	<select id="findByAppRidResourceTypeIdResourceCode" resultMap="BaseResultMap"
+		parameterType="Object">
+
+		SELECT * FROM UM_RESOURCE
+		where
+		app_rid=#{appRid}
+		and resource_type_rid = #{resourceTypeRid}
+		and resource_code =
+		#{resourceCode}
+	</select>
+
+	<!-- 根据应用系统id ，资源类型 和 parent_resource_rid =0 查找 root 的资源id -->
+	<select id="findByAppRidResourceTypeIdParentResourceRid"
+		resultMap="BaseResultMap" parameterType="Object">
+
+		SELECT * FROM UM_RESOURCE
+		where
+		app_rid=#{appRid}
+		and resource_type_rid = #{resourceTypeRid}
+		and parent_resource_rid = 0
+	</select>
+
+	<select id="getAdminMenu" resultMap="BaseResultMap"
+		parameterType="Object">
+
+		select * from (
+		SELECT re.*,(app.app_name) AS appName,ret.resource_type_name AS
+		resourceTypeName,ree.resource_name AS parentResourceName FROM
+		UM_RESOURCE AS re
+		LEFT JOIN UM_APP app ON app.rid=re.app_rid
+		LEFT JOIN UM_RESOURCE_TYPE ret
+		ON re.resource_type_rid=ret.rid
+		LEFT JOIN UM_RESOURCE ree ON
+		ree.rid=re.parent_resource_rid
+		WHERE
+		re.rid IN
+		(SELECT DISTINCT resource_rid FROM UM_ROLE_RESOURCE AS tempc
+		LEFT JOIN UM_RESOURCE tempr ON tempr.rid=tempc.resource_rid
+		WHERE tempc.role_rid IN (
+		SELECT role_rid FROM UM_ROLE_USER WHERE user_rid=#{userId}) AND
+		tempr.app_rid IN
+		(SELECT rid FROM UM_APP WHERE app_code=#{sysCode}) AND
+		tempr.resource_type_rid IN
+		(SELECT rid FROM UM_RESOURCE_TYPE WHERE resource_type_code=#{type})
+
+		)
+
+		UNION SELECT re.*,(app.app_name) AS appName,ret.resource_type_name AS
+		resourceTypeName,ree.resource_name AS parentResourceName FROM
+		V_APP_ADMIN_MENU AS re
+		LEFT JOIN UM_APP app ON app.rid=re.app_rid
+		LEFT JOIN UM_RESOURCE_TYPE ret
+		ON re.resource_type_rid=ret.rid
+		LEFT JOIN UM_RESOURCE ree ON
+		ree.rid=re.parent_resource_rid
+
+		) as result order by result.resource_order
+
+
+	</select>
+
+
+	<select id="getResourcebyCodeAndAppCode" resultMap="BaseResultMap"
+		parameterType="Object">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM UM_RESOURCE WHERE resource_code = #{resourceCode}
+		and app_rid IN (SELECT rid FROM UM_APP WHERE app_code = #{appCode})
+		and resource_type_rid IN (SELECT rid FROM UM_RESOURCE_TYPE WHERE
+		resource_type_code = #{typeCode})
+	</select>
+
+
+	<!-- 获取角色下的资源 -->
+	<select id="getResourceByRole" resultMap="BaseResultMap"
+		parameterType="Object">
+		SELECT * FROM UM_RESOURCE
+		WHERE rid IN (SELECT resource_rid FROM UM_ROLE_RESOURCE WHERE role_rid IN
+		(SELECT rid FROM UM_ROLE WHERE role_code= #{roleCode}))
+		AND app_rid IN (SELECT rid FROM UM_APP WHERE app_code= #{appCode} )
+		AND resource_type_rid IN (SELECT rid FROM UM_RESOURCE_TYPE WHERE app_rid
+		IN
+		(SELECT rid FROM UM_APP WHERE app_code= #{appCode} ) AND
+		resource_type_code=#{resourceTypeCode})
+	</select>
+
+	<select id="findAllResource" resultMap="BaseResultMap" parameterType="Object">
+		SELECT r.* FROM UM_RESOURCE r
+		inner join SYS_USER_RESOURCE_REL rel on rel.rid = r.rid
+		inner join SYS_USER u on u.id = rel.sysUserId
+		where op_umid = 'proxy' and resource_type_rid = #{type} and u.userId = #{userId}
+		order by resource_code
+	</select>
+
+</mapper>   

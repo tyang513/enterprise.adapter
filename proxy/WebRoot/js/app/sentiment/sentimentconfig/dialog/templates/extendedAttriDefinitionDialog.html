@@ -1,0 +1,36 @@
+<div class="dialog">
+	<form data-attach-point="editForm" class="ui-form" method="post">
+		<input type="hidden" name="id">
+		<div class="ui-edit">
+			<div class="fitem">
+				<label>属性代码：</label> <input name="code" type="text"   size="33"
+					class="easyui-validatebox" data-attach-point="codeInput" data-options="required:true,validType:'length[1,40]'"
+					missingMessage="请填写属性代码"> <span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label>属性名：</label> 
+				<input name="name" type="text"  size="33"	class="easyui-validatebox" data-attach-point="nameInput" data-options="required:true,validType:'length[1,40]'"
+					missingMessage="请填写属性名">
+				 <span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label>属性类型：</label> <input name="type" type="text"  size="33"
+					class="easyui-combobox" data-attach-point="typeCombobox" data-options="required:true,editable:false"
+					missingMessage="请选择属性类型"> <span class="required">*</span>
+			</div>
+			<div class="fitem" data-attach-point="defaultValueDiv">
+				<label>属性默认值：</label> 
+				<input name="defaultValue" type="text"  size="33"  class="easyui-validatebox" data-attach-point="defaultValueInput" data-options="required:true,validType:'length[1,40]'"
+					missingMessage="请填写属性默认值"> 
+					 <span class="required">*</span>
+			</div>
+			
+				<div class="fitem">
+					<label>属性描述：</label> 
+					<textarea cols="34" rows="4" class="easyui-validatebox" name="description" 
+    					data-options="required:true,validType:length[1,256]" missingMessage="请填写属性描述"></textarea>
+    					<span class="required">*</span>
+				</div>
+		</div>
+	</form>
+</div>

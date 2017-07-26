@@ -1,0 +1,29 @@
+<div class="dialog">
+	<form data-attach-point="createmailTemplateForm">
+		<input name="id" type="hidden" data-attach-point="id"/>
+				<div class="criteria-panel" >
+					<div>
+						<label>&nbsp;&nbsp;&nbsp; 任务编号：</label> 
+						<input class="easyui-validatebox"
+							data-attach-point="ipt_id"  name="ipt_id"  data-options="disabled:true" maxlength="128" />
+					</div>
+					<div>
+						<label>&nbsp;&nbsp;&nbsp; 任务名称：</label> <input class="easyui-validatebox"
+							data-attach-point="ipt_jobkey"  name="ipt_jobkey"  data-options="disabled:true" maxlength="128" />
+					</div>					
+					<div>
+						<label>&nbsp;&nbsp;&nbsp;&nbsp;创建时间：</label> <input class="easyui-validatebox"
+							data-attach-point="ipt_createtime"  name="ipt_createtime"  data-options="disabled:true" maxlength="128" />
+					</div>
+					<div>
+						<label>任务记录编号：</label> <input class="easyui-validatebox"
+							data-attach-point="ipt_jobinputid"  name="ipt_jobinputid"  data-options="disabled:true" maxlength="128" />
+					</div>					
+			    	<div>
+						<label>&nbsp;&nbsp;&nbsp;&nbsp;错误信息：</label>
+						<textarea  class="easyui-validatebox"  style="width:280px;height :120px" data-options="disabled:true"  data-attach-point="ipt_errorinfo" name="ipt_errorinfo"  rows="5" cols="60" maxlength="1024" ></textarea>
+					</div>		
+							
+				</div>
+	</form>
+</div>

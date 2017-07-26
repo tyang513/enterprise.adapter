@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.td.proxy.dao.admin.PartnerDao" > 
+  <!-- Result Map-->
+  <resultMap id="BaseResultMap" type="com.td.proxy.entity.admin.Partner" >
+	<result column="id" property="id"/>
+	<result column="partner_full_name" property="partnerFullName"/>
+	<result column="partner_short_name" property="partnerShortName"/>
+	<result column="partner_code" property="partnerCode"/>
+	<result column="status" property="status"/>
+	<result column="encryption_algorithm_type" property="encryptionAlgorithmType"/>
+	<result column="secret_key" property="secretKey"/>
+	<result column="secret_iv" property="secretIv"/>
+	<result column="email" property="email"/>
+	<result column="c_time" property="cTime"/>
+	<result column="m_time" property="mTime"/>
+  </resultMap>
+       
+  <!-- SYS_PARTNER table all fields -->
+  <sql id="Base_Column_List" >
+	 id,partner_full_name,partner_short_name,partner_code,status,encryption_algorithm_type,secret_key,secret_iv,email,c_time,m_time
+  </sql>
+   
+  <!-- 查询条件 -->
+  <sql id="Base_Where_Clause">
+    where 1=1
+    <trim suffixOverrides="," >
+	      <if test="id != null and id != ''" >
+        and id =  #{id}
+	  </if>
+	      <if test="partnerFullName != null and partnerFullName != ''" >
+        and partner_full_name =  #{partnerFullName}
+	  </if>
+	      <if test="partnerShortName != null and partnerShortName != ''" >
+        and partner_short_name =  #{partnerShortName}
+	  </if>
+	      <if test="partnerCode != null and partnerCode != ''" >
+        and partner_code =  #{partnerCode}
+	  </if>
+	      <if test="status != null and status != ''" >
+        and status =  #{status}
+	  </if>
+	      <if test="encryptionAlgorithmType != null and encryptionAlgorithmType != ''" >
+        and encryption_algorithm_type =  #{encryptionAlgorithmType}
+	  </if>
+	      <if test="secretKey != null and secretKey != ''" >
+        and secret_key =  #{secretKey}
+	  </if>
+	      <if test="secretIv != null and secretIv != ''" >
+        and secret_iv =  #{secretIv}
+	  </if>
+	      <if test="email != null and email != ''" >
+        and email =  #{email}
+	  </if>
+	      <if test="cTime != null and cTime != ''" >
+        and c_time =  #{cTime}
+	  </if>
+	      <if test="mTime != null and mTime != ''" >
+        and m_time =  #{mTime}
+	  </if>
+    </trim>
+  </sql>
+   
+  <!-- 插入记录 -->
+  <insert id="insert" parameterType="Object" >
+    <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+	  SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into SYS_PARTNER(id,partner_full_name,partner_short_name,partner_code,status,encryption_algorithm_type,secret_key,secret_iv,email,c_time,m_time)
+ values(#{id},#{partnerFullName},#{partnerShortName},#{partnerCode},#{status},#{encryptionAlgorithmType},#{secretKey},#{secretIv},#{email},#{cTime},#{mTime})
+  </insert>
+
+  <!-- 根据id，修改记录-->  
+  <update id="updateByPrimaryKey" parameterType="Object" >
+    update SYS_PARTNER set partner_full_name=#{partnerFullName},partner_short_name=#{partnerShortName},partner_code=#{partnerCode},status=#{status},encryption_algorithm_type=#{encryptionAlgorithmType},secret_key=#{secretKey},secret_iv=#{secretIv},email=#{email},c_time=#{cTime},m_time=#{mTime} where id=#{id}
+  </update>
+ 
+  <!-- 修改记录，只修改只不为空的字段 -->
+  <update id="updateByPrimaryKeySelective" parameterType="Object" >
+    update SYS_PARTNER set 
+	<trim  suffixOverrides="," >
+	<if test="partnerFullName != null  ">
+		partner_full_name=#{partnerFullName},
+	</if>
+	<if test="partnerShortName != null  ">
+		partner_short_name=#{partnerShortName},
+	</if>
+	<if test="partnerCode != null  ">
+		partner_code=#{partnerCode},
+	</if>
+	<if test="status != null  ">
+		status=#{status},
+	</if>
+	<if test="encryptionAlgorithmType != null  ">
+		encryption_algorithm_type=#{encryptionAlgorithmType},
+	</if>
+	<if test="secretKey != null  ">
+		secret_key=#{secretKey},
+	</if>
+	<if test="secretIv != null  ">
+		secret_iv=#{secretIv},
+	</if>
+	<if test="email != null  ">
+		email=#{email},
+	</if>
+	<if test="cTime != null  ">
+		c_time=#{cTime},
+	</if>
+	<if test="mTime != null  ">
+		m_time=#{mTime},
+	</if>
+	</trim> where id=#{id}
+  </update>
+ 
+  <!-- 根据id查询 合作伙伴 -->
+  <select id="selectByPrimaryKey"  resultMap="BaseResultMap" parameterType="Object">
+    select <include refid="Base_Column_List" /> 
+	 from SYS_PARTNER where id = #{id}
+  </select>
+  
+  <!-- 删除记录 -->
+  <delete id="deleteByPrimaryKey" parameterType="Object">
+    delete 	 from SYS_PARTNER where id = #{id}
+  </delete>
+
+  <!-- 合作伙伴 列表总数-->
+  <select id="queryByCount" resultType="java.lang.Integer"  parameterType="Object">
+	select count(1) from SYS_PARTNER 
+	<include refid="Base_Where_Clause"/>
+  </select>
+  	
+  <!-- 查询合作伙伴列表 -->
+  <select id="queryByList" resultMap="BaseResultMap"  parameterType="Object">
+	select 
+	<include refid="Base_Column_List"/>
+	from SYS_PARTNER 
+	<include refid="Base_Where_Clause"/>
+	<if test="pager.orderCondition != null and pager.orderCondition != ''" >
+       ${pager.orderCondition}
+    </if>
+    <if test="pager.mysqlQueryCondition != null and pager.mysqlQueryCondition != ''" >
+       ${pager.mysqlQueryCondition}
+    </if>
+  </select>
+  
+  <select id="findAllList" resultMap="BaseResultMap">
+	select 
+	<include refid="Base_Column_List"/>
+	from SYS_PARTNER 
+  </select>
+</mapper>   

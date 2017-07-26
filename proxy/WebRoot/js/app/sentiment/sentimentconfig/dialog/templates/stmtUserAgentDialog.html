@@ -1,0 +1,28 @@
+<div class="dialog">
+	<form data-attach-point="editForm" class="ui-form" method="post">  
+		<input type="hidden" name="id">
+		<div class="ui-edit">
+			<div data-attach-point="addUserAgent" hidden="true">
+				<div class="fitem">
+					<label>名称：</label>
+					<input name="name" type="text" maxlength="512"  size="44"  class="easyui-validatebox" data-options="required:true" missingMessage="请填写类别名称">
+					<span class="required">*</span>		
+				</div>
+				<div class="fitem">
+					<label>备注：</label>
+					<input name="description" type="text" maxlength="256"  size="44" class="easyui-validatebox" data-options="" >
+				</div>
+			</div>
+			<div data-attach-point="viewUserAgent" hidden="true" >
+				<div class="fitem">
+					<label>名称：</label>
+					<textarea  name="name"  data-attach-point="name" cols="50" rows="4" data-options="validType:['maxLength[512]']" maxlength="512"   missingMessage="请填写类别名称"></textarea>
+				</div>
+				<div class="fitem">
+					<label>备注：</label>
+					<textarea   name="description"  data-attach-point="description" cols="50" rows="4" data-options="validType:['maxLength[256]']" maxlength="256"   missingMessage="请填写关键字"></textarea>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

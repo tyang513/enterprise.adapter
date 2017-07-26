@@ -1,0 +1,29 @@
+{
+	"secondaryIndexErrorRecordDetail/list.do" : {
+		"type" : "post",
+		"url" : "secondaryIndexErrorRecordDetail/list.do",
+		"dataType" : "json"
+	},
+	"secondaryIndexErrorRecordDetail/save.do" : {
+		"type" : "post",
+		"url" : "secondaryIndexErrorRecordDetail/save.do",
+		"dataType" : "json"
+	},
+	"secondaryIndexErrorRecordDetail/saveData.do" : {
+		"type" : "POST",
+		"url" : "secondaryIndexErrorRecordDetail/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"secondaryIndexErrorRecordDetail/findById.do" : {
+		"type" : "post",
+		"url" : "secondaryIndexErrorRecordDetail/findById.do",
+		"dataType" : "json"
+	},
+	"secondaryIndexErrorRecordDetail/deleteById.do" : {
+		"type" : "post",
+		"url" : "secondaryIndexErrorRecordDetail/deleteById.do",
+		"dataType" : "json"
+	}
+}

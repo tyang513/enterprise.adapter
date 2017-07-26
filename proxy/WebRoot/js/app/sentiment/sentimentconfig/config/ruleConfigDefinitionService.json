@@ -1,0 +1,45 @@
+{
+	"ruleConfigDefinition/list.do" : {
+		"type" : "post",
+		"url" : "ruleConfigDefinition/list.do",
+		"dataType" : "json"
+	},
+	"ruleConfigDefinition/save.do" : {
+		"type" : "post",
+		"url" : "ruleConfigDefinition/save.do",
+		"dataType" : "json"
+	},
+	"ruleConfigDefinition/saveData.do" : {
+		"type" : "POST",
+		"url" : "ruleConfigDefinition/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"ruleConfigDefinition/findById.do" : {
+		"type" : "post",
+		"url" : "ruleConfigDefinition/findById.do",
+		"dataType" : "json"
+	},
+	"ruleConfigDefinition/deleteById.do" : {
+		"type" : "post",
+		"url" : "ruleConfigDefinition/deleteById.do",
+		"dataType" : "json"
+	},
+	
+	"getRuleConfigDefinitionByRuleId" : {
+		"type" : "post",
+		"url" : "ruleConfigDefinition/list.do",
+		"dataType" : "json"
+	},
+	"addRuleConfig" : {
+		"type" : "post",
+		"url" : "ruleConfigDefinition/save.do",
+		"dataType" : "json"
+	},
+	"updateRuleConfig" : {
+		"type" : "post",
+		"url" : "ruleConfigDefinition/save.do",
+		"dataType" : "json"
+	}
+}

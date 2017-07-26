@@ -1,0 +1,30 @@
+{
+	"templateRule/list.do" : {
+		"type" : "post",
+		"url" : "templateRule/list.do",
+		"dataType" : "json"
+	},
+	"templateRule/save.do" : {
+		"type" : "post",
+		"url" : "templateRule/save.do",
+		"dataType" : "json"
+	},
+	"templateRule/saveData.do" : {
+		"type" : "POST",
+		"url" : "templateRule/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"templateRule/findById.do" : {
+		"type" : "post",
+		"url" : "templateRule/findById.do",
+		"dataType" : "json"
+	},
+	"templateRule/deleteById.do" : {
+		"type" : "post",
+		"url" : "templateRule/deleteById.do",
+		"dataType" : "json"
+	},
+	
+}

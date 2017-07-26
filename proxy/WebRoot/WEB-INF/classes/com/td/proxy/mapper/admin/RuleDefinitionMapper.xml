@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.td.proxy.dao.admin.RuleDefinitionDao">
+	<!-- Result Map -->
+	<resultMap id="BaseResultMap"
+		type="com.td.proxy.entity.admin.RuleDefinition">
+		<result column="id" property="id" />
+		<result column="code" property="code" />
+		<result column="name" property="name" />
+		<result column="rule_class_name" property="ruleClassName" />
+		<result column="business_type" property="businessType" />
+		<result column="attr1" property="attr1" />
+		<result column="attr2" property="attr2" />
+		<result column="attr3" property="attr3" />
+		<result column="attr4" property="attr4" />
+		<result column="attr5" property="attr5" />
+		<result column="attr6" property="attr6" />
+		<result column="attr7" property="attr7" />
+		<result column="attr8" property="attr8" />
+		<result column="attr9" property="attr9" />
+		<result column="attr10" property="attr10" />
+		<result column="description" property="description" />
+		<result column="status" property="status" />
+		<result column="c_time" property="ctime" />
+		<result column="m_time" property="mtime" />
+	</resultMap>
+
+	<!-- STL_RULE_DEFINITION table all fields -->
+	<sql id="Base_Column_List">
+		id,code,name,rule_class_name,business_type,attr1,attr2,attr3,attr4,attr5,attr6,attr7,attr8,attr9,attr10,description,status,c_time,m_time
+	</sql>
+
+	<!-- 查询条件 -->
+	<sql id="Base_Where_Clause">
+		where 1=1
+		<trim suffixOverrides=",">
+			<if test="id != null and id != ''">
+				AND id like CONCAT('%',#{id},'%')
+			</if>
+			<if test="code != null and code != ''">
+				AND code like CONCAT('%',#{code},'%')
+			</if>
+			<if test="name != null and name != ''">
+				AND name like CONCAT('%',#{name},'%')
+			</if>
+			<if test="ruleClassName != null and ruleClassName != ''">
+				AND rule_Class_Name like CONCAT('%',#{ruleClassName},'%')
+			</if>
+			<if test="businessType != null and businessType != ''">
+				and business_type = #{businessType}
+			</if>
+			<if test="attr1 != null and attr1 != ''">
+				AND attr1 like CONCAT('%',#{attr1},'%')
+			</if>
+			<if test="attr2 != null and attr2 != ''">
+				AND attr2 like CONCAT('%',#{attr2},'%')
+			</if>
+			<if test="attr3 != null and attr3 != ''">
+				AND attr3 like CONCAT('%',#{attr3},'%')
+			</if>
+			<if test="attr4 != null and attr4 != ''">
+				AND attr4 like CONCAT('%',#{attr4},'%')
+			</if>
+			<if test="attr5 != null and attr5 != ''">
+				AND attr5 like CONCAT('%',#{attr5},'%')
+			</if>
+			<if test="attr6 != null and attr6 != ''">
+				AND attr6 like CONCAT('%',#{attr6},'%')
+			</if>
+			<if test="attr7 != null and attr7 != ''">
+				AND attr7 like CONCAT('%',#{attr7},'%')
+			</if>
+			<if test="attr8 != null and attr8 != ''">
+				AND attr8 like CONCAT('%',#{attr8},'%')
+			</if>
+			<if test="attr9 != null and attr9 != ''">
+				AND attr9 like CONCAT('%',#{attr9},'%')
+			</if>
+			<if test="attr10 != null and attr10 != ''">
+				AND attr10 like CONCAT('%',#{attr10},'%')
+			</if>
+			<if test="description != null and description != ''">
+				AND description like CONCAT('%',#{description},'%')
+			</if>
+			<if test="status != null and status != ''">
+				AND status = #{status}
+			</if>
+			<if test="businessTypeArray != null">
+				AND business_type in 
+				<foreach collection="businessTypeArray" item="item" open="(" separator="," close=")">  
+			       #{item}  
+			    </foreach>  
+			</if>
+			<if test="nameArray != null and nameArray != ''">
+				AND
+				<foreach collection="nameArray" open="(" separator="OR" close=")" item="item">
+				 	name like CONCAT('%',#{item},'%')
+				</foreach>
+			</if>
+			order by c_time desc
+		</trim>
+	</sql>
+
+	<!-- 插入记录 -->
+	<insert id="insert" parameterType="Object">
+		<selectKey resultType="java.lang.Integer" order="AFTER"
+			keyProperty="id">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		insert into
+		SYS_RULE_DEFINITION(id,code,name,rule_class_name,business_type,attr1,attr2,attr3,attr4,attr5,attr6,attr7,attr8,attr9,attr10,description,status,c_time,m_time)
+		values(#{id},#{code},#{name},#{ruleClassName},#{businessType},#{attr1},#{attr2},#{attr3},#{attr4},#{attr5},#{attr6},#{attr7},#{attr8},#{attr9},#{attr10},#{description},#{status},#{ctime},#{mtime})
+	</insert>
+
+	<!-- 根据id，修改记录 -->
+	<update id="updateByPrimaryKey" parameterType="Object">
+		update SYS_RULE_DEFINITION set
+		name=#{name},rule_class_name=#{ruleClassName},business_type=#{businessType},attr1=#{attr1},attr2=#{attr2},attr3=#{attr3},attr4=#{attr4},attr5=#{attr5},attr6=#{attr6},attr7=#{attr7},attr8=#{attr8},attr9=#{attr9},attr10=#{attr10},description=#{description},status=#{status},c_time=#{ctime},m_time=#{mtime}
+		where id=#{id}
+	</update>
+
+	<!-- 修改记录，只修改只不为空的字段 -->
+	<update id="updateByPrimaryKeySelective" parameterType="Object">
+		update SYS_RULE_DEFINITION set
+		<trim suffixOverrides=",">
+			<if test="name != null  ">
+				name=#{name},
+			</if>
+			<if test="ruleClassName != null  ">
+				rule_class_name=#{ruleClassName},
+			</if>
+			<if test="businessType != null  ">
+				business_type=#{businessType},
+			</if>
+			<if test="attr1 != null  ">
+				attr1=#{attr1},
+			</if>
+			<if test="attr2 != null  ">
+				attr2=#{attr2},
+			</if>
+			<if test="attr3 != null  ">
+				attr3=#{attr3},
+			</if>
+			<if test="attr4 != null  ">
+				attr4=#{attr4},
+			</if>
+			<if test="attr5 != null  ">
+				attr5=#{attr5},
+			</if>
+			<if test="attr6 != null  ">
+				attr6=#{attr6},
+			</if>
+			<if test="attr7 != null  ">
+				attr7=#{attr7},
+			</if>
+			<if test="attr8 != null  ">
+				attr8=#{attr8},
+			</if>
+			<if test="attr9 != null  ">
+				attr9=#{attr9},
+			</if>
+			<if test="attr10 != null  ">
+				attr10=#{attr10},
+			</if>
+			<if test="description != null  ">
+				description=#{description},
+			</if>
+			<if test="status != null  ">
+				status=#{status},
+			</if>
+			<if test="ctime != null  ">
+				c_time=#{ctime},
+			</if>
+			<if test="mtime != null  ">
+				m_time=#{mtime},
+			</if>
+		</trim>
+		where id=#{id}
+	</update>
+
+	<!-- 根据id查询 规则定义 -->
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="Object">
+		select
+		<include refid="Base_Column_List" />
+		from SYS_RULE_DEFINITION where id = #{id}
+	</select>
+
+	<!-- 删除记录 -->
+	<delete id="deleteByPrimaryKey" parameterType="Object">
+		delete from SYS_RULE_DEFINITION where id = #{id}
+	</delete>
+
+	<!-- 规则定义 列表总数 -->
+	<select id="queryByCount" resultType="java.lang.Integer"
+		parameterType="Object">
+		select count(1) from SYS_RULE_DEFINITION
+		<include refid="Base_Where_Clause" />
+	</select>
+
+	<!-- 查询规则定义列表 -->
+	<select id="queryByList" resultMap="BaseResultMap"
+		parameterType="Object">
+		select
+		<include refid="Base_Column_List" />
+		from SYS_RULE_DEFINITION
+		<include refid="Base_Where_Clause" />
+		<if test="pager.orderCondition != null and pager.orderCondition != ''">
+			${pager.orderCondition}
+		</if>
+		<if test="pager.mysqlQueryCondition != null and pager.mysqlQueryCondition != ''">
+			${pager.mysqlQueryCondition}
+		</if>
+
+	</select>
+	
+	<select id="queryByBusinessType" resultMap="BaseResultMap"
+		parameterType="Object">
+		select
+		<include refid="Base_Column_List" />
+		from SYS_RULE_DEFINITION
+		where business_type=#{businessType} and status = '1'
+	</select>
+	
+	<select id="queryByBusinessTypeAndId" resultMap="BaseResultMap"
+		parameterType="Object">
+		select
+		<include refid="Base_Column_List" />
+		from SYS_RULE_DEFINITION
+		where business_type=#{businessType} and status = '1' and id in 
+		<foreach collection="ids" open="(" close=")" item="item" index="index" separator=",">
+			#{item}
+		</foreach>
+	</select>
+	
+	<select id="queryByBusinessTypeTemplate" resultMap="BaseResultMap" parameterType="Object">
+		select
+		d.*
+		from SYS_RULE_DEFINITION d
+		inner join SYS_TEMPLATE_RULE r on r.rule_definition_id = d.id 
+		where business_type=#{businessType} and status = '1' and temp_id =${temp_id}
+		<if test="attr1 != null  ">
+				and attr1=#{attr1}
+		</if>
+	</select>
+	
+</mapper>   

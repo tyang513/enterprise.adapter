@@ -1,0 +1,31 @@
+<div class="datagrid-toolbar-tool"><!--
+	 <a href="#" class="easyui-linkbutton" data-attach-event="click:openTask" plain="true">查看</a> 
+--></div>
+<div class="datagrid-toolbar-filter" style="height: 65px; display: none">
+	<div class="criteria-panel" >
+		<div>
+			<label>
+				流程名：
+			</label>
+			<input class="easyui-combobox" editable="true"  data-attach-point="processName">
+		</div>
+		<div>
+			<label>
+				任务名：
+			</label>
+			<input class="easyui-validatebox" data-attach-point="finTaskName" />
+		</div>
+		<div>
+			<label>
+				申请单：
+			</label>
+			<input class="easyui-validatebox" data-attach-point="sheetId" />
+		</div>
+		<div>
+			<label>
+				流程发起人：
+			</label>
+			<input class="easyui-validatebox" data-attach-point="starterName" />
+		</div>
+	</div>
+</div>

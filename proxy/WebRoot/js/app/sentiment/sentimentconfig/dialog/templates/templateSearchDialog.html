@@ -1,0 +1,20 @@
+<input type="hidden" name="categoryId" data-attach-point="initCategoryId">
+<div style="height: 90%">
+	<table class="listgrid"
+		data-options="nowrap:false,pagination:true,rownumbers:true,fit:true,fitColumns:true,singleSelect:true"
+		data-attach-point="templateListGrid">
+		<thead>
+			<tr>
+				<th data-options="field:'templateCode',width:40,align:'center'">模板编号</th>
+				<th data-options="field:'version',width:20,align:'center'">版本号</th>
+				<th	data-options="field:'mediaSource',width:30,align:'center', formatter:app.formatter.formatMediaSource">媒体来源</th>
+				<th	data-options="field:'url',width:50,align:'center'">站点地址</th>
+				<th	data-options="field:'urlName',width:50,align:'center'">站点名字</th>
+				<th	data-options="field:'urlCode',width:50,align:'center'">站点编码</th>
+				<th	data-options="field:'effectDate',width:30,align:'center',formatter:app.formatter.formatTime">生效时间</th>
+				<th	data-options="field:'expiryDate',width:30,align:'center',formatter:app.formatter.formatTime">失效时间</th>
+				<th data-options="field:'status',width:20,align:'center',formatter:app.formatter.formatStatus">状态</th>
+		</tr>
+		</thead>
+	</table>
+</div>

@@ -1,0 +1,20 @@
+<table id="${uuid}_grid"  class="easyui-datagrid"
+	data-options="nowrap:false,border:false,striped:true,singleSelect:true,fit:true,fitColumns:true,pagination:true,toolbar:'#${uuid}_bar'"
+	data-attach-point="dataGrid">
+	<thead>
+		<tr>
+			<th data-options="field:'id',hidden:true"></th>
+			<th data-options="field:'name',width:12,align:'left'">流程名称</th>
+			<th data-options="field:'code',width:12,align:'left'">英文名称</th>
+			<th data-options="field:'version',width:8,align:'left'">版本</th>
+			<th data-options="field:'defaulttasktimeout',width:6,align:'left'">默认任务超时时间（天） </th>
+			<th data-options="field:'defaultremindinterval',width:6,align:'left'">默认的提醒间隔（天）</th>
+			<th data-options="field:'processdefinitionviewurl',width:6,align:'left'">流程定义页面 </th>
+			<th data-options="field:'systemcode',hidden:true">所属子系统CODE</th>
+			<th data-options="field:'sysname',width:8,align:'left'">所属子系统</th>
+		</tr>
+	</thead>
+</table>
+<div id="${uuid}_bar" class="app-processConfigInfoSearchBar"
+	data-options="grid:'#${uuid}_grid'" data-attach-point="searchBar"
+	data-attach-event="processconfiginfosearchbaraction:_doAction"></div>

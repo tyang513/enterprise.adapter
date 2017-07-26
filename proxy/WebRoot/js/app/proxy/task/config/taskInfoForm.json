@@ -1,0 +1,38 @@
+{
+	"taskInfoForm" : {
+		"taskInfo" : {
+			"north" : [{
+				"classPath" : "app/proxy/task/module/taskInfoSummary",
+				"options" : {
+					"title" : "任务信息摘要",
+					"readOnlyButtons" : [],
+					"buttons" : [{
+						"text" : "关闭",
+						"group" : "right",
+						"eventId" : "cancel"
+					}]
+				}
+			}],
+			"east" : [],
+			"center" : [{
+				"classPath" : "app/proxy/task/module/taskInfo",
+				"options" : {
+					"title" : "任务基本信息",
+					"show": false
+				}
+			},{
+				"classPath" : "app/proxy/task/module/taskProcessInfo",
+				"options" : {
+					"title" : "任务运行步骤",
+					"show": false
+				}
+			},{
+				"classPath" : "app/proxy/task/module/taskLogInfo",
+				"options" : {
+					"title" : "任务运行日志",
+					"show": false
+				}
+			}]
+		}
+	}
+}

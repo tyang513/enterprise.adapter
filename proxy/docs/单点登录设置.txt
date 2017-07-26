@@ -1,0 +1,16 @@
+登录用户/密码：test/123456 或者 admin/123456
+1 单点登录配置 ，在文件sysConfig.properties中
+#本地测试时，修改C:\Windows\System32\drivers\etc\hosts文件，增加：
+#127.0.0.1      localhost.dataservice.24money.com
+#172.17.16.64	test.dataservice.24money.com
+#然后在浏览器中通过http://localhost.dataservice.24money.com:8080/Finance访问，注意改为自己本地的端口
+sso.client.serverName = http://localhost.dataservice.24money.com:8080
+sso.client.casServer = https://test.dataservice.24money.com:8443/cas
+sso.client.casServerLoginUrl = https://test.dataservice.24money.com:8443/cas/login
+sso.client.casServerLogoutUrl = https://test.dataservice.24money.com:8443/cas/logout
+
+2 导入证书
+cd 到JAVA_HOME/jre/lib/security目录
+拷贝dcds_test.cer到该目录
+在cmd下运行指令：
+keytool -importcert -keystore cacerts -keypass changeit -file dcds_test.cer -alias dcds_test

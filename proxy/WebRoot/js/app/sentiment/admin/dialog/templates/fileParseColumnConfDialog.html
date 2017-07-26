@@ -1,0 +1,38 @@
+<div class="dialog">
+	<form data-attach-point="editForm" class="ui-form" method="post">  
+		<input type="hidden" name="id" data-attach-point="id">
+		<input type="hidden" name="fileParseConfId"  data-attach-point="fileParseConfId">
+		<div class="ui-edit">
+			<div class="fitem">
+				<label  style="width:75px;">名称：</label>
+				<input name="name" type="text"  size="42"  maxlength="40" class="easyui-validatebox" data-options="required:true"  data-attach-point="name"  missingMessage="请填写名称">
+				<span class="required">*</span>				
+			</div>
+			<div class="fitem">
+				<label  style="width:75px;">代码：</label>
+				<input name="code" type="text"   size="42"  maxlength="40" class="easyui-validatebox" data-options="required:true"  data-attach-point="code" missingMessage="请填写代码">
+				<span class="required">*</span>		
+			</div>
+			<div class="fitem">
+				<label  style="width:75px;">类型：</label>
+				<input name="type" type="text"   size="42"  maxlength="40" class="easyui-combobox" data-options="editable:false"  data-attach-point="typeCombobox" missingMessage="请填写类型">
+							</div>
+			<div class="fitem">
+				<label  style="width:75px;">是否映射：</label>
+				<input name="isMapping" type="text"   size="42"  maxlength="1" class="easyui-combobox"  data-attach-point="isMappingCombobox" data-options="editable:false" >
+							</div>
+			<div class="fitem">
+				<label  style="width:75px;">映射名称：</label>
+				<input name="mappingName" type="text"   size="42"  maxlength="256" class="easyui-validatebox" data-options=""  data-attach-point="mappingName"  missingMessage="请填写映射名称">
+							</div>
+			<div class="fitem">
+				<label  style="width:75px;">描述：</label>
+				<input name="description" type="text"   size="42"  maxlength="256" class="easyui-validatebox" data-options=""  data-attach-point="description"  missingMessage="请填写描述">
+							</div>
+			<div class="fitem">
+				<label style="width:75px;">字段转换类：</label>
+				<input name="attr1" type="text"   size="42"  maxlength="256" class="easyui-validatebox" data-options=""  data-attach-point="attr1"  missingMessage="请填写字段转换类">
+			</div>
+		</div>
+	</form>
+</div>

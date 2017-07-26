@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd"
+	default-autowire="byName">
+	
+	<!-- 自动扫描controller包  -->
+	<context:component-scan base-package="com.td.admin.controller" />
+	<context:component-scan base-package="com.td.common.controller" />	
+	<!--  -->
+	<context:component-scan base-package="com.td.proxy.controller.admin" />
+	<context:component-scan base-package="com.td.proxy.controller.task" />
+	 
+	<mvc:resources mapping="/js/**" location="/js/" />
+	<mvc:resources mapping="/css/**" location="/css/" />
+	
+	<!-- Configures Handler Interceptors -->	
+	<mvc:interceptors>
+		<bean class="com.talkingdata.base.interceptor.ExceptionInterceptor" />
+	</mvc:interceptors>
+
+	<mvc:annotation-driven conversion-service="conversionService">
+	    <mvc:message-converters register-defaults="true">
+	        <bean class="org.springframework.http.converter.ByteArrayHttpMessageConverter" />
+	        <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+	            <property name="supportedMediaTypes" value="text/html;charset=UTF-8" />
+	        </bean>
+	        <bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+	            <property name="supportedMediaTypes" value="text/html;charset=UTF-8" />
+	            <property name="objectMapper" ref="objectMapper"/>
+	        </bean>
+	    </mvc:message-converters>
+	</mvc:annotation-driven>
+
+	<bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">  
+		<property name="converters">  
+    		<set>
+	        	<bean class="com.td.common.util.CustomDateConverter"/>  
+		    </set>
+		</property> 
+	</bean>
+
+	<!-- spring mvc 异常处理 -->
+	<bean id="exceptionResolver" class="com.td.common.exception.CustomSimpleMappingExceptionResolver">
+	  <property name="exceptionMappings"> 
+     	<props>
+     		<prop key="warnLogCategory" >WARN</prop>
+		  <!--<prop key="com.jason.exception.SystemException">error/500</prop>--> 
+          <prop key="com.jason.exception.BusinessException">error/errorpage</prop>
+		  <!--<prop key="java.lang.exception">error/500</prop>-->
+       </props> 
+   	 </property> 
+	</bean>
+
+	<bean id="objectMapper" class="org.codehaus.jackson.map.ObjectMapper"></bean>
+
+	<!-- Resolves view names to protected .jsp resources within the /WEB-INF/views directory -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+		<property name="prefix" value="/view/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+
+</beans>

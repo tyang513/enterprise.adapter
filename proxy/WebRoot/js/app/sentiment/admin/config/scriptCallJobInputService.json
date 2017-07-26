@@ -1,0 +1,44 @@
+{
+	"scriptCallJobInput/list.do" : {
+		"type" : "post",
+		"url" : "scriptCallJobInput/list.do",
+		"dataType" : "json"
+	},
+	"scriptCallJobInput/save.do" : {
+		"type" : "post",
+		"url" : "scriptCallJobInput/save.do",
+		"dataType" : "json"
+	},
+	"scriptCallJobInput/saveData.do" : {
+		"type" : "POST",
+		"url" : "scriptCallJobInput/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"scriptCallJobInput/findById.do" : {
+		"type" : "post",
+		"url" : "scriptCallJobInput/findById.do",
+		"dataType" : "json"
+	},
+	"scriptCallJobInput/deleteById.do" : {
+		"type" : "post",
+		"url" : "scriptCallJobInput/deleteById.do",
+		"dataType" : "json"
+	},
+	"scriptCallJobInput/updateStatusRetry.do" : {
+		"type" : "post",
+		"url" : "scriptCallJobInput/updateStatusRetry.do",
+		"dataType" : "json"
+	},
+	"scriptCallJobInput/updateStatusBSWC.do" : {
+		"type" : "post",
+		"url" : "scriptCallJobInput/updateStatusBSWC.do",
+		"dataType" : "json"
+	},
+	"scriptCallJobInput/updateStatusBSYC.do" : {
+		"type" : "post",
+		"url" : "scriptCallJobInput/updateStatusBSYC.do",
+		"dataType" : "json"
+	}
+}

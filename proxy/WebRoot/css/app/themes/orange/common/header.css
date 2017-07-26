@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+.app-header {
+	background: #fff
+}
+
+.app-header .topbox {
+	width: 100%;
+	height: 63px;
+	background: #F8F8F8;
+	margin: auto o;
+	min-width: 1000px;
+	overflow: hidden;
+}
+
+
+
+.app-header .logo {
+    background: url("../images/lgoo2.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    float: left;
+    height: 46px;
+    margin: 12px 0 0 30px;
+    width: 32%;
+    z-index: 3;
+}
+
+
+.app-header .right {
+/*    background: url("../images/top-right-bj.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+    float: left;
+    height: 84px;
+    marge-left:23px;
+    width: 65%;
+}
+
+.app-header .an {
+    float: right;
+    margin: 18px 20px 0 0;
+}
+
+.app-header .an-cbox {
+	background-color: #F0F0F0;
+    border-radius: 5px;
+    float: left;
+    text-align: center;
+}
+
+.app-header .an-cbox .link-panel {
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 12px;
+}
+
+.app-header .an-cbox .link-panel span {
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+
+.app-header .an-cbox .link-panel .inline {
+	display: inline-block;
+}
+.app-header .an-1 {
+	line-height: 29px;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.app-header .an-2 {
+	float: right;
+	width: 50px;
+	height: 29px;
+	background: url(../images/an-2.png) no-repeat;
+	line-height: 29px;
+	color: #FFF;
+	border: none;
+	cursor: pointer;
+}
+
+.app-header .topmenubox {
+	height: 30px;
+	background: #28A7E1;
+	position: absolute;
+	width: 100%;
+	min-width: 1000px;
+	overflow: hidden;
+}
+
+.app-header .topmenu {
+	font: 12px verdana, arial, sans-serif, bolder; /* 设置文字大小和字体样式 */
+}
+
+.app-header .topmenu,.app-header .topmenu li {
+	list-style: none; /* 将默认的列表符号去掉 */
+	padding: 0; /* 将默认的内边距去掉 */
+	margin: 0; /* 将默认的外边距去掉 */
+}
+
+.app-header .topmenu li {
+	float: left; /* 往左浮动 */
+}
+
+.app-header .topmenu li a {
+	display: block; /* 将链接设为块级元素 */
+	height: 22px; /* 设置高度 */
+	line-height: 30px; /* 设置行高，将行高和高度设置同一个值，可以让单行文本垂直居中 */
+	text-align: center; /* 居中对齐文字 */
+	background: #28A7E1; /* 设置背景色 */
+	color: #fff; /* 设置文字颜色 */
+	font-weight: bold;
+	text-decoration: none; /* 去掉下划线 */
+	border-right: 1px solid #fff; /* 在左侧加上分隔线 */
+	display: block; /* 作为一个块 */
+	padding-right: 20px; /* 设置块的属性 */
+	padding-bottom: 8px;
+	padding-left: 20px;
+}
+
+.app-header .topmenu li a:hover {
+	background: #89CAF5; /* 变换背景色 */
+	color: #fff; /* 变换文字颜色 */
+}
+
+.app-header .topmenu li a.last {
+	border-right: 0; /* 去掉左侧边框 */
+}

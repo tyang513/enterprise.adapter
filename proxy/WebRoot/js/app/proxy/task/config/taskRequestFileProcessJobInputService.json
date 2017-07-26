@@ -1,0 +1,29 @@
+{
+	"taskRequestFileProcessJobInput/list.do" : {
+		"type" : "post",
+		"url" : "taskRequestFileProcessJobInput/list.do",
+		"dataType" : "json"
+	},
+	"taskRequestFileProcessJobInput/save.do" : {
+		"type" : "post",
+		"url" : "taskRequestFileProcessJobInput/save.do",
+		"dataType" : "json"
+	},
+	"taskRequestFileProcessJobInput/saveData.do" : {
+		"type" : "POST",
+		"url" : "taskRequestFileProcessJobInput/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"taskRequestFileProcessJobInput/findById.do" : {
+		"type" : "post",
+		"url" : "taskRequestFileProcessJobInput/findById.do",
+		"dataType" : "json"
+	},
+	"taskRequestFileProcessJobInput/deleteById.do" : {
+		"type" : "post",
+		"url" : "taskRequestFileProcessJobInput/deleteById.do",
+		"dataType" : "json"
+	}
+}

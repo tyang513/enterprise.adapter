@@ -1,0 +1,29 @@
+{
+	"scriptStepRecord/list.do" : {
+		"type" : "post",
+		"url" : "scriptStepRecord/list.do",
+		"dataType" : "json"
+	},
+	"scriptStepRecord/save.do" : {
+		"type" : "post",
+		"url" : "scriptStepRecord/save.do",
+		"dataType" : "json"
+	},
+	"scriptStepRecord/saveData.do" : {
+		"type" : "POST",
+		"url" : "scriptStepRecord/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"scriptStepRecord/findById.do" : {
+		"type" : "post",
+		"url" : "scriptStepRecord/findById.do",
+		"dataType" : "json"
+	},
+	"scriptStepRecord/deleteById.do" : {
+		"type" : "post",
+		"url" : "scriptStepRecord/deleteById.do",
+		"dataType" : "json"
+	}
+}

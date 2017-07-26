@@ -1,0 +1,16 @@
+<table id="${uuid}_grid"  class="easyui-datagrid"
+	data-options="nowrap:false,border:false,striped:true,singleSelect:true,fit:true,fitColumns:true,pagination:true,toolbar:'#${uuid}_bar'"
+	data-attach-point="dataGrid">
+	<thead>
+		<tr>
+			<th data-options="field:'id',width:8,align:'center'">任务编号 </th>
+			<th data-options="field:'jobkey',width:12,align:'left'">任务名称</th>
+			<th data-options="field:'createtime',width:8,align:'center',formatter:app.formatter.formatTimeStamp">创建时间</th>
+			<th data-options="field:'errorinfo',width:60,align:'left'">错误信息</th>
+			<th data-options="field:'jobinputid',width:5,align:'center'">任务记录编号</th>
+		</tr>
+	</thead>
+</table>
+<div id="${uuid}_bar" class="app-jobConfigErrorInfoSearchBar"
+	data-options="grid:'#${uuid}_grid'" data-attach-point="searchBar"
+	data-attach-event="jobconfigerrorinfosearchbaraction:_doAction"></div>

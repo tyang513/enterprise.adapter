@@ -1,0 +1,23 @@
+<table id="${uuid}_grid"  class="easyui-datagrid"
+	data-options="nowrap:false,border:false,striped:true,singleSelect:true,fit:true,fitColumns:true,pagination:true,toolbar:'#${uuid}_bar'"
+	data-attach-point="dataGrid">
+	<thead>
+		<tr>
+			<th data-options="field:'id',hidden:true"></th>
+			<th data-options="field:'name',width:14,align:'left'">任务名称</th>
+			<th data-options="field:'code',width:14,align:'left'">英文名称</th>
+			<th data-options="field:'timeoutremindflag',width:10,align:'left',formatter:app.formatter.formatTimeoutRemind">是否开启超时提醒</th>
+			<th data-options="field:'timeout',width:8,align:'left'">超时时间（天） </th>
+			<th data-options="field:'remindinterval',width:8,align:'left'">提醒间隔（天）</th>
+<!--			<th data-options="field:'pageurl',width:12,align:'left'">任务页面URL</th>  -->
+			<th data-options="field:'processname',width:12,align:'left'">流程名称</th>
+			<th data-options="field:'taskstartemailtemplateid',width:10,align:'left'">任务开始通知邮件</th>
+			<th data-options="field:'taskendemailtemplateid',width:10,align:'left'">任务结束通知邮件</th>
+			<th data-options="field:'taskdescription',width:12,align:'left'">任务描述</th>
+
+		</tr>
+	</thead>
+</table>
+<div id="${uuid}_bar" class="app-taskConfigSearchBar"
+	data-options="grid:'#${uuid}_grid'" data-attach-point="searchBar"
+	data-attach-event="taskconfigsearchbaraction:_doAction"></div>

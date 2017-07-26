@@ -1,0 +1,15 @@
+<input class="easyui-searchbox" style="width: 214px"
+	data-options="prompt:'请输入UMID或用户名'" data-attach-point="searchbox">
+<div style="height: 90%">
+	<table class="easyui-datagrid"
+		data-options="idField:'id',pagination:false,rownumbers:true,fit:true,fitColumns:true,singleSelect:true"
+		data-attach-point="userListGrid">
+		<thead>
+			<tr>
+				<th data-options="field:'umid',width:30,sortable:true,align:'left',halign:'center'">UMID</th>
+				<th data-options="field:'username',width:20,sortable:true,halign:'center'">用户姓名</th>
+				<th data-options="field:'email',width:35,sortable:true,halign:'center'">email</th>
+			</tr>
+		</thead>
+	</table>
+</div>

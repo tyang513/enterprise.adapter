@@ -1,0 +1,69 @@
+<div class="form-module">
+	<div data-attach-point="sigle">
+		<table id="${uuid}_grid" class="easyui-datagrid"
+			data-options="custom:true,nowrap:false,border:false,striped:true,singleSelect:true,fitColumns:true"
+			data-attach-point="dataGrid" style="width: 680px">
+			<thead>
+				<tr>
+					<th data-options="field:'id',hidden:true">流程ID</th>
+					<th data-options="field:'sheetid',hidden:true">申请单号</th>
+					<th data-options="field:'processname',width:100,align:'center' ">流程名称</th>
+
+					<th
+						data-options="field:'starttime',width:130,align:'center',formatter:app.formatter.formatTimeStamp1">申请时间</th>
+					<th
+						data-options="field:'endtime',width:130,align:'center',formatter:app.formatter.formatTimeStamp1">完成时间</th>
+					<th data-options="field:'statusName',width:100,align:'center'">状态</th>
+					<th
+						data-options="field:'query',width:40,align:'center',formatter:'_formatAct'">操作</th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+	<div data-attach-point="component">
+		<div class="easyui-tabs" data-attach-point="processTab">
+			<div title="处理记录" style="padding: 8px" data-attach-point="dataGridHisDiv">
+				<table id="${uuid}_grid" class="easyui-datagrid"
+					data-options="custom:true,border:false,striped:true,singleSelect:true,fitColumns:true"
+					data-attach-point="dataGridHis" style="width: 700px">
+					<thead>
+						<tr>
+							<th data-options="field:'id',hidden:true">流程ID</th>
+							<th data-options="field:'sheetid',hidden:true">申请单号</th>
+							<th data-options="field:'processname',width:100,align:'center' ">流程名称</th>
+
+							<th
+								data-options="field:'starttime',width:130,align:'center',formatter:app.formatter.formatTimeStamp1">申请时间</th>
+							<th
+								data-options="field:'endtime',width:130,align:'center',formatter:app.formatter.formatTimeStamp1">完成时间</th>
+							<th data-options="field:'statusName',width:100,align:'center'">状态</th>
+							<th
+								data-options="field:'query',width:40,align:'center',formatter:'_formatAct'">操作</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+			<div title="券卡信息" data-options="" style="padding: 8px" >
+				<div  data-attach-point="batchInfo"></div>
+				<br/>
+				<table data-attach-point="dataGridTicket" style="width: 700px"></table>
+				<!--  <table id="${uuid}_grid" class="easyui-datagrid"
+					data-options="pagination:true,border:false,striped:true,singleSelect:true,fitColumns:true"
+					data-attach-point="dataGridTicket" style="width: 480px">
+					<thead>
+						<tr>
+							<th data-options="field:'batchnumber',width:100,align:'center'">领用批次号</th>
+							<th data-options="field:'startnumber',width:100,align:'center'">起始号码</th>
+							<th data-options="field:'endnumber',width:100,align:'center' ">终止号码</th>
+							<th
+								data-options="field:'money',width:100,align:'center'">面值</th>
+							<th
+								data-options="field:'number',width:100,align:'center'">张数</th>
+						</tr>
+					</thead>
+				</table>
+				-->
+			</div>
+		</div>
+	</div>
+</div>

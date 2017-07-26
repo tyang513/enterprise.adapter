@@ -1,0 +1,28 @@
+<div class="dialog two-column" >
+	<form data-attach-point="editForm" class="ui-form" method="post">  
+		<input type="hidden" name="id">
+		<input type="hidden" name="code">
+		<input type="hidden" name="fileType">
+		<input type="hidden" name="emailType">
+		<input type="hidden" name="isUseDynamicFileName">
+		<input type="hidden" name="paramCount">
+		<div class="ui-edit" data-attach-point="dynamicParamsDiv">
+			<div class="fitem">
+				<label style="width:80px;">报表英文名： </label> <span  data-attach-point="codeSpan"></span>
+			</div>
+			<div class="fitem">
+				<label style="width:80px;">报表名：</label> <span  data-attach-point="nameSpan"></span>
+			</div>
+			<div class="fitem">
+				<label style="width:80px;">邮件地址：</label> 
+				<input name="emailContent" data-attach-point="emailContentValidate" type="text" maxlength="100" class="easyui-validatebox" data-options="required:true" missingMessage="请填写邮件地址">
+				<span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label style="width:80px;">动态文件名：</label>
+				<input name="dynamicFileName" data-attach-point="dynamicFileNameValidate" type="text" maxlength="100" class="easyui-validatebox" data-options="required:true" missingMessage="请填写动态文件名">
+				<span class="required">*</span>
+			</div>
+		</div>
+	</form>
+</div>

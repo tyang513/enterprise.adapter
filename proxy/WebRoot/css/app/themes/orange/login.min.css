@@ -1,0 +1,456 @@
+@font-face {
+	font-family: futura_mdcn_btmedium;
+	src: url(../font/futura_medium_condensed_bt-webfont.eot?#iefix) format("embedded-opentype"), url(../font/futura_medium_condensed_bt-webfont.woff) format("woff"), url(../font/futura_medium_condensed_bt-webfont.ttf) format("truetype"), url(../font/futura_medium_condensed_bt-webfont.svg#futura_mdcn_btmedium) format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: futura_hv_btheavy;
+	src: url(../font/futuhv__-webfont.eot?#iefix) format("embedded-opentype"), url(../font/futuhv__-webfont.woff) format("woff"), url(../font/futuhv__-webfont.ttf) format("truetype"), url(../font/futuhv__-webfont.svg#futura_hv_btheavy) format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: kefa_presssregular;
+	src: url(../font/kefa-webfont.eot?#iefix) format("embedded-opentype"), url(../font/kefa-webfont.woff) format("woff"), url(../font/kefa-webfont.ttf) format("truetype"), url(../font/kefa-webfont.svg#kefa_presssregular) format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: titilliumsemibold_upright;
+	src: url(../font/titillium-semiboldupright-webfont.eot?#iefix) format("embedded-opentype"), url(../font/titillium-semiboldupright-webfont.woff) format("woff"), url(../font/titillium-semiboldupright-webfont.ttf) format("truetype"), url(../font/titillium-semiboldupright-webfont.svg#titilliumsemibold_upright) format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+* {
+	margin: 0px; padding: 0px;
+}
+a {
+	
+}
+a:focus {
+	outline: 0px;
+}
+button {
+	outline: 0px;
+}
+input {
+	outline: 0px;
+}
+select {
+	outline: 0px;
+}
+textarea {
+	outline: 0px;
+}
+textarea {
+	font-size: 13px; resize: none;
+}
+img {
+	border: currentColor;
+}
+body {
+	margin: 0px; padding: 0px; color: rgb(93, 98, 111); font-family: Verdana,Geneva,sans-serif; font-size: 14px;
+}
+body.body-home {
+	background: url("../images/bg-body.jpg") no-repeat top rgb(18, 22, 49); margin: 0px; padding: 0px; color: rgb(93, 98, 111); font-family: Verdana,Geneva,sans-serif; font-size: 14px;
+}
+body.body-secPage {
+	background: url("../images/bg-body-sec.jpg") no-repeat top rgb(18, 22, 49); margin: 0px; padding: 0px; color: rgb(93, 98, 111); font-family: Verdana,Geneva,sans-serif; font-size: 14px;
+}
+body.body-thirdPage {
+	background: url("../images/bg-body-third.png"); margin: 0px; padding: 0px; color: rgb(93, 98, 111); font-family: Verdana,Geneva,sans-serif; font-size: 14px;
+}
+.disable-select {
+	-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+}
+.clearfix::after {
+	height: 0px; line-height: 0; clear: both; display: block; visibility: hidden; content: ".";
+}
+.clearfix {
+	display: inline-block;
+}
+html[xmlns] .clearfix {
+	display: block;
+}
+* html .clearfix {
+	height: 1%;
+}
+a {
+	transition: background-color .5s ease 0s, color .5s ease 0s, width .5s ease 0s, border-width .5s ease 0s, border-color .5s ease 0s; -webkit-transition: background-color .5s ease 0s, color .5s ease 0s, width .5s ease 0s, border-width .5s ease 0s, border-color .5s ease 0s; -moz-transition: background-color .5s ease 0s, color .5s ease 0s, width .5s ease 0s, border-width .5s ease 0s, border-color .5s ease 0s; -ms-transition: background-color .5s ease 0s, color .5s ease 0s, width .5s ease 0s, border-width .5s ease 0s, border-color .5s ease 0s; -o-transition: background-color .5s ease 0s, color .5s ease 0s, width .5s ease 0s, border-width .5s ease 0s, border-color .5s ease 0s;
+}
+.nav {
+	background: rgb(51, 57, 105); padding: 14px 0px 9px; border-bottom-color: rgb(42, 47, 77); border-bottom-width: 1px; border-bottom-style: solid; display: block; zoom: 1; box-shadow: 0px 1px 0px #3d4474;
+}
+.main-nav {
+	margin: 0px auto; width: 1110px; display: block;
+}
+.main-nav span {
+	float: left; display: block;
+}
+.main-nav .content-menu {
+	padding: 3px 0px; float: right;
+}
+.main-nav .content-menu ul {
+	margin: 0px; padding: 12px 0px; float: left; zoom: 1;
+}
+.main-nav .content-menu ul li {
+	list-style: none; float: left; position: relative; z-index: 30;
+}
+.main-nav .content-menu ul li a {
+	padding: 6px 20px; color: rgb(120, 138, 198); text-decoration: none;
+}
+.main-nav .content-menu ul li font {
+	left: 44px; top: 30px; display: none; position: absolute;
+}
+.main-nav .content-menu ul li.on-choose font {
+	display: block;
+}
+.main-nav .content-menu ul li a:hover {
+	color: rgb(255, 255, 255);
+}
+.main-nav .content-menu ul li.on-choose a {
+	color: rgb(255, 255, 255);
+}
+.main-nav .content-menu .language {
+	padding-top: 10px; float: left;
+}
+.main-nav .content-menu .language a {
+	margin: 0px 5px; border-radius: 50%; width: 22px; height: 22px; text-align: center; line-height: 22px; font-size: 10px; text-decoration: none; float: left; display: block;
+}
+.main-nav .content-menu .language a.chinese {
+	border: 1px solid rgb(48, 133, 213); color: rgb(48, 133, 213);
+}
+.main-nav .content-menu .language a.english {
+	border: 1px solid rgb(255, 255, 255); color: rgb(255, 255, 255);
+}
+.main-nav .content-menu .user-message {
+	background: rgb(48, 133, 213); margin: 3px 0px 0px 12px; padding: 10px; width: 116px; color: rgb(255, 255, 255); float: left;
+}
+.main-nav .content-menu .user-message a {
+	padding: 0px 10px; color: rgb(255, 255, 255); text-decoration: none;
+}
+.main-nav .content-menu .user-message a.login {
+	margin-left: 10px;
+}
+.main-nav .content-menu .user-message font {
+	padding: 1px 0px 2px; width: 86px; overflow: hidden; font-size: 12px; float: left; white-space: nowrap; text-overflow: ellipsis;
+}
+.main-nav .content-menu .user-message a.log-out {
+	padding: 1px 0px 2px; font-size: 12px; float: right;
+}
+.sec-nav {
+	background: rgb(51, 57, 105); margin: 1px auto 0px; width: 100%; height: 40px; border-bottom-color: rgb(43, 46, 90); border-bottom-width: 1px; border-bottom-style: solid; display: block; position: relative; z-index: 100;
+}
+.content-sec-nav {
+	margin: 0px auto; width: 700px; overflow: hidden; padding-top: 12px; display: block;
+}
+.content-sec-nav a {
+	margin: 0px 1px; padding: 0px 18px 10px; color: rgb(120, 138, 198); font-size: 12px; text-decoration: none; float: left;
+}
+.content-sec-nav a.on-choose {
+	color: rgb(70, 165, 255); border-bottom-color: rgb(70, 165, 255); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.content-sec-nav a:hover {
+	color: rgb(70, 165, 255); border-bottom-color: rgb(70, 165, 255); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.content-sec-nav span {
+	display: none;
+}
+.content-sec-nav span.mobile {
+	padding-left: 180px;
+}
+.content-sec-nav span.produce {
+	padding-left: 160px;
+}
+.content-sec-nav span.about-us {
+	padding-left: 350px;
+}
+.bottom {
+	background: rgb(34, 38, 62); padding: 30px 0px 100px; width: 100%; border-top-color: rgb(40, 44, 76); border-top-width: 8px; border-top-style: solid;
+}
+.content-bottom {
+	margin: 0px auto; width: 1259px; overflow: hidden; display: block; zoom: 1;
+}
+.content-bottom ul {
+	margin: 0px; padding: 0px; float: left; zoom: 1;
+}
+.content-bottom ul li {
+	list-style: none; padding: 3px 0px; color: rgb(48, 133, 213); clear: both; display: block;
+}
+.content-bottom ul li img {
+	margin-bottom: 16px;
+}
+.bottom-right ul li a {
+	color: rgb(48, 133, 213); text-decoration: none;
+}
+.content-bottom ul li a {
+	color: rgb(48, 133, 213); text-decoration: none;
+}
+.bottom-right ul li.phone-number span {
+	background: url("../images/icon-contact.png") no-repeat; width: 19px; height: 19px; text-indent: -9999px; margin-right: 10px; float: left;
+}
+.content-bottom ul li.phone-number span {
+	background: url("../images/icon-contact.png") no-repeat; width: 19px; height: 19px; text-indent: -9999px; margin-right: 10px; float: left;
+}
+.bottom-right ul li.e-mail span {
+	background: url("../images/icon-contact.png") no-repeat -19px 0px; width: 19px; height: 19px; text-indent: -9999px; margin-right: 10px; float: left;
+}
+.content-bottom ul li.e-mail span {
+	background: url("../images/icon-contact.png") no-repeat -19px 0px; width: 19px; height: 19px; text-indent: -9999px; margin-right: 10px; float: left;
+}
+.social {
+	text-align: right; float: right;
+}
+.social font {
+	color: rgb(60, 70, 131); clear: both; font-size: 12px; display: block;
+}
+.social span {
+	color: rgb(60, 70, 131); clear: both; font-size: 12px; display: block;
+}
+.social span a {
+	margin: 0px 0px 10px 14px; width: 44px; height: 44px; color: rgb(255, 255, 255); text-indent: 1000px; text-decoration: none; float: right; display: block;
+}
+.social span a.facebook {
+	background: url("../images/icon-social.png") no-repeat left top;
+}
+.social span a.qq {
+	background: url("../images/icon-social.png") no-repeat -44px top;
+}
+.social span a.sina {
+	background: url("../images/icon-social.png") no-repeat -88px top;
+}
+.social span a.blog {
+	background: url("../images/icon-social.png") no-repeat -132px top;
+}
+.social font {
+	padding-bottom: 6px;
+}
+.main-bottom {
+	background: rgb(34, 38, 62); padding: 40px 0px 60px; color: rgb(65, 81, 159); overflow: hidden; display: block;
+}
+.content-homeBottom {
+	margin: 0px auto; width: 80%; min-width: 1003px;
+}
+.content-homeBottom .bottom-left {
+	float: left; display: block;
+}
+.bottom-left ul {
+	margin: 0px; padding: 0px 26px; float: left; zoom: 1;
+}
+.bottom-left ul h4 {
+	padding-bottom: 26px; font-size: 12px; font-weight: 400; display: block;
+}
+.bottom-left ul li {
+	list-style: none; line-height: 30px; clear: both; font-size: 12px; display: block;
+}
+.bottom-left ul h4 a {
+	color: rgb(255, 255, 255); text-decoration: none;
+}
+.bottom-left ul li a {
+	color: rgb(83, 99, 174); text-decoration: none;
+}
+.bottom-left ul li a:hover {
+	color: rgb(255, 255, 255);
+}
+.bottom-left ul.no-leftBorder {
+	border-left-color: currentColor; border-left-width: 0px; border-left-style: none;
+}
+.bottom-left ul.no-rightBorder {
+	border-right-color: currentColor; border-right-width: 0px; border-right-style: none;
+}
+.bottom-right {
+	float: right; display: block;
+}
+.bottom-right ul {
+	margin: 0px; padding: 0px; float: left; display: block; zoom: 1;
+}
+.bottom-right ul li {
+	padding: 3px 0px; color: rgb(48, 133, 213); clear: both; float: right; display: block;
+}
+.bottom-right img {
+	float: right;
+}
+.bottom-right .social {
+	padding-top: 30px; clear: both; float: right; display: block;
+}
+.bottom-right .social span {
+	overflow: hidden; padding-bottom: 20px; display: block;
+}
+.copyright-bottom {
+	text-align: center; padding-top: 20px; clear: both; font-size: 12px; border-top-color: rgb(65, 81, 159); border-top-width: 1px; border-top-style: solid; display: block;
+}
+.copyright-bottom font {
+	clear: both; display: block;
+}
+.copyright-bottom font a {
+	margin: 6px 5px; color: rgb(83, 99, 174); text-decoration: none; display: inline-block; cursor: pointer;
+}
+.copyright-bottom font a:hover {
+	color: rgb(255, 255, 255);
+}
+body.regist {
+	background: url("../images/bg-regist.png") no-repeat top rgb(40, 41, 80); margin: 0px; padding: 0px;
+}
+h3 {
+	font-weight: 400; display: block;
+}
+h4 {
+	font-weight: 400; display: block;
+}
+h5 {
+	font-weight: 400; display: block;
+}
+.content-regist {
+	margin: 0px auto; width: 350px; padding-top: 80px; display: block;
+}
+.content-regist em {
+	text-align: center; display: block;
+}
+.content-regist h3 {
+	padding: 54px 0px 18px; text-align: center; color: rgb(255, 255, 255); font-size: 18px; border-bottom-color: rgb(14, 15, 49); border-bottom-width: 1px; border-bottom-style: solid; position: relative;
+}
+.content-regist h3 a.back {
+	background: url("../images/icons.png") no-repeat -526px -392px; left: 0px; top: 60px; width: 20px; height: 17px; text-indent: -9999px; position: absolute;
+}
+.content-regist ol {
+	margin: 0px; padding: 24px 0px 36px; width: 100%; border-top-color: rgb(47, 49, 91); border-bottom-color: rgb(14, 15, 49); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; zoom: 1;
+}
+.content-regist ul {
+	margin: 0px; padding: 24px 0px 36px; width: 100%; border-top-color: rgb(47, 49, 91); border-bottom-color: rgb(14, 15, 49); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; zoom: 1;border-bottom:none;
+}
+.content-regist ol li {
+	list-style: none; padding: 14px 0px; clear: both; display: block; position: relative;
+}
+.content-regist ul li {
+	list-style: none; padding: 14px 0px; clear: both; display: block; position: relative;
+}
+.content-regist ul li .input-regist {
+	background: rgb(255, 255, 255); padding: 0px 2%; border-radius: 6px; border: currentColor; width: 96%; height: 44px; font-size: 16px; box-shadow: inset 0px 2px 4px #c8c9dc;
+}
+.content-regist ul li .input-regist:focus {
+	color: rgb(68, 70, 108);
+}
+.content-regist ul li font {
+	top: -7px; text-align: right; right: 0px; color: rgb(255, 128, 66); font-size: 12px; display: block; position: absolute;
+}
+.content-regist ol li {
+	padding: 0px 10px; border-radius: 6px; border: 1px solid rgb(30, 74, 120); height: 42px; color: rgb(52, 137, 225); line-height: 42px; margin-bottom: 20px; display: block; position: relative;
+}
+.content-regist ol li font {
+	width: 110px; text-align: left; float: left;
+}
+.content-regist ol li .input-message {
+	border: currentColor; width: 200px; height: 20px; color: rgb(255, 255, 255); font-size: 14px; margin-top: 10px; float: left;
+}
+.content-regist ol li .input-message:focus {
+	color: rgb(255, 255, 255);
+}
+.content-regist ol li span {
+	top: 0px; width: 250px; text-align: left; right: -260px; color: rgb(255, 128, 66); font-size: 12px; display: block; position: absolute;
+}
+.remember {
+	color: rgb(83, 104, 162); font-size: 12px; display: block; position: relative;
+}
+.agree {
+	padding: 10px 0px; color: rgb(83, 104, 162); font-size: 12px; display: block; position: relative;
+}
+.content-regist ol .agree {
+	margin: 20px 0px;
+}
+.agree a {
+	color: rgb(83, 104, 162);
+}
+.remember span {
+	width: 120px; color: rgb(83, 104, 162); font-size: 12px; margin-top: 10px; float: left; display: block;
+}
+.remember strong {
+	text-align: right; color: rgb(83, 104, 162); font-size: 12px; font-weight: 400; float: right;
+}
+.remember a {
+	color: rgb(83, 104, 162); line-height: 20px; text-decoration: none;
+}
+.operate-submit {
+	position: relative;
+}
+.operate-submit span {
+	left: 360px; top: 10px; width: 200px; color: rgb(255, 128, 66); font-size: 12px; display: block; position: absolute;
+}
+a.btn-login {
+	background: rgb(48, 133, 213); padding: 10px 0px; border-radius: 6px; text-align: center; color: rgb(255, 255, 255); clear: both; font-size: 16px; text-decoration: none; margin-top: 11px; display: block; cursor: pointer;
+}
+.ga-checkbox {
+	width: 15px; height: 15px; line-height: 15px; letter-spacing: -1px; font-size: 9px; margin-right: 10px; float: left;
+}
+.ga-checkbox input {
+	margin: 0px; left: 0px; top: 10px; width: inherit; height: inherit; position: absolute; z-index: 1; cursor: pointer; opacity: 0;
+}
+.ga-checkbox input + b {
+	border-radius: 2px; border: 1px solid rgb(83, 104, 162); left: 0px; top: 11px; width: 14px; height: inherit; line-height: 14px; position: absolute; z-index: 2; cursor: pointer; box-sizing: border-box; pointer-events: none;
+}
+.ga-checkbox input:checked + b::after {
+	top: -5px; position: absolute; content: url(../images/icon-checkbox.png);
+}
+.to-regist {
+	text-align: center; color: rgb(83, 104, 162); padding-top: 20px; clear: both; border-top-color: rgb(47, 49, 91); border-top-width: 1px; border-top-style: solid; display: block;
+}
+.to-regist a {
+	color: rgb(48, 133, 213);
+}
+.content-regist ul li.findtips {
+	color: rgb(52, 137, 225); overflow: hidden; padding-bottom: 20px; display: block;
+}
+.copyright {
+	margin: 100px 0px 40px; width: 100%; text-align: center; color: rgb(84, 89, 155); clear: both; display: block;
+}
+.probation-box {
+	background: rgb(255, 255, 255); margin: -130px 0px 0px -214px; border-radius: 4px; left: 50%; top: 50%; width: 428px; height: 260px; overflow: hidden; position: absolute; z-index: 100; box-shadow: 0px 2px 6px #535457;
+}
+.probation-box .operate {
+	padding: 12px 14px 0px; width: 400px; height: 56px; border-bottom-color: rgb(199, 204, 211); border-bottom-width: 1px; border-bottom-style: solid; float: left; display: block;
+}
+.probation-box .operate ul font {
+	width: 400px; text-align: center; padding-top: 10px; font-size: 20px; display: block;
+}
+.bg-grey {
+	
+}
+.message-list-box {
+	height: 200px; overflow: auto; clear: both; display: block;
+}
+.message-list-box span {
+	padding: 40px 20px 20px; text-align: center; overflow: hidden; display: block;
+}
+.operate-try {
+	text-align: center; overflow: hidden; padding-top: 30px; clear: both; display: block;
+}
+.operate-try a {
+	margin: 0px auto; padding: 8px 0px; border-radius: 10px; border: 1px solid rgb(49, 172, 127); width: 130px; color: rgb(49, 172, 127); text-decoration: none; display: block;
+}
+.operate-try a:hover {
+	background: rgb(49, 172, 127); color: rgb(255, 255, 255);
+}
+.content-agreement {
+	background: rgb(255, 255, 255); margin: -240px 0px 0px -270px; left: 50%; top: 50%; width: 540px; height: 480px; font-size: 14px; position: absolute; z-index: 1000;
+}
+.content-agreement h4 {
+	background: rgb(95, 147, 225); padding: 30px; color: rgb(255, 255, 255); display: block; position: relative;
+}
+.content-agreement h4 b {
+	background: url("../images/icons.png") no-repeat -452px -596px; top: 26px; width: 28px; height: 28px; right: 20px; text-indent: -9999px; display: block; position: absolute; cursor: pointer;
+}
+.content-agreement span {
+	padding: 20px 30px; height: 340px; line-height: 26px; overflow: auto; display: block;
+}
+.content-agreement span p {
+	padding-bottom: 10px;
+}
+.content-agreement span h5 {
+	font-size: 14px; display: block;
+}
+.content-agreement span font {
+	padding: 0px 0px 10px 16px; display: block;
+}
+.content-agreement span h2 {
+	padding: 16px 0px; text-align: center; clear: both; display: block;
+}

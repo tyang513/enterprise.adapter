@@ -1,0 +1,29 @@
+<div class="dialog">
+	<form data-attach-point="editForm" class="ui-form" method="post">
+		<input type="hidden" name="id">
+		<div class="ui-edit">
+			<div class="fitem">
+				<label>solr名称：</label> <input name="solrCollectionName" readonly="readonly" size="62" type="text" maxlength="256" class="easyui-validatebox" data-options="">
+			</div>
+			<div class="fitem">
+				<label>hbase表名：</label> <input name="hbaseTableName" readonly="readonly" size="62" type="text" maxlength="256" class="easyui-validatebox" data-options="">
+			</div>
+			<!-- 数据库保存数据为空，暂时注释--赵帅兵20141013 -->
+			<!-- <div class="fitem">
+				<label>状态：</label> <input name="status" type="text" readonly="readonly" size="62" maxlength="" data-attach-point="statusCombobox" class="easyui-combobox">
+			</div> -->
+			<div class="fitem">
+				<label>操作类型：</label> <input name="operatorType" readonly="readonly" size="62" type="text" maxlength=""  data-attach-point="operatorTypeCombobox" class="easyui-combobox" >
+			</div>
+			<div class="fitem">
+				<label>错误日期：</label> <input name="errorDate" readonly="readonly" size="62" type="text" maxlength="40" class="easyui-validatebox" data-options="required:true">
+			</div>
+			<div class="fitem">
+				<label>对象json格式：</label> <input name="dataJson" readonly="readonly" size="62" type="text" maxlength="1024" class="easyui-validatebox" data-options="">
+			</div>
+			<div class="fitem">
+				<label>异常信息：</label> <textarea rows="10" cols="62" readonly="readonly" name="exceptionInfo" ></textarea> 
+			</div>
+		</div>
+	</form>
+</div>

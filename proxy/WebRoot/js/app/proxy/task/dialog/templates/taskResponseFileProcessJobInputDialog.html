@@ -1,0 +1,19 @@
+<div class="dialog">
+	<form data-attach-point="editForm" class="ui-form" method="post">  
+		<input type="hidden" name="id">
+		<div class="ui-edit">
+			<div class="fitem">
+				<label>重试次数：</label>
+				<input name="retry" type="text" maxlength="" class="easyui-validatebox" data-options="" missingMessage="请填写重试次数">
+							</div>
+			<div class="fitem">
+				<label>最大重试次数：</label>
+				<input name="maxRetry" type="text" maxlength="" class="easyui-validatebox" data-options="" missingMessage="请填写最大重试次数">
+							</div>
+			<div class="fitem">
+				<label>超时时间：</label>
+				<input name="timeout" type="text" maxlength="" class="easyui-validatebox" data-options="required:true" missingMessage="请填写超时时间">
+				<span class="required">*</span>			</div>
+		</div>
+	</form>
+</div>

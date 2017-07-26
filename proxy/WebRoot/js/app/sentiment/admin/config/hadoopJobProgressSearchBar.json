@@ -1,0 +1,22 @@
+{
+	"hadoopJobProgress" : {
+		"title" : "hadoop输入统计",
+		"buttons" : [{
+			"text" : "查看",
+			"group" : "left",
+			"eventId" : "view"
+		}, {
+			"text" : "搜索",
+			"checkSelect" : false,
+			"group" : "filter",
+			"eventId" : "search"
+		}, {
+			"text" : "重置",
+			"checkSelect" : false,
+			"selfHandle" : true,
+			"group" : "filter",
+			"eventId" : "reset"
+		}]
+	}
+
+}

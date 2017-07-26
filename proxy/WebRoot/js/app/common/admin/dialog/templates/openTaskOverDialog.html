@@ -1,0 +1,37 @@
+
+<div class="dialog">
+	<form data-attach-point="addOrEditTaskOverForm">
+	<input name="id" type="hidden" data-attach-point="id">
+
+    	<table cellspacing="100" cellpadding="100">
+    		<tr>
+    			<td><span style="color:red; margin-right: 5px">*</span>用户姓名：</td>
+    			<td>
+    				<input class="easyui-combogrid" width="300px"  data-options="required:true" data-attach-point="userumid" name="userumid"></input>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td><span style="color:red; margin-right: 5px">*</span>接管人姓名：</td>
+    			<td>
+    				<input class="easyui-combogrid" width="300px"  data-options="required:true" data-attach-point="targetuserumid" name="targetuserumid"></input>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td><span style="color:red; margin-right: 5px">*</span>开始时间：</td>
+    			<td>
+    				<input class="easyui-datebox"
+				data-options="editable:false,required:true,formatter:app.formatter.formatTime"
+				data-attach-point="starttime" name="starttime">
+    			</td>
+    		</tr>
+    		<tr>
+    			<td><span style="color:red; margin-right: 5px">*</span>结束时间：</td>
+    			<td>
+    				<input class="easyui-datebox"
+				data-options="editable:false,required:true,formatter:app.formatter.formatTime"
+				data-attach-point="endtime" name="endtime">
+    			</td>
+    		</tr>
+    	</table>
+    </form>
+</div>

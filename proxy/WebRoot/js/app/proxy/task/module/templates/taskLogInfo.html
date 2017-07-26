@@ -1,0 +1,13 @@
+<table id="${uuid}_grid" class="listgrid"
+	data-options="nowrap:false,border:true,striped:true,singleSelect:true,fit:false,fitColumns:true,pagination:true"
+	data-attach-point="dataGrid">
+	<thead>
+		<tr>
+			<th data-options="field:'taskJobInputName',width:20,align:'center'">处理任务名称</th>
+			<th data-options="field:'type',width:30,align:'center',formatter:app.formatter.formatTaskLogType">类型</th>
+			<th data-options="field:'description',width:150,align:'left'">描述</th>
+			<th data-options="field:'startTime',width:30,align:'center',formatter:app.formatter.formatTimeStamp1">开始时间</th>
+			<th data-options="field:'finishTime',width:30,align:'center',formatter:app.formatter.formatTimeStamp1">结束时间</th>
+		</tr>
+	</thead>
+</table>

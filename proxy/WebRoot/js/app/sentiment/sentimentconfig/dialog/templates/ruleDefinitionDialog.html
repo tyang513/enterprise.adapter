@@ -1,0 +1,98 @@
+<div class="dialog two-column">
+	<form data-attach-point="editForm" class="ui-form" method="post" enctype="multipart/form-data">  
+		<input type="hidden" name="id">
+		<input data-attach-point="attachmentIds" name="attachmentIds" type="hidden" />
+        <input data-attach-point="code" name="code" type="hidden" />
+		<div class="ui-edit">
+			<div class="fitem">
+				<label>规则名称：</label>
+				<input name="name" style="width: 200px;" data-attach-point="name" class="easyui-validatebox" data-options="required:true,validType:'length[1,256]'" missingMessage="请填写规则名称">
+				<span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label>规则实现类名称：</label>
+				<input name="ruleClassName" style="width: 200px;" data-attach-point="ruleClassName"  type="text"  class="easyui-validatebox" data-options="required:true,validType:'length[1,256]'" missingMessage="请填写规则实现类的名称">
+				<span class="required">*</span>
+			</div>
+			<div class="fitem clearfloat">
+				<label>规则的业务类型：</label>
+				<input name="businessType"  style="width: 215px;"  type="text"   editable="false" data-attach-point="businessTypeCombobox" maxlength="4" class="easyui-combobox" data-options="required:true,editable:false" missingMessage="请选择规则的业务类型">
+				<span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label>扩展属性1：</label>
+				<textarea  style="width: 200px;"  cols="30" rows="2" class="easyui-validatebox" name="attr1" 
+    					data-options="validType:'maxLength[256]',maxlength:256,length:256" missingMessage="请填写扩展属性"></textarea> 
+			</div>
+			<div class="fitem">
+				<label>扩展属性2：</label>
+				<textarea  style="width: 200px;"  cols="30" rows="2" class="easyui-validatebox" name="attr2" 
+    					data-options="validType:'maxLength[256]',maxlength:256,length:256" missingMessage="请填写扩展属性"></textarea> 
+			</div>
+			<div class="fitem">
+				<label>扩展属性3：</label>
+				<textarea  style="width: 200px;"  cols="30" rows="2" class="easyui-validatebox" name="attr3" 
+    					data-options="validType:'maxLength[256]',maxlength:256,length:256" missingMessage="请填写扩展属性"></textarea> 
+			</div>
+			<div class="fitem">
+				<label>扩展属性4：</label>
+				<textarea  style="width: 200px;"  cols="30" rows="2" class="easyui-validatebox" name="attr4" 
+    					data-options="validType:'maxLength[256]',maxlength:256,length:256" missingMessage="请填写扩展属性"></textarea> 
+			</div>
+			<div class="fitem">
+				<label>扩展属性5：</label>
+				<textarea  style="width: 200px;"  cols="30" rows="2" class="easyui-validatebox" name="attr5" 
+    					data-options="validType:'maxLength[256]',maxlength:256,length:256" missingMessage="请填写扩展属性"></textarea> 
+			</div>
+			<div class="fitem">
+				<label>扩展属性6：</label>
+				<textarea  style="width: 200px;"  cols="30" rows="2" class="easyui-validatebox" name="attr6" 
+    					data-options="validType:'maxLength[5000]',maxlength:256,length:256" missingMessage="请填写扩展属性"></textarea> 
+			</div>
+			<div class="fitem">
+				<label>扩展属性7：</label>
+				<textarea  style="width: 200px;"  cols="30" rows="2" class="easyui-validatebox" name="attr7" 
+    					data-options="validType:'maxLength[5000]',maxlength:256,length:256" missingMessage="请填写扩展属性"></textarea> 
+			</div>
+			<div class="fitem">
+				<label>扩展属性8：</label>
+				<textarea  style="width: 200px;"  cols="30" rows="2" class="easyui-validatebox" name="attr8" 
+    					data-options="validType:'maxLength[5000]',maxlength:256,length:256" missingMessage="请填写扩展属性"></textarea> 
+			</div>
+			<div class="fitem">
+				<label>扩展属性9：</label>
+				<textarea  style="width: 200px;"  cols="30" rows="2" class="easyui-validatebox" name="attr9" 
+    					data-options="validType:'maxLength[5000]',maxlength:256,length:256" missingMessage="请填写扩展属性"></textarea> 
+			</div>
+			<div class="fitem">
+				<label>扩展属性10：</label>
+				<textarea  style="width: 200px;"  cols="30" rows="2" class="easyui-validatebox" name="attr10" 
+    					data-options="validType:'maxLength[5000]',maxlength:256,length:256" missingMessage="请填写扩展属性"></textarea> 
+			</div>
+			<div class="fitem">
+				<label>状态：</label>
+				<input  style="width: 215px;"  name="status" type="text"   editable="false" data-attach-point="statusCombobox" maxlength="4" class="easyui-combobox" data-options="required:true,editable:false" missingMessage="请选择状态">
+				<span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label>规则说明：</label>
+				<textarea  style="width: 200px;" cols="30" rows="2" class="easyui-validatebox" name="description" 
+    					data-options="validType:'maxLength[256]',maxlength:256,length:256" missingMessage="请填写规则说明"></textarea>
+			</div>
+			<div class="fitem clearfloat">
+			<label>规则附件：</label>
+				<input data-attach-point="attachmentFile" type="file" name="dataFile"  style="width:194px;">
+ 				<a data-attach-point="attachmentHref" href="/sysAttachment/downloadAttachmentById.do?id="></a>
+ 			</div>
+			<div class="fitem">
+				<span class="required">
+						规则命名规范：<br/>
+						通用规则：通用+“爬虫/解析”+“网站名称”<br/>
+						以爬虫为例：通用+爬虫+新浪新闻<br/>
+					           （规则业务类型：需与新增时所选的规则的业务类型保持一致）<br/>
+				</span>
+			</div>
+			 
+		</div>
+	</form>
+</div>

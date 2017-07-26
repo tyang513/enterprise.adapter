@@ -1,0 +1,169 @@
+package com.td.proxy.entity.task;
+
+import java.util.Date;
+
+import com.talkingdata.base.entity.BaseEntity;
+
+/**
+ * 
+ * <br>
+ * <b>功能：</b>TaskResponseFileProcessJobInputEntity<br>
+ * <b>作者：</b>code generator<br>
+ * <b>日期：</b> Feb 2, 2014 <br>
+ * <b>版权所有：<b>版权所有(C) 2014<br>
+ */
+public class TaskResponseFileProcessJobInput extends BaseEntity {
+	
+	private Integer id;
+	private String taskCode;
+	private String jobInputName;
+	private Integer status;
+	private Object errorInfo;
+	private Integer retry;
+	private Integer maxRetry;
+	private Integer timeout;
+	private Date cTime;
+	private Date mTime;
+	private String triggerType;
+	private Date startDate;
+	private Date endDate;
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getTaskCode() {
+		return this.taskCode;
+	}
+
+	public void setTaskCode(String taskCode) {
+		this.taskCode = taskCode;
+	}
+
+	public String getJobInputName() {
+		return this.jobInputName;
+	}
+
+	public void setJobInputName(String jobInputName) {
+		this.jobInputName = jobInputName;
+	}
+
+//	public String getFileName() {
+//		return this.fileName;
+//	}
+//
+//	public void setFileName(String fileName) {
+//		this.fileName = fileName;
+//	}
+//
+//	public String getFilePath() {
+//		return this.filePath;
+//	}
+//
+//	public void setFilePath(String filePath) {
+//		this.filePath = filePath;
+//	}
+
+	public Integer getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
+
+	public Object getErrorInfo() {
+		return this.errorInfo;
+	}
+
+	public void setErrorInfo(Object errorInfo) {
+		this.errorInfo = errorInfo;
+	}
+
+	public Integer getRetry() {
+		return this.retry;
+	}
+
+	public void setRetry(Integer retry) {
+		this.retry = retry;
+	}
+
+	public Integer getMaxRetry() {
+		return this.maxRetry;
+	}
+
+	public void setMaxRetry(Integer maxRetry) {
+		this.maxRetry = maxRetry;
+	}
+
+	public Integer getTimeout() {
+		return this.timeout;
+	}
+
+	public void setTimeout(Integer timeout) {
+		this.timeout = timeout;
+	}
+
+	public Date getCTime() {
+		return this.cTime;
+	}
+
+	public void setCTime(Date cTime) {
+		this.cTime = cTime;
+	}
+
+	public Date getMTime() {
+		return this.mTime;
+	}
+
+	public void setMTime(Date mTime) {
+		this.mTime = mTime;
+	}
+
+	/**
+	 * @return the triggerType
+	 */
+	public String getTriggerType() {
+		return triggerType;
+	}
+
+	/**
+	 * @param triggerType the triggerType to set
+	 */
+	public void setTriggerType(String triggerType) {
+		this.triggerType = triggerType;
+	}
+
+	/**
+	 * @return the startDate
+	 */
+	public Date getStartDate() {
+		return startDate;
+	}
+
+	/**
+	 * @param startDate the startDate to set
+	 */
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
+	}
+
+	/**
+	 * @return the endDate
+	 */
+	public Date getEndDate() {
+		return endDate;
+	}
+
+	/**
+	 * @param endDate the endDate to set
+	 */
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
+	}
+}
+

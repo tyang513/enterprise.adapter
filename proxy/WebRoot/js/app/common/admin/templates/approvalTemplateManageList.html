@@ -1,0 +1,17 @@
+<table id="${uuid}_grid"  class="easyui-datagrid"
+	data-options="nowrap:false,border:false,striped:true,singleSelect:true,fit:true,fitColumns:true,pagination:true,toolbar:'#${uuid}_bar'"
+	data-attach-point="dataGrid">
+	<thead>
+		<tr>
+			<th data-options="field:'id',width:40,align:'center'">模板编号</th>
+			<th data-options="field:'code',width:80,align:'left'">模版编码</th>
+			<th data-options="field:'name',width:80,align:'center'">模版名字</th>
+			<th data-options="field:'description',width:150,align:'left'">模版描述</th>
+			<th data-options="field:'status',width:50,align:'left',formatter:app.formatter.formatOaTemplateStatus">状态</th>
+			<th data-options="field:'systemName',width:80,align:'center'">所属子系统</th>
+		</tr>
+	</thead>
+</table>
+<div id="${uuid}_bar" class="app-approvalTemplateManageListSearchBar"
+	data-options="grid:'#${uuid}_grid'" data-attach-point="searchBar"
+	data-attach-event="approvaltemplatemanagelistsearchbaraction:_doAction"></div>

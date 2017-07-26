@@ -1,0 +1,34 @@
+<div class="dialog">
+	<form data-attach-point="editForm" class="ui-form" method="post">
+		<input type="hidden" name="id">
+		<div class="ui-edit">
+			<div class="fitem">
+				<label>脚本名称：</label> <input name="scriptName" size="62" type="text" maxlength="40" class="easyui-validatebox">
+			</div>
+			<div class="fitem">
+				<label>脚本类型：</label> <input name="type" size="62" type="text" data-attach-point="typeCombobox" maxlength="4" class="easyui-combobox">
+			</div>
+			<div class="fitem">
+				<label>目标日期：</label> <input name="targetDate" size="62" type="text" maxlength="40" class="easyui-validatebox" data-options="">
+			</div>
+			<div class="fitem">
+				<label>步骤：</label> <input name="step" type="text" size="62" maxlength="" class="easyui-validatebox">
+			</div>
+			<div class="fitem">
+				<label>总步骤：</label> <input name="stepCount" size="62" type="text" maxlength="" class="easyui-validatebox">
+			</div>
+			<div class="fitem">
+				<label>步骤开始时间：</label> <input name="beginTime" size="62" type="text" maxlength="" data-attach-point="beginTime" class="easyui-datetimebox">
+			</div>
+			<div class="fitem">
+				<label>步骤完成时间：</label> <input name="endTime" size="62" type="text" maxlength="" data-attach-point="endTime" class="easyui-datetimebox">
+			</div>
+			<div class="fitem">
+				<label>脚本参数：</label> <input name="stepContent" size="62" type="text" maxlength="256" class="easyui-validatebox">
+			</div>
+			<div class="fitem">
+				<label>描述：</label> <input name="description" size="62" type="text" maxlength="5120" class="easyui-validatebox" data-options="">
+			</div>
+		</div>
+	</form>
+</div>

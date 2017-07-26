@@ -1,0 +1,23 @@
+
+<div class="dialog">
+	<form data-attach-point="updateCalendarForm">
+	<input name="id" type="hidden" data-attach-point="id"> 
+    	<table cellspacing="100" cellpadding="100">
+    		<tr>
+    			<td><span style="color:red; margin-right: 5px">*</span>时间：</td>
+    			<td><input data-attach-point="date" class="easyui-datebox" type="text" name="date" data-options="required:true" editable="false"></input></td>
+    		</tr>
+    		<tr >
+    			<td><span style="color:red; margin-right: 5px">*</span>类型：</td>
+    			<td>
+    				<select data-attach-point="type" data-options="panelHeight:80" name="type" data-options="required:true" editable="false"
+						class="easyui-combobox" >
+						<option value="1"  selected="selected">工作日</option>
+						<option value="2">节假日</option>
+					</select>
+    			</td>
+    		</tr>
+    		
+    	</table>
+    </form>
+</div>

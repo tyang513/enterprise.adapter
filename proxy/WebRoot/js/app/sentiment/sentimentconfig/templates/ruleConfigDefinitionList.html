@@ -1,0 +1,17 @@
+<table id="${uuid}_grid" class="listgrid" 
+	data-options="border:false,striped:true,singleSelect:true,fit:true,fitColumns:true,pagination:true,toolbar:'#${uuid}_bar'"
+	data-attach-point="dataGrid">
+	<thead>
+		<tr>
+			<th data-options="field:'code',width:60,align:'center'" >配置代码</th>
+			<th data-options="field:'content',width:60,align:'center'" >配置内容</th>
+			<th data-options="field:'description',width:60,align:'center'" >描述</th>
+			<th data-options="field:'ctime',width:60,align:'center',formatter:app.formatter.formatTime" >创建时间</th>
+			<th data-options="field:'mtime',width:60,align:'center',formatter:app.formatter.formatTime" >修改时间</th>
+		</tr>
+	</thead>
+</table>
+
+<div id="${uuid}_bar" class="app-ruleConfigDefinitionSearchBar"
+	data-options="grid:'#${uuid}_grid'" data-attach-point="searchBar"
+	data-attach-event="ruleconfigdefinitionsearchbaraction:_doAction"></div>

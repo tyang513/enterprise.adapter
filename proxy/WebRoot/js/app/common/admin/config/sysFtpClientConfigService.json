@@ -1,0 +1,24 @@
+{
+	"sysFtpClientConfig/list.do" : {
+		"type" : "post",
+		"url" : "sysFtpClientConfig/list.do",
+		"dataType" : "json"
+	},
+	"sysFtpClientConfig/save.do" : {
+		"type" : "post",
+		"url" : "sysFtpClientConfig/save.do",
+		"dataType" : "json"
+	},
+	"sysFtpClientConfig/saveData.do" : {
+		"type" : "POST",
+		"url" : "sysFtpClientConfig/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"sysFtpClientConfig/delete.do" : {
+		"type" : "post",
+		"url" : "sysFtpClientConfig/delete.do",
+		"dataType" : "json"
+	}
+}

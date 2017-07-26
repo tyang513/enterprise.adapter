@@ -1,0 +1,40 @@
+<div class="dialog">
+	<form data-attach-point="editForm" class="ui-form" method="post">  
+		<input type="hidden" name="id">
+		<input type="hidden" name="status" data-attach-point="statusInput">
+		<input type="hidden" name="categoryId"  data-attach-point="categoryIdInput">
+		<div class="ui-edit">
+			<div data-attach-point="div1" style="display: none" class="fitem">
+				<label>模板编号：</label> <span class="bold" data-attach-point="codeSpan"></span>
+			</div>
+			<div data-attach-point="div2" style="display: none" class="fitem">
+				<label >模板版本：</label> <span  data-attach-point="versionSpan"></span>
+			</div>
+			<div class="fitem">
+				<label>媒体来源：</label>
+				<input name="mediaSource" type="text"  size="44"  editable="false" data-attach-point="mediaSourceCombobox" maxlength="4" class="easyui-combobox" data-options="required:true,editable:false" missingMessage="请选择媒体来源">
+				<span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label>站点地址：</label>
+				<input name="url" type="text"   size="44" editable="false" data-attach-point="url" maxlength="256" class="easyui-validatebox" data-options="required:true,editable:false" missingMessage="请填写站点地址">
+				<span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label>站点名字：</label>
+				<input name="urlName" type="text"  size="44"  editable="false" data-attach-point="urlName" maxlength="256" class="easyui-validatebox" data-options="required:true,editable:false" missingMessage="请填写站点名字">
+				<span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label>生效时间：</label>
+				<input name="effectDate"  size="44"  data-attach-point="effectDateInfo" editable="false"  type="text" maxlength="" class="easyui-datebox" data-options="required:true,editable:false" missingMessage="请填写模板的生效时间">
+				<span class="required">*</span>	
+			</div>
+			<div class="fitem">
+				<label>失效时间：</label>
+				<input name="expiryDate"  size="44"  data-attach-point="expiryDateInfo" editable="false"  type="text" maxlength="" class="easyui-datebox" data-options="required:true,editable:false" missingMessage="请填写模板的失效时间">
+				<span class="required">*</span>	
+			</div>
+		</div>
+	</form>
+</div>

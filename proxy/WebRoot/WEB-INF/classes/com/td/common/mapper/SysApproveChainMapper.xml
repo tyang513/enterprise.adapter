@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.td.common.dao.SysApproveChainDao" > 
+  <!-- Result Map-->
+  <resultMap id="BaseResultMap" type="com.td.common.entity.SysApproveChain" >
+	<result column="id" property="id"/>
+	<result column="sheetId" property="sheetId"/>
+	<result column="sheetType" property="sheetType"/>
+	<result column="index_" property="index"/>
+	<result column="approverUmId" property="approverUmId"/>
+	<result column="approverName" property="approverName"/>
+	<result column="templateCode" property="templateCode"/>
+	<result column="systemCode" property="systemCode"/>
+	<result column="mtime" property="mtime"/>
+	<result column="ctime" property="ctime"/>
+  </resultMap>
+       
+  <!-- SYS_APPROVE_CHAIN table all fields -->
+  <sql id="Base_Column_List" >
+	 id,sheetId,sheetType,index_,approverUmId,approverName,templateCode,systemCode,mtime,ctime
+  </sql>
+   
+  <!-- 查询条件 -->
+  <sql id="Base_Where_Clause">
+    where 1=1
+    <trim suffixOverrides="," >
+	      <if test="id != null and id != ''" >
+        and id =  #{id}
+	  </if>
+	      <if test="sheetId != null and sheetId != ''" >
+        and sheetId =  #{sheetId}
+	  </if>
+	      <if test="sheetType != null and sheetType != ''" >
+        and sheetType =  #{sheetType}
+	  </if>
+	      <if test="index != null and index != ''" >
+        and index_ =  #{index}
+	  </if>
+	      <if test="approverUmId != null and approverUmId != ''" >
+        and approverUmId =  #{approverUmId}
+	  </if>
+	      <if test="approverName != null and approverName != ''" >
+        and approverName =  #{approverName}
+	  </if>
+	      <if test="templateCode != null and templateCode != ''" >
+        and templateCode =  #{templateCode}
+	  </if>
+	      <if test="systemCode != null and systemCode != ''" >
+        and systemCode =  #{systemCode}
+	  </if>
+	      <if test="mtime != null and mtime != ''" >
+        and mtime =  #{mtime}
+	  </if>
+	      <if test="ctime != null and ctime != ''" >
+        and ctime =  #{ctime}
+	  </if>
+    </trim>
+  </sql>
+   
+  <!-- 插入记录 -->
+  <insert id="insert" parameterType="Object" >
+    <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+	  SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into SYS_APPROVE_CHAIN(id,sheetId,sheetType,index_,approverUmId,approverName,templateCode,systemCode,mtime,ctime)
+ values(#{id},#{sheetId},#{sheetType},#{index},#{approverUmId},#{approverName},#{templateCode},#{systemCode},#{mtime},#{ctime})
+  </insert>
+
+  <!-- 根据id，修改记录-->  
+  <update id="updateByPrimaryKey" parameterType="Object" >
+    update SYS_APPROVE_CHAIN set sheetId=#{sheetId},sheetType=#{sheetType},index_=#{index},approverUmId=#{approverUmId},approverName=#{approverName},templateCode=#{templateCode},systemCode=#{systemCode},mtime=#{mtime},ctime=#{ctime} where id=#{id}
+  </update>
+ 
+  <!-- 修改记录，只修改只不为空的字段 -->
+  <update id="updateByPrimaryKeySelective" parameterType="Object" >
+    update SYS_APPROVE_CHAIN set 
+	<trim  suffixOverrides="," >
+	<if test="sheetId != null  ">
+		sheetId=#{sheetId},
+	</if>
+	<if test="sheetType != null  ">
+		sheetType=#{sheetType},
+	</if>
+	<if test="index_ != null  ">
+		index_=#{index},
+	</if>
+	<if test="approverUmId != null  ">
+		approverUmId=#{approverUmId},
+	</if>
+	<if test="approverName != null  ">
+		approverName=#{approverName},
+	</if>
+	<if test="templateCode != null  ">
+		templateCode=#{templateCode},
+	</if>
+	<if test="systemCode != null  ">
+		systemCode=#{systemCode},
+	</if>
+	<if test="mtime != null  ">
+		mtime=#{mtime},
+	</if>
+	<if test="ctime != null  ">
+		ctime=#{ctime},
+	</if>
+	</trim> where id=#{id}
+  </update>
+ 
+  <!-- 根据id查询 审批链 -->
+  <select id="selectByPrimaryKey"  resultMap="BaseResultMap" parameterType="Object">
+    select <include refid="Base_Column_List" /> 
+	 from SYS_APPROVE_CHAIN where id = #{id}
+  </select>
+  
+  <!-- 删除记录 -->
+  <delete id="deleteByPrimaryKey" parameterType="Object">
+    delete 	 from SYS_APPROVE_CHAIN where id = #{id}
+  </delete>
+
+  <!-- 审批链 列表总数-->
+  <select id="queryByCount" resultType="java.lang.Integer"  parameterType="Object">
+	select count(1) from SYS_APPROVE_CHAIN 
+	<include refid="Base_Where_Clause"/>
+  </select>
+  	
+  <!-- 查询审批链列表 -->
+  <select id="queryByList" resultMap="BaseResultMap"  parameterType="Object">
+	select 
+	<include refid="Base_Column_List"/>
+	from SYS_APPROVE_CHAIN 
+	<include refid="Base_Where_Clause"/>
+	<if test="pager.orderCondition != null and pager.orderCondition != ''" >
+       ${pager.orderCondition}
+    </if>
+    <if test="pager.mysqlQueryCondition != null and pager.mysqlQueryCondition != ''" >
+       ${pager.mysqlQueryCondition}
+    </if>
+  </select>
+</mapper>   

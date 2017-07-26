@@ -1,0 +1,89 @@
+
+.summary-panel {
+    background-color: #FCFCFC;
+    padding-bottom: 0px;
+}
+.summary-panel .summary {
+	height: 60px;
+}
+
+.summary-panel .summary .sheetLogo {
+	width: 100px;
+	height: 100%;
+	margin-top: 10px;
+	display: inline-block;
+}
+
+.summary-panel .summary .content {
+	margin-left: 120px;
+	margin-top: -65px;
+}
+
+.summary-panel .summary .content .sheetType {
+	margin-bottom: 10px;
+}
+
+.summary-panel .summary .content .sheetType span {
+	margin: 5px;
+	font-family: Arial;
+	font-size: 16px;
+	font-weight: bold;
+	font-style: oblique;
+	text-decoration: none;
+	color: #333333;
+}
+
+.summary-panel .summary .content .sheetInfo .margin-span {
+	margin-left: 60px;
+}
+
+.summary-panel .toolbar{
+	margin-right:210px;
+}
+.summary-panel .toolbar .group-seperator {
+	margin-left: 20px;
+}
+
+.summary-panel .toolbar, .summary-panel .actionMsg {
+	margin-top: 5px;
+	margin-left: 106px;
+	padding-bottom: 5px;
+	height: 30px;
+	width:80%;
+}
+.summary-panel .actionMsg>div {
+	margin-left: 5px;
+}
+.summary-panel .toolbar .easyui-linkbutton, .summary-panel .toolbar .easyui-menubutton {
+    margin-left: 4px;
+}
+.summary-panel .toolbar a.l-btn span span.l-btn-text {
+    font-size: 10px;
+}
+
+
+.summary-panel .toolbar .left,
+.summary-panel .toolbar .center{
+	display: inline-block;
+	float:left;
+}
+
+.summary-panel .toolbar .right{
+	display: inline-block;
+	float: right;
+	margin-right: 0px;
+}
+
+.summary-panel .summary .sheetInfo label {
+	margin-left:80px;
+}
+.summary-panel .summary .sheetInfo label:first-child {
+	margin-left:0px;
+}
+.summary-panel .summary .sheetInfo span {
+	 vertical-align: middle;
+	 font-weight: bold;
+}
+.summary-panel .freezeImg {
+	 background: url(../../images/freezeImg.png) no-repeat center;
+}

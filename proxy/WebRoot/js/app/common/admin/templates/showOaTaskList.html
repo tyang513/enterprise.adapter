@@ -1,0 +1,27 @@
+<table id="${uuid}_grid"  class="listgrid"
+	data-options="nowrap:false,border:false,striped:true,singleSelect:true,fit:true,fitColumns:true,pagination:true,toolbar:'#${uuid}_bar'"
+	data-attach-point="dataGrid">
+	<thead>  
+			<tr>  	
+				<th data-options="field:'instancename',width:40,align:'center'">审批流程名称</th>
+				<th data-options="field:'taskname',width:40,align:'center'">任务名称</th>
+				<th data-options="field:'taskindex',width:15,align:'center'">审批顺序</th>
+				<th data-options="field:'assignername',width:15,align:'center'">处理人姓名</th>
+				
+				<th data-options="field:'approve',align:'center',width:15,formatter:function(value,row,index){
+					if(value==1){
+		                   	return '是';
+		            }else{
+		                   	return '否';
+		                  }
+				}">是否同意</th>
+				<th data-options="field:'statusName',align:'center',width:14">状态</th>
+				<th data-options="field:'starttime',width:30,align:'center',formatter:app.formatter.formatTimeStamp1">启动时间</th>
+				<th data-options="field:'endtime',width:30,align:'center',formatter:app.formatter.formatTimeStamp1">结束时间</th>
+				<th data-options="field:'memo',align:'center',width:15">备注</th>
+		    </tr>
+	</thead>
+</table>
+<div id="${uuid}_bar" class="app-showOaTaskListSearchBar"
+	data-options="grid:'#${uuid}_grid'" data-attach-point="searchBar"
+	data-attach-event="showoatasklistsearchbaraction:_doAction"></div>

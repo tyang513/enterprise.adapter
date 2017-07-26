@@ -1,0 +1,21 @@
+<table id="${uuid}_grid"  class="easyui-datagrid"
+	data-options="nowrap:false,border:false,striped:true,singleSelect:true,fit:true,fitColumns:true,pagination:true,toolbar:'#${uuid}_bar',idField:'id'"
+	data-attach-point="dataProcessJobInputGrid">
+	<thead>
+		<tr>
+			<th data-options="field:'id',hidden:true"> </th>
+			<th data-options="field:'sheetid',width:20,align:'center'">申请单号 </th>
+			<th data-options="field:'sheettype',width:20,align:'center',formatter:'_formatterApplicationType'">申请单类型</th>
+			<th data-options="field:'processtype',width:15,align:'center',formatter:'_formatterProcesstype'">处理类型</th>
+			<th data-options="field:'retry',width:10,align:'center'">重试次数</th>
+			<th data-options="field:'maxretry',width:10,align:'center'">最大重试次数</th>
+			<th data-options="field:'status',width:15,align:'center',formatter:'_formatterStatus'">处理状态</th>
+			<th data-options="field:'oper',width:10,align:'center',formatter:'_formatterOper'">操作 </th>
+		</tr>
+	</thead>
+</table>
+<div id="${uuid}_bar" class="app-sheetProcessJobInputListSearchBar"
+	data-options="grid:'#${uuid}_grid'" data-attach-point="searchBar"
+	data-attach-event="sheetprocessjobinputlistsearchbaraction:_doAction">
+	</div>
+	

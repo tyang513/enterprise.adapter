@@ -1,0 +1,19 @@
+<div class="form-module">
+<table class="listgrid"
+	data-options="border:false,striped:true,singleSelect:true,fitColumns:true,pagination:true"
+	data-attach-point="dataGrid">
+	<thead>
+		<tr>
+			<th data-options="field:'id',width:60,align:'left'">流程ID</th>
+			<th data-options="field:'processname',width:60,align:'left'">流程名</th>
+			<!-- <th data-options="field:'sheetid',width:60,align:'left'">申请单号</th> -->
+			<th data-options="field:'starttime',width:60,align:'left',formatter:app.formatter.formatTimeStamp1">启动时间</th>
+			<th data-options="field:'endtime',width:60,align:'left',formatter:app.formatter.formatTimeStamp1">结束时间</th>
+			<th data-options="field:'startername',width:60,align:'left'">流程发起人</th>
+			<th data-options="field:'status',width:60,align:'left',formatter:app.formatter.formatProcessStatus">流程状态</th>
+			<th data-options="field:'systemcode',hidden:true">所属子系统CODE</th>
+			<th data-options="field:'act',width:60,align:'center',formatter:'_formatAct'">操作</th>
+		</tr>
+	</thead>
+</table>
+</div>

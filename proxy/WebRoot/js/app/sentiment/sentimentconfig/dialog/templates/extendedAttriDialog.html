@@ -1,0 +1,43 @@
+<div class="dialog">
+	<form data-attach-point="editForm" class="ui-form" method="post">
+		<input type="hidden" name="id" data-attach-point="idInput"> 
+		<input type="hidden" name="extendAttrId" data-attach-point="extendAttrIdInput"> 
+		<input type="hidden" name="templateId" data-attach-point="templateIdInput">
+		<input type="hidden" name="extendName" data-attach-point="extendNameInput">
+		<input type="hidden" name="extendCode" data-attach-point="extendCodeInput">
+		<input type="hidden" name="extendValue" data-attach-point="extendValueHide"/>
+		<div class="ui-edit">
+				<div class="fitem">
+					<label>属性名：</label>
+					<input data-attach-point="extendNameCombobox" type="text" maxlength="40" class="easyui-combobox"
+						data-options="required:true, editable:false" missingMessage="请选择属性名">
+					<span class="required">*</span>
+				</div>
+				<div class="fitem" data-attach-point="extendValueTextDiv">
+					<label>属性值：</label> 
+					<input type="text" class="easyui-validatebox" data-attach-point="extendValueTextInput" data-options="required:true" missingMessage="属性值不能为空">
+					<span class="required">*</span>	
+				</div>
+				<div class="fitem" hidden=true data-attach-point="extendValueNumberDiv">
+					<label>属性值：</label> 
+					<input class="easyui-numberbox" data-attach-point="extendValueNumberInput" hidden=true data-options="required:true,precision:2" missingMessage="属性值不能为空">
+					<span class="required">*</span>	
+				</div>
+				<div class="fitem" hidden=true data-attach-point="extendValueTextAreaDiv">
+					<label>属性值：</label> 
+					<textarea cols="22" rows="2" class="easyui-validatebox" data-attach-point="extendValueTextAreaInput" hidden=true data-options="required:true,validType:'maxLength[512]'" missingMessage="属性值不能为空"></textarea>
+					<span class="required">*</span>	
+				</div>
+				<div class="fitem" hidden=true data-attach-point="extendValueTextComboDiv" >
+					<label>属性值：</label> 
+					<input class="easyui-combobox"  maxlength="40" data-attach-point="extendValueComboInput" data-options="required:true,editable:false"  missingMessage="属性值不能为空">
+					<span class="required">*</span>	
+				</div>
+						
+		</div>
+	</form>
+</div>
+
+
+
+

@@ -1,0 +1,17 @@
+<input class="easyui-searchbox" style="width: 214px"
+	data-options="prompt:'请输入邮件编码或标题'" data-attach-point="searchbox">
+<div style="height: 90%">
+	<table class="easyui-datagrid"
+		data-options="idField:'id',pagination:false,rownumbers:true,fit:true,fitColumns:true,singleSelect:true"
+		data-attach-point="mailTemplateListGrid">
+		<thead>
+			<tr>
+				<th data-options="field:'code',width:30,sortable:true,align:'left',halign:'center'">编码</th>
+				<th data-options="field:'title',width:30,sortable:true,halign:'center'">标题</th>
+				<th data-options="field:'content',width:45,sortable:true,halign:'center'">模版内容</th>
+				<th data-options="field:'systemcode',hidden:true">所属子系统CODE</th>
+			    <th data-options="field:'systemName',width:12,align:'left'">所属子系统</th>
+			</tr>
+		</thead>
+	</table>
+</div>

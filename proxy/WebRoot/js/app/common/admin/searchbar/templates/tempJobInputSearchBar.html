@@ -1,0 +1,43 @@
+<div class="datagrid-toolbar-tool"></div>
+<div class="datagrid-toolbar-filter" style="display: none;">
+	<div class="criteria-panel">
+		<form data-attach-point="searchForm">
+			<div class="fitem">
+				<label>执行类</label>
+				<input name="executorClassName" type="text" maxlength="128" class="easyui-validatebox">
+			</div>
+			<div class="fitem">
+				<label>执行参数</label>
+				<input name="params" type="text" maxlength="1024" class="easyui-validatebox">
+			</div>
+			<div class="fitem">
+				<label>调用人名字</label>
+				<input name="umName" type="text" maxlength="64" class="easyui-validatebox">
+			</div>
+			<div class="fitem">
+				<label>状态</label>
+				<input name="status" type="text" maxlength="4" class="easyui-combobox" data-attach-point="ipt_taskStatus">
+			</div>
+			<div class="fitem">
+				<label>重试次数</label>
+				<input name="retry" type="text" maxlength="" class="easyui-validatebox">
+			</div>
+			<div class="fitem">
+				<label>最大重试次数</label>
+				<input name="maxRetry" type="text" maxlength="" class="easyui-validatebox">
+			</div>
+			<div class="fitem">
+				<label>超时时间</label>
+				<input name="timeout" type="text" maxlength="" class="easyui-validatebox">
+			</div>
+			<div class="fitem">
+				<label>创建时间</label>
+				<input name="cTime" type="text" maxlength="" class="easyui-datetimebox">
+			</div>
+			<div class="fitem">
+				<label>修改时间</label>
+				<input name="mTime" type="text" maxlength="" class="easyui-datetimebox">
+			</div>
+      </form>		
+	</div>
+</div>

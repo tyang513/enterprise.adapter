@@ -1,0 +1,39 @@
+<div class="dialog">
+	<form data-attach-point="editForm" class="ui-form" method="post">  
+		<input type="hidden" name="id">
+		<div class="ui-edit">
+			<div class="fitem">
+				<label><span class="required">*</span>服务器名</label>
+				<input name="servername" type="text" maxlength="32" class="easyui-validatebox" data-options="required:true" missingMessage="请填写服务器名">
+			</div>
+			<div class="fitem">
+				<label><span class="required">*</span>协议</label>
+				<input name="protocol" type="text" maxlength="8" class="easyui-validatebox" data-options="required:true" missingMessage="请填写协议">
+			</div>
+			<div class="fitem">
+				<label><span class="required">*</span>用户名</label>
+				<input name="user" type="text" maxlength="32" class="easyui-validatebox" data-options="required:true" missingMessage="请填写用户名">
+			</div>
+			<div class="fitem">
+				<label><span class="required">*</span>ftp服务器根目录</label>
+				<input name="rootpath" type="text" maxlength="1024" class="easyui-validatebox" data-options="required:true" missingMessage="请填写ftp服务器根目录">
+			</div>
+			<div class="fitem">
+				<label><span class="required">*</span>字符集</label>
+				<input name="charset" type="text" maxlength="16" class="easyui-validatebox" data-options="required:true" missingMessage="请填写字符集">
+			</div>
+			<div class="fitem">
+				<label><span class="required">*</span>服务器ip</label>
+				<input name="host" type="text" maxlength="32" class="easyui-validatebox" data-options="required:true" missingMessage="请填写服务器ip">
+			</div>
+			<div class="fitem">
+				<label><span class="required">*</span>服务器port</label>
+				<input name="port" type="text" maxlength="" class="easyui-numberbox" data-options="required:true" missingMessage="请填写服务器port">
+			</div>
+			<div class="fitem">
+				<label><span class="required">*</span>服务器代码</label>
+				<input name="code" type="text" maxlength="32" class="easyui-validatebox" data-options="required:true" missingMessage="请填写服务器代码">
+			</div>
+		</div>
+	</form>
+</div>

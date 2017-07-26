@@ -1,0 +1,58 @@
+<div class="dialog">
+	<form data-attach-point="createmailTemplateForm">
+
+		<input name="id" type="hidden" data-attach-point="id" />
+		<div class="ui-edit">
+			<div class="fitem" data-attach-point="ipt_code_Div">
+				<label style="width:150px;">
+					流程英文名：</label> <input class="easyui-validatebox"
+					data-attach-point="ipt_code" name="ipt_code"
+					data-options="required:true" maxlength="128" />
+			</div>
+			<div class="fitem" data-attach-point="ipt_name_Div">
+				<label style="width:150px;">
+					流程中文名：</label> <input class="easyui-validatebox"
+					data-attach-point="ipt_name" name="ipt_name"
+					data-options="required:true" maxlength="128" />
+			</div>
+			<div class="fitem">
+				<label style="width:150px;">版本号：</label>
+				<input class="easyui-validatebox" data-attach-point="ipt_version"
+					name="ipt_version" data-options="" maxlength="512" />
+			</div>
+			<div class="fitem">
+				<label style="width:150px;">流程定义页面：</label>
+				<input class="easyui-validatebox"
+					data-attach-point="ipt_processdefinitionviewurl"
+					name="ipt_processdefinitionviewurl" data-options=""
+					maxlength="512" />
+			</div>
+			<div class="fitem">
+				<label style="width:150px;">默认任务超时时间（天）：</label> <input class="easyui-numberbox"
+					data-attach-point="ipt_defaulttasktimeout"
+					name="ipt_defaulttasktimeout"
+					data-options="required:true,min:0,max:99999999" maxlength="8" />
+			</div>
+			<div class="fitem">
+				<label style="width:150px;">默认的提醒时间（天）：</label> <input
+					class="easyui-numberbox"
+					data-attach-point="ipt_defaultremindinterval"
+					name="ipt_defaultremindinterval"
+					data-options="min:0,max:99999999" maxlength="8" />
+			</div>
+			<div class="fitem">
+				<label style="width:150px;">所属子系统：</label>
+				<input class="easyui-combobox" style="width: 168px" editable="false"
+					data-options="" data-attach-point="ipt_systemName"
+					name="ipt_systemName">
+			</div>
+			<div class="fitem">
+				<label style="width:150px;">描述：</label>
+				<textarea class="easyui-validatebox"
+					style="width: 260px; height: 120px" data-options=""
+					data-attach-point="ipt_description" name="ipt_description" rows="5"
+					cols="60" maxlength="1024"></textarea>
+			</div>
+		</div>
+	</form>
+</div>

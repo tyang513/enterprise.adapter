@@ -1,0 +1,50 @@
+<div class="dialog two-column" >
+	<form data-attach-point="editForm" class="ui-form" method="post">  
+		<input type="hidden" name="id">
+		<div class="ui-edit">
+			<div class="fitem">
+				<label style="width:110px;">报表英文名：</label>
+				<input name="code" type="text" maxlength="40" class="easyui-validatebox" data-options="required:true" missingMessage="请填写报表英文名">
+				<span class="required">*</span>			</div>
+			<div class="fitem">
+				<label style="width:110px;">报表名：</label>
+				<input name="name" type="text" maxlength="100" class="easyui-validatebox" data-options="required:true" missingMessage="请填写报表名">
+				<span class="required">*</span>
+							</div>
+			<div class="fitem">
+				<label style="width:110px;">报表文件类型：</label>
+				<input name="fileType" data-attach-point="fileTypeCombobox" editable="false" type="text" maxlength="40" class="easyui-combobox" data-options="required:true" missingMessage="请选择报表文件类型">
+				<span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label style="width:110px;">邮件类型：</label>
+				<input name="emailType" data-attach-point="emailTypeCombobox" editable="false" type="text" maxlength="100" class="easyui-combobox" data-options="required:true" missingMessage="请填写邮件类型">
+				<span class="required">*</span>			</div>
+			<div class="fitem">
+				<label style="width:110px;">邮件配置：</label>
+				<input name="emailContent" data-attach-point="emailContentValidate" type="text" maxlength="200" class="easyui-validatebox" data-options="required:true" missingMessage="请填写邮件配置（多个邮箱或用户采用,隔开）">
+				<span class="required">*</span>			</div>
+			<div class="fitem">
+				<label style="width:110px;">邮件模板编码：</label>
+				<input name="emailTemplateCode" data-attach-point="emailTemplateCodeValidate" type="text" maxlength="" class="easyui-validatebox" data-options="required:true" missingMessage="请填写邮件模板编码">
+				<span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label style="width:110px;">是否用动态文件名：</label>
+				<input name="isUseDynamicFileName" data-attach-point="isUseDynamicFileNameCombobox" editable="false" type="text" maxlength="100" class="easyui-combobox" data-options="required:true" missingMessage="请选择是否使用动态文件名">
+				<span class="required">*</span>			</div>
+			<div class="fitem clearfloat">
+				<label style="width:110px;">SQL模板：</label>
+				<textarea data-attach-point="sqlStr"  name="sqlStr" cols="90" rows="5"
+						data-options="required:true,validType:['maxLength[2000]']" maxlength="50000" missingMessage="请填写SQL模板"></textarea>	
+				<span class="required">*</span>					
+			</div>
+			<div class="fitem clearfloat">
+				<label style="width:110px;">报表标题列配置：</label>
+				<textarea data-attach-point="colList"  name="colList" cols="90" rows="5"
+						data-options="required:true,validType:['maxLength[2000]']" maxlength="50000" missingMessage="请填写报表标题列配置"></textarea>
+				<span class="required">*</span>			
+			</div>
+		</div>
+	</form>
+</div>

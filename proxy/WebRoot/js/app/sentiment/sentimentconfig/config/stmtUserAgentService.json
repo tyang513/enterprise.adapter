@@ -1,0 +1,29 @@
+{
+	"stmtUserAgent/list.do" : {
+		"type" : "post",
+		"url" : "stmtUserAgent/list.do",
+		"dataType" : "json"
+	},
+	"stmtUserAgent/save.do" : {
+		"type" : "post",
+		"url" : "stmtUserAgent/save.do",
+		"dataType" : "json"
+	},
+	"stmtUserAgent/saveData.do" : {
+		"type" : "POST",
+		"url" : "stmtUserAgent/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"stmtUserAgent/findById.do" : {
+		"type" : "post",
+		"url" : "stmtUserAgent/findById.do",
+		"dataType" : "json"
+	},
+	"stmtUserAgent/deleteById.do" : {
+		"type" : "post",
+		"url" : "stmtUserAgent/deleteById.do",
+		"dataType" : "json"
+	}
+}

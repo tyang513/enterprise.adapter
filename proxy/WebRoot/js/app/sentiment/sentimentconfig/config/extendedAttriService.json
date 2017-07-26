@@ -1,0 +1,29 @@
+{
+	"extendedAttri/list.do" : {
+		"type" : "post",
+		"url" : "extendedAttri/list.do",
+		"dataType" : "json"
+	},
+	"extendedAttri/save.do" : {
+		"type" : "post",
+		"url" : "extendedAttri/save.do",
+		"dataType" : "json"
+	},
+	"extendedAttri/saveData.do" : {
+		"type" : "POST",
+		"url" : "extendedAttri/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"extendedAttri/findById.do" : {
+		"type" : "post",
+		"url" : "extendedAttri/findById.do",
+		"dataType" : "json"
+	},
+	"extendedAttri/deleteById.do" : {
+		"type" : "post",
+		"url" : "extendedAttri/deleteById.do",
+		"dataType" : "json"
+	}
+}

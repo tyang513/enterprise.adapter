@@ -1,0 +1,64 @@
+<div class="dialog two-column">
+	<form data-attach-point="editForm" class="ui-form" method="post">
+		<input type="hidden" name="id">
+		<div class="ui-edit">
+			<div class="fitem">
+				<label>hadoop任务Id：</label>
+				<input name="jobId" type="text" maxlength="40" class="easyui-validatebox" data-options="required:true" missingMessage="请填写Hadoop任务Id">
+				<span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label>统计标识：</label>
+				<input name="progressId" type="text" maxlength="40" class="easyui-validatebox" data-options="required:true" missingMessage="请填写Hadoop统计标识">
+				<span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label>任务名:</label>
+				<input name="taskName" data-attach-point="taskNameCombobox" type="text" maxlength="40" class="easyui-combobox" data-options="required:true" missingMessage="请填写任务名">
+				<span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label>任务类型:</label>
+				<input name="jobType" data-attach-point="jobTypeCombobox" type="text" maxlength="40" class="easyui-combobox" data-options="required:true" missingMessage="请填写任务类型">
+				<span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label>hadoop数据执行分类:</label>
+				<input name="executeType" data-attach-point="executeTypeCombobox" type="text" maxlength="40" class="easyui-combobox" data-options="required:true" missingMessage="请填写执行分类">
+				<span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label>hadoop数据执行结果:</label>
+				<input name="resultType" data-attach-point="resultTypeCombobox" type="text" maxlength="40" class="easyui-combobox" data-options="required:true" missingMessage="请填写执行结果">
+				<span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label>hadoop数据结果原因:</label>
+				<input name="reasonType" data-attach-point="reasonTypeCombobox" type="text" maxlength="40" class="easyui-combobox" data-options="required:true" missingMessage="请填写结果原因">
+				<span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label>规则定义名：</label>
+				<input name="ruleName" type="text" maxlength="40" class="easyui-validatebox" data-options="required:true" missingMessage="请填写规则定义名">
+				<span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label>统计数：</label>
+				<input name="count" type="text" maxlength="20" class="easyui-validatebox" data-options="required:true" missingMessage="请填写统计数">
+				<span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label>对账批次号：</label>
+				<input name="batchNo" type="text" maxlength="20" class="easyui-validatebox">
+			</div>
+			<div class="fitem">
+				<label>数据处理类型：</label>
+				<input name="isInsert" data-attach-point="isInsertCombobox" type="text" maxlength="20" class="easyui-combobox">
+			</div>
+			<div class="fitem clearfloat">
+				<label>备注：</label>
+				<textarea data-attach-point="memo" name="memo" cols="85" rows="4"></textarea>
+			</div>
+		</div>
+	</form>
+</div>

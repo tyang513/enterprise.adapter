@@ -1,0 +1,31 @@
+<div class="dialog">
+	<form data-attach-point="editForm" class="ui-form" method="post">
+		<input type="hidden" name="id" data-attach-point="id"> 
+		<input type="hidden" name="ruleDefId" data-attach-point="ruleDefId">
+		<div class="ui-edit">
+			<div class="fitem">
+				<label>配置代码：</label> 
+				<textarea cols="40" rows="2" class="easyui-validatebox" name="code"  data-attach-point="code" 
+    					data-options="required:true,validType:'length[1,40]'" missingMessage="请填写配置代码"></textarea> 
+				<span class="required">*</span>
+			</div>
+			<div class="fitem">
+				<label>配置内容：</label> 
+				<textarea cols="40" rows="2" class="easyui-validatebox" name="content"  data-attach-point="content" 
+    					data-options="validType:'length[1,40]'" missingMessage="请填写配置内容"></textarea>
+			</div>
+			<!-- 
+			<div class="fitem">
+				<label>转换类名：</label> 
+				<textarea cols="40" rows="2" class="easyui-validatebox" name="converterClassName"  data-attach-point="converterClassName" 
+    					data-options="validType:'length[1,40]'" missingMessage="请填写转换类名"></textarea>
+			</div>
+			 -->
+			<div class="fitem">
+				<label>描述：</label> 
+				<textarea cols="40" rows="2" class="easyui-validatebox" name="description" 
+    					data-options="validType:'length[1,256]'" missingMessage="请填写规则配置描述"></textarea>
+			</div>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,34 @@
+{
+	"scriptInfo/list.do" : {
+		"type" : "post",
+		"url" : "scriptInfo/list.do",
+		"dataType" : "json"
+	},
+	"scriptInfo/save.do" : {
+		"type" : "post",
+		"url" : "scriptInfo/save.do",
+		"dataType" : "json"
+	},
+	"scriptInfo/saveData.do" : {
+		"type" : "POST",
+		"url" : "scriptInfo/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"scriptInfo/findById.do" : {
+		"type" : "post",
+		"url" : "scriptInfo/findById.do",
+		"dataType" : "json"
+	},
+	"scriptInfo/deleteById.do" : {
+		"type" : "post",
+		"url" : "scriptInfo/deleteById.do",
+		"dataType" : "json"
+	},
+	"scriptInfo/runScript.do" : {
+		"type" : "post",
+		"url" : "scriptInfo/runScript.do",
+		"dataType" : "json"
+	}
+}

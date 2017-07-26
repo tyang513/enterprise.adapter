@@ -1,0 +1,35 @@
+<div class="dialog">
+	<form data-attach-point="createmailTemplateForm">
+		<input name="id" type="hidden" data-attach-point="id"/>
+				<div class="criteria-panel" >
+					<div>
+						<label>&nbsp;&nbsp;&nbsp; 英文代码：</label> <input class="easyui-validatebox"
+							data-attach-point="ipt_jkey"  name="ipt_jkey"  data-options="required:true" maxlength="128" />
+					</div>
+					<div>
+						<label>&nbsp;&nbsp;&nbsp; 任务名称：</label> <input class="easyui-validatebox"
+							data-attach-point="ipt_name"  name="ipt_name"  data-options="required:true" maxlength="128" />
+					</div>					
+					<div>
+						<label>&nbsp; 任务实现类：</label> <input class="easyui-validatebox"
+							data-attach-point="ipt_classname"  name="ipt_classname"  data-options="required:true" maxlength="128" />
+					</div>
+					<div>
+						<label>间隔时间(秒)：</label> <input class="easyui-validatebox"
+							data-attach-point="ipt_intervall"  name="ipt_intervall"  data-options="required:true" maxlength="128" />
+					</div>		
+					<div>
+						<label>任务开始时间：</label> 
+						<input class="easyui-datebox"  style="width:168px" data-options="editable:false,formatter:app.formatter.formatTime" data-attach-point="ipt_starttime" name ="ipt_starttime">
+					</div>	
+					<div>
+						<label>任务结束时间：</label> 
+						<input class="easyui-datebox"  style="width:168px" data-options="editable:false,formatter:app.formatter.formatTime" data-attach-point="ipt_endtime" name ="ipt_endtime">
+					</div>	
+					<div>
+						<label>&nbsp;&nbsp;所属子系统：</label> <input class="easyui-combobox" style="width:168px" editable="false"  data-options="required:true"  data-attach-point="ipt_systemName"  name="ipt_systemName">
+					</div>
+							
+				</div>
+	</form>
+</div>

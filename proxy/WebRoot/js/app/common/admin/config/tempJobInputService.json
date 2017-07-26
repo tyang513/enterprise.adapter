@@ -1,0 +1,29 @@
+{
+	"tempJobInput/list.do" : {
+		"type" : "post",
+		"url" : "tempJobInput/list.do",
+		"dataType" : "json"
+	},
+	"tempJobInput/save.do" : {
+		"type" : "post",
+		"url" : "tempJobInput/save.do",
+		"dataType" : "json"
+	},
+	"tempJobInput/saveData.do" : {
+		"type" : "POST",
+		"url" : "tempJobInput/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"tempJobInput/findById.do" : {
+		"type" : "post",
+		"url" : "tempJobInput/findById.do",
+		"dataType" : "json"
+	},
+	"tempJobInput/deleteById.do" : {
+		"type" : "post",
+		"url" : "tempJobInput/deleteById.do",
+		"dataType" : "json"
+	}
+}

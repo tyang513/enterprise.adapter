@@ -1,0 +1,45 @@
+{
+	"templateForm" : {
+		"viewData" : {
+			"tabs" : "模板基本信息,计算规则信息,扩展属性信息",
+			"north" : [{
+				"classPath" : "app/sentiment/sentimentconfig/module/templateSummary",
+				"options" : {
+					"title" : "模板配置",
+					"buttons" : [{
+								"text" : "关闭",
+								"group" : "right",
+								"eventId" : "cancel"
+							}]
+							
+				}
+			}],
+			"east" : [],
+			"center" : [{
+				"classPath" : "app/sentiment/sentimentconfig/module/templateInfo",
+				"options" : {
+					"title" : "模板基本信息",
+					"show": false,
+					"tab" : 1
+				}
+			},{
+				"classPath" : "app/sentiment/sentimentconfig/module/templateRule",
+				"options" : {
+					"title" : "计算规则信息",
+					"show": false,
+					"tab" : 2
+				}
+			},{
+				"classPath" : "app/sentiment/sentimentconfig/module/extendedAttri",
+				"options" : {
+					"title" : "扩展属性信息",
+					"show": false,
+					"tab" : 3
+				}
+			}
+			]
+		}
+		
+	
+	}
+}

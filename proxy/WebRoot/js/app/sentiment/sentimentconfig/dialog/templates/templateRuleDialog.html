@@ -1,0 +1,68 @@
+
+<div class="easyui-layout" data-options="fit:true">
+	
+	<div data-options="region:'north',border:false" style="height: 245px;">
+		<div class="dialog ">
+		 <form data-attach-point="editForm" class="ui-form" method="post">  
+			<input type="hidden" name="id" data-attach-point="idInput">
+			<input type="hidden" name="ruleDefinitionId" data-attach-point="ruleDefinitionIdInput">
+			<input type="hidden" data-attach-point="approvalChainJsonData" name="approvalChainJsonData">
+			<input type="hidden" name="tempId" data-attach-point="tempIdInput">
+			<div class="ui-edit">
+				<div data-attach-point="addRule" hidden="true">
+					<div class="fitem">
+						<label>规则名称：</label>
+						<input name="name" class="easyui-combobox"   data-options="required:true,width:356,editable:false" data-attach-point="nameCombobox" missingMessage="请选择规则名称">
+						<span class="required">*</span>
+					</div>
+					<div class="fitem">
+						<label>规则业务类型：</label>
+						<input name="businessType"  style="width:342px" data-attach-point="businessTypeInput" type="text" maxlength="40" class="easyui-validatebox" data-options="" missingMessage="请填写规则业务类型">
+						<span class="required">*</span>
+					</div>
+					<div class="fitem clearfloat">
+						<label>规则实现类：</label>
+						<input name="ruleClassName"  style="width:342px" data-attach-point="ruleClassNameInput"  type="text" maxlength="40" class="easyui-validatebox" data-options="" missingMessage="请填写规则实现类">
+						<span class="required">*</span>
+					</div>
+				</div>
+				<div data-attach-point="editRule" hidden="true">
+					<div class="fitem">
+						<label>规则名称：</label>
+						<span data-attach-point="nameInput1"></span>
+					</div>
+					<div class="fitem">
+						<label>规则业务类型：</label>
+						<span  data-attach-point="businessTypeInput1"></span>
+					</div>
+					<div class="fitem clearfloat">
+						<label>规则实现类：</label>
+						<span data-attach-point="ruleClassNameInput1"></span>
+					</div>
+				</div>
+				<div class="fitem clearfloat">
+					<label>描述：</label>
+					<textarea data-attach-point="description"  name="description" cols="52" rows="6"
+								data-options="validType:['maxLength[256]']" maxlength="256"></textarea>
+				</div>
+			</div>
+		</form>
+		</div>
+	</div>
+	<div data-options="region:'center',border:false" >
+		<table id="dg_TemplateTask" class="easyui-datagrid" data-options="toolbar:'#${uuid}_bar',idField:'id',rownumbers:true,fit:true,fitColumns:true,
+			singleSelect:true,multiSort:false,remoteSort:true,height:250" data-attach-point="approvalTemplate_TemplateTask">
+			<thead>
+				<tr>
+					<th data-options="field:'code',width:100,align:'center'" >配置代码</th>
+					<th nowrap="false" data-options="field:'content',width:195,align:'center',editor:{type:'textarea',options:{required:true,rows:'4'}},formatter:'_fmt'" >配置内容</th>
+					<!-- <th nowrap="false" data-options="field:'convertClassName',width:195,align:'center',editor:{type:'textarea',options:{required:true,rows:'4'}},formatter:'_formatConvertClassName'" >转换类名</th> -->
+				</tr>
+			</thead>
+		</table>
+		<div id="${uuid}_bar">
+		</div>
+	</div>
+
+</div>
+

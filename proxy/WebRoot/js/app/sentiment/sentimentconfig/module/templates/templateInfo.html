@@ -1,0 +1,32 @@
+<!-- 按钮下移 start -->
+<div id="${uuid}_bar">
+		<div data-attach-point="editBtn">
+			<a href="javascript:void(0)" class="easyui-linkbutton" data-attach-event="click:_openTemplateDialog"  data-attach-point="editBtnAlink">修改</a>
+		</div>
+</div>
+<!-- 按钮下移 end -->
+<div class="form-module two-column">
+	<form data-attach-point="editForm" class="ui-form" method="post">  
+		<input type="hidden" name="id" data-attach-point="idSpan">
+		<div class="ui-edit">
+			<div class="fitem">
+				<label >模板编号：</label> <span  data-attach-point="codeSpan"></span>
+			</div>
+			<div class="fitem">
+				<label > 全称：</label> <span  data-attach-point="partnerFullNameSpan"></span>
+			</div>
+			<div class="fitem">
+				<label >版本：</label> <span  data-attach-point="version"></span>
+			</div>
+			<div class="fitem">
+				<label>状态：</label> <span  data-attach-point="status"></span>
+			</div>
+			<div class="fitem" >
+				<label >生效时间：</label> <span  data-attach-point="effectDateSpan"></span>
+			</div>
+			<div class="fitem">
+				<label >失效时间：</label> <span  data-attach-point="expiryDateSpan"></span>
+			</div>
+		</div>
+	</form>
+</div>

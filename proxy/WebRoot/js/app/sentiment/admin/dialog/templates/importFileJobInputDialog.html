@@ -1,0 +1,35 @@
+<div class="dialog">
+	<form data-attach-point="editForm" class="ui-form" method="post">  
+		<input type="hidden" name="id">
+		<div class="ui-edit">
+			<div class="fitem">
+				<label>调用人名字：</label>
+				<input name="umName" type="text" maxlength="64" class="easyui-validatebox" data-options="required:true" missingMessage="请填写调用人名字">
+				<span class="required">*</span>			</div>
+			<div class="fitem">
+				<label>状态：</label>
+				<input name="status" type="text" data-attach-point="statusCombobox" maxlength="4" class="easyui-combobox" data-options="required:true" missingMessage="请填写状态">
+				<span class="required">*</span>			</div>
+			<div class="fitem">
+				<label>异常信息：</label>
+				<input name="errorInfo" type="text" maxlength="256" class="easyui-validatebox" data-options="" missingMessage="请填写异常信息">
+							</div>
+			<div class="fitem">
+				<label>重试次数：</label>
+				<input name="retry" type="text" maxlength="" class="easyui-validatebox" data-options="" missingMessage="请填写重试次数">
+							</div>
+			<div class="fitem">
+				<label>最大重试次数：</label>
+				<input name="maxRetry" type="text" maxlength="" class="easyui-validatebox" data-options="" missingMessage="请填写最大重试次数">
+							</div>
+			<div class="fitem">
+				<label>超时时间：</label>
+				<input name="timeout" type="text" maxlength="" class="easyui-validatebox" data-options="required:true" missingMessage="请填写超时时间">
+				<span class="required">*</span>			</div>
+			<div class="fitem">
+				<label>创建时间：</label>
+				<input name="cTime" type="text" maxlength="" class="easyui-datetimebox" data-options="required:true" missingMessage="请填写创建时间">
+				<span class="required">*</span>			</div>
+		</div>
+	</form>
+</div>

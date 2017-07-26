@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.td.proxy.dao.admin.ExtendedAttriDao" > 
+  <!-- Result Map-->
+  <resultMap id="BaseResultMap" type="com.td.proxy.entity.admin.ExtendedAttri" >
+	<result column="id" property="id"/>
+	<result column="template_id" property="templateId"/>
+	<result column="extend_name" property="extendName"/>
+	<result column="extend_code" property="extendCode"/>
+	<result column="extend_value" property="extendValue"/>
+	<result column="is_extended" property="isExtended"/>
+	<result column="extend_attr_id" property="extendAttrId"/>
+	<result column="c_time" property="ctime"/>
+	<result column="m_time" property="mtime"/>
+  </resultMap>
+       
+  <!-- STL_EXTENDED_ATTRI table all fields -->
+  <sql id="Base_Column_List" >
+	 id,template_id,extend_name,extend_code,extend_value,is_extended,extend_attr_id,c_time,m_time
+  </sql>
+   
+  <!-- 查询条件 -->
+  <sql id="Base_Where_Clause">
+    where 1=1
+    <trim suffixOverrides="," >
+	      <if test="id != null and id != ''" >
+        and id =  #{id}
+	  </if>
+	      <if test="templateId != null and templateId != ''" >
+        and template_id =  #{templateId}
+	  </if>
+	      <if test="extendName != null and extendName != ''" >
+        and extend_name =  #{extendName}
+	  </if>
+	      <if test="extendCode != null and extendCode != ''" >
+        and extend_code =  #{extendCode}
+	  </if>
+	      <if test="extendValue != null and extendValue != ''" >
+        and extend_value =  #{extendValue}
+	  </if>
+	      <if test="isExtended != null and isExtended != ''" >
+        and is_extended =  #{isExtended}
+	  </if>
+	   <if test="extendAttrId != null and extendAttrId != ''" >
+        and extend_attr_id =  #{extendAttrId}
+	  </if>
+	      <if test="ctime != null and ctime != ''" >
+        and c_time =  #{ctime}
+	  </if>
+	      <if test="mtime != null and mtime != ''" >
+        and m_time =  #{mtime}
+	  </if>
+    </trim>
+  </sql>
+   
+  <!-- 插入记录 -->
+  <insert id="insert" parameterType="Object" >
+    <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+	  SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into SYS_EXTENDED_ATTRI(id,template_id,extend_name,extend_code,extend_value,is_extended,extend_attr_id,c_time,m_time)
+ values(#{id},#{templateId},#{extendName},#{extendCode},#{extendValue},#{isExtended},#{extendAttrId},#{ctime},#{mtime})
+  </insert>
+
+  <!-- 根据id，修改记录-->  
+  <update id="updateByPrimaryKey" parameterType="Object" >
+    update SYS_EXTENDED_ATTRI set template_id=#{templateId},extend_name=#{extendName},extend_code=#{extendCode},extend_value=#{extendValue},is_extended=#{isExtended},extend_attr_id=#{extendAttrId},c_time=#{ctime},m_time=#{mtime} where id=#{id}
+  </update>
+ 
+  <!-- 修改记录，只修改只不为空的字段 -->
+  <update id="updateByPrimaryKeySelective" parameterType="Object" >
+    update SYS_EXTENDED_ATTRI set 
+	<trim  suffixOverrides="," >
+	<if test="templateId != null  ">
+		template_id=#{templateId},
+	</if>
+	<if test="extendName != null  ">
+		extend_name=#{extendName},
+	</if>
+	<if test="extendCode != null  ">
+		extend_code=#{extendCode},
+	</if>
+	<if test="extendValue != null  ">
+		extend_value=#{extendValue},
+	</if>
+	<if test="isExtended != null  ">
+		is_extended=#{isExtended},
+	</if>
+	<if test="extendAttrId != null  ">
+		extend_attr_id=#{extendAttrId},
+	</if>
+	
+	<if test="ctime != null  ">
+		c_time=#{ctime},
+	</if>
+	<if test="mtime != null  ">
+		m_time=#{mtime},
+	</if>
+	</trim> where id=#{id}
+  </update>
+ 
+  <!-- 根据id查询 扩展属性 -->
+  <select id="selectByPrimaryKey"  resultMap="BaseResultMap" parameterType="Object">
+    select <include refid="Base_Column_List" /> 
+	 from SYS_EXTENDED_ATTRI where id = #{id}
+  </select>
+  
+  <!-- 根据template_id查询 扩展属性 -->
+  <select id="selectBytemplateId"  resultMap="BaseResultMap" parameterType="java.util.HashMap">
+    select <include refid="Base_Column_List" /> 
+	 from SYS_EXTENDED_ATTRI where template_id = #{templateId} and extend_code =#{extendCode}
+  </select>
+  
+  <!-- 删除记录 -->
+  <delete id="deleteByPrimaryKey" parameterType="Object">
+    delete 	 from SYS_EXTENDED_ATTRI where id = #{id}
+  </delete>
+  
+  <delete id="deleteByTemplateId" parameterType="Object">
+    delete 	 from SYS_EXTENDED_ATTRI where template_id = #{templateId}
+  </delete>
+
+  <!-- 扩展属性 列表总数-->
+  <select id="queryByCount" resultType="java.lang.Integer"  parameterType="Object">
+	select count(1) from SYS_EXTENDED_ATTRI 
+	<include refid="Base_Where_Clause"/>
+  </select>
+  	
+  <!-- 查询扩展属性列表 -->
+  <select id="queryByList" resultMap="BaseResultMap"  parameterType="Object">
+	select 
+	<include refid="Base_Column_List"/>
+	from SYS_EXTENDED_ATTRI 
+	<include refid="Base_Where_Clause"/>
+	<if test="pager.orderCondition != null and pager.orderCondition != ''" >
+       ${pager.orderCondition}
+    </if>
+    <if test="pager.mysqlQueryCondition != null and pager.mysqlQueryCondition != ''" >
+       ${pager.mysqlQueryCondition}
+    </if>
+  </select>
+  
+   <select id="queryBytemplateId"  resultMap="BaseResultMap" parameterType="Object">
+     select <include refid="Base_Column_List" /> 
+	 from SYS_EXTENDED_ATTRI where template_id = #{templateId} 
+   </select>
+</mapper>   

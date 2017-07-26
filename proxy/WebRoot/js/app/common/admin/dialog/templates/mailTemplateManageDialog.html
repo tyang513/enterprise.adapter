@@ -1,0 +1,29 @@
+<div class="dialog">
+	<form data-attach-point="createmailTemplateForm">
+		<input name="id" type="hidden" data-attach-point="id"/>
+				<div class="criteria-panel" >
+					<div data-attach-point="ipt_code_Div">
+						<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;编码：</label> <input class="easyui-validatebox"
+							data-attach-point="ipt_code"  name="ipt_code"  data-options="required:true" maxlength="128" />
+					</div>
+					<div data-attach-point="ipt_code_Level_Div">
+						<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;编码：</label> 
+						<label data-attach-point="ipt_code_Level"></label>
+					</div>
+					
+					<div>
+						<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;标题：</label> <input class="easyui-validatebox"
+							data-attach-point="ipt_title"  name="ipt_title"  data-options="required:true" maxlength="512" />
+					</div>
+					<div>
+						<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;模版内容：</label>
+						<textarea  class="easyui-validatebox"  style="width:300px;height :120px" data-options="required:true"  data-attach-point="ipt_content" name="ipt_content"  rows="5" cols="60" maxlength="1024" ></textarea>
+						 
+					</div>
+					<div>
+						<label>&nbsp;&nbsp;&nbsp;所属子系统：</label> <input class="easyui-combobox"  editable="false"  data-options="required:true"  data-attach-point="ipt_systemName"  name="ipt_systemName">
+					</div>
+					
+				</div>
+	</form>
+</div>

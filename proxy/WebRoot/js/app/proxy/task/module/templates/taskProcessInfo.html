@@ -1,0 +1,18 @@
+<div id="${uuid}_bar" class="app-taskProcessSearchBar"
+	data-options="grid:'#${uuid}_grid'" data-attach-point="searchBar"
+	data-attach-event="taskprocesssearchbaraction:_doAction"></div>
+	
+<table id="${uuid}_grid" class="listgrid"
+	data-options="border:true,striped:true,singleSelect:true,fit:false,fitColumns:true,pagination:false"
+	data-attach-point="dataGrid">
+	<thead>
+		<tr>
+			<th data-options="field:'jobInputName',width:30,align:'center'">任务名称</th>
+			<th data-options="field:'status',width:30,align:'center',formatter:app.formatter.formatJobInputStatus">状态</th>
+			<th data-options="field:'retry',width:30,align:'center'">运行次数</th>
+			<th data-options="field:'maxRetry',width:30,align:'center'">最大运行次数</th>
+			<th data-options="field:'errorInfo',width:100,align:'center'">异常信息</th>
+		</tr>
+	</thead>
+</table>
+

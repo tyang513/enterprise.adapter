@@ -1,0 +1,26 @@
+ <div class="form-module">
+<div id="${uuid}_bar">
+		<div data-attach-point="readOnlyDiv">
+			<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" data-attach-event="click:_onSave">新增扩展属性</a>
+			<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" data-attach-event="click:_onDelete">删除扩展属性</a>
+		</div>
+</div>
+<table class="listgrid"
+	data-options="nowrap:false,singleSelect:true,fitColumns:true,loadMsg :'数据加载中请稍后……'"
+	data-attach-point="dataGrid">
+	<thead>
+		<tr>
+		<input type="hidden" name="id" />
+		<input type="hidden" name="templateId" />
+		<input type="hidden" name="extendAttrId" />
+			<th data-options="field:'extendCode',width:60,align:'center'" >属性代码</th>
+			<th data-options="field:'extendName',width:60,align:'center'" >属性名</th>
+			<div data-attach-point="extendValueDiv">
+			<th data-options="field:'extendValue',width:60,align:'center'" >属性值</th>
+			</div>
+			<th data-options="field:'ctime',width:60,align:'center',formatter:app.formatter.formatTime" >创建时间</th>
+			
+		</tr>
+	</thead>
+</table>
+</div>

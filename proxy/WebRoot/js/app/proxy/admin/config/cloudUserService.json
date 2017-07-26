@@ -1,0 +1,29 @@
+{
+	"cloudUser/list.do" : {
+		"type" : "post",
+		"url" : "cloudUser/list.do",
+		"dataType" : "json"
+	},
+	"cloudUser/save.do" : {
+		"type" : "post",
+		"url" : "cloudUser/save.do",
+		"dataType" : "json"
+	},
+	"cloudUser/saveData.do" : {
+		"type" : "POST",
+		"url" : "cloudUser/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"cloudUser/findById.do" : {
+		"type" : "post",
+		"url" : "cloudUser/findById.do",
+		"dataType" : "json"
+	},
+	"cloudUser/deleteById.do" : {
+		"type" : "post",
+		"url" : "cloudUser/deleteById.do",
+		"dataType" : "json"
+	}
+}

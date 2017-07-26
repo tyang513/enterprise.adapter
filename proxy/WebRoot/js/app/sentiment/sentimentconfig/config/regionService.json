@@ -1,0 +1,55 @@
+{
+	"region/list.do" : {
+		"type" : "post",
+		"url" : "region/list.do",
+		"dataType" : "json"
+	},
+	"region/save.do" : {
+		"type" : "post",
+		"url" : "region/save.do",
+		"dataType" : "json"
+	},
+	"region/saveData.do" : {
+		"type" : "POST",
+		"url" : "region/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"region/findById.do" : {
+		"type" : "post",
+		"url" : "region/findById.do",
+		"dataType" : "json"
+	},
+	"region/deleteById.do" : {
+		"type" : "post",
+		"url" : "region/deleteById.do",
+		"dataType" : "json"
+	},
+	"region/enableOrDisableRegion.do" : {
+		"type" : "post",
+		"url" : "region/enableOrDisableRegion.do",
+		"dataType" : "json"
+	},
+	"region/queryRegionByParentId.do" : {
+		"type" : "post",
+		"url" : "region/queryRegionByParentId.do",
+		"dataType" : "json"
+	},
+	"region/queryAllRegion.do" : {
+		"type" : "post",
+		"url" : "region/queryAllRegion.do",
+		"dataType" : "json"
+	},
+	"region/getRootNode.do" : {
+		"type" : "post",
+		"url" : "region/getRootNode.do",
+		"dataType" : "json"
+	},
+	"region/treeList.do" : {
+		"type" : "post",
+		"url" : "region/treeList.do",
+		"dataType" : "json"
+	}
+	
+}

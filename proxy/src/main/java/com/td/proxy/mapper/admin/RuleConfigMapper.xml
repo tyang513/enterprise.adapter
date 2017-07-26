@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.td.proxy.dao.admin.RuleConfigDao" > 
+  <!-- Result Map-->
+  <resultMap id="BaseResultMap" type="com.td.proxy.entity.admin.RuleConfig" >
+	<result column="id" property="id"/>
+	<result column="template_rule_id" property="templateRuleId"/>
+	<result column="code" property="code"/>
+	<result column="content" property="content"/>
+	<result column="c_time" property="ctime"/>
+	<result column="m_time" property="mtime"/>
+  </resultMap>
+       
+  <!-- STL_RULE_CONFIG table all fields -->
+  <sql id="Base_Column_List" >
+	 id,template_rule_id,code,content,c_time,m_time
+  </sql>
+   
+  <!-- 查询条件 -->
+  <sql id="Base_Where_Clause">
+    where 1=1
+    <trim suffixOverrides="," >
+	      <if test="id != null and id != ''" >
+        and id =  #{id}
+	  </if>
+	      <if test="templateRuleId != null and templateRuleId != ''" >
+        and template_rule_id =  #{templateRuleId}
+	  </if>
+	      <if test="code != null and code != ''" >
+        and code =  #{code}
+	  </if>
+	      <if test="content != null and content != ''" >
+        and content =  #{content}
+	  </if>
+	      <if test="ctime != null and ctime != ''" >
+        and c_time =  #{ctime}
+	  </if>
+	      <if test="mtime != null and mtime != ''" >
+        and m_time =  #{mtime}
+	  </if>
+    </trim>
+  </sql>
+   
+  <!-- 插入记录 -->
+  <insert id="insert" parameterType="Object" >
+    <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+	  SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into SYS_RULE_CONFIG(id,template_rule_id,code,content,c_time,m_time)
+ values(#{id},#{templateRuleId},#{code},#{content},#{ctime},#{mtime})
+  </insert>
+
+  <!-- 根据id，修改记录-->  
+  <update id="updateByPrimaryKey" parameterType="Object" >
+    update SYS_RULE_CONFIG set template_rule_id=#{templateRuleId},code=#{code},content=#{content},c_time=#{ctime},m_time=#{mtime} where id=#{id}
+  </update>
+ 
+  <!-- 修改记录，只修改只不为空的字段 -->
+  <update id="updateByPrimaryKeySelective" parameterType="Object" >
+    update SYS_RULE_CONFIG set 
+	<trim  suffixOverrides="," >
+	<if test="templateRuleId != null  ">
+		template_rule_id=#{templateRuleId},
+	</if>
+	<if test="code != null  ">
+		code=#{code},
+	</if>
+	<if test="content != null  ">
+		content=#{content},
+	</if>
+	<if test="ctime != null  ">
+		c_time=#{ctime},
+	</if>
+	<if test="mtime != null  ">
+		m_time=#{mtime},
+	</if>
+	</trim> where id=#{id}
+  </update>
+ 
+  <!-- 根据id查询 规则配置 -->
+  <select id="selectByPrimaryKey"  resultMap="BaseResultMap" parameterType="Object">
+    select <include refid="Base_Column_List" /> 
+	 from SYS_RULE_CONFIG where id = #{id}
+  </select>
+  
+  <!-- 删除记录 -->
+  <delete id="deleteByPrimaryKey" parameterType="Object">
+    delete 	 from SYS_RULE_CONFIG where id = #{id}
+  </delete>
+  
+  <!-- 删除记录 -->
+  <delete id="deleteByTemplateRuleId" parameterType="Object">
+    delete from SYS_RULE_CONFIG where template_rule_id = #{templateRuleId}
+  </delete>
+
+  <!-- 规则配置 列表总数-->
+  <select id="queryByCount" resultType="java.lang.Integer"  parameterType="Object">
+	select count(1) from SYS_RULE_CONFIG 
+	<include refid="Base_Where_Clause"/>
+  </select>
+  	
+  <!-- 查询规则配置列表 -->
+  <select id="queryByList" resultMap="BaseResultMap"  parameterType="Object">
+	select 
+	<include refid="Base_Column_List"/>
+	from SYS_RULE_CONFIG 
+	<include refid="Base_Where_Clause"/>
+	<if test="pager.orderCondition != null and pager.orderCondition != ''" >
+       ${pager.orderCondition}
+    </if>
+    <if test="pager.mysqlQueryCondition != null and pager.mysqlQueryCondition != ''" >
+       ${pager.mysqlQueryCondition}
+    </if>
+  </select>
+  
+  <!-- 根据规则模板id查询 规则配置 -->
+  <select id="selectByTemplateRuleId"  resultMap="BaseResultMap" parameterType="Object">
+    select <include refid="Base_Column_List" /> 
+	 from SYS_RULE_CONFIG where template_rule_id = #{templateRuleId}
+  </select>
+  
+  <select id="selectByTemplateRuleIds" resultMap="BaseResultMap" parameterType="Object">
+  	select <include refid="Base_Column_List" /> 
+	 from SYS_RULE_CONFIG where template_rule_id in 
+	<foreach collection="template_rule_ids" open="(" close=")" index="index" item="item" separator=",">
+		#{item}
+	</foreach>
+
+  </select>
+  
+    <select id="findByRuleDefinitionIdAndTemplateId" parameterType="Object" resultMap="BaseResultMap">
+ 	select rc.* from SYS_RULE_CONFIG rc
+	left join SYS_TEMPLATE_RULE tr on rc.template_rule_id = tr.id
+	left join SYS_TEMPLATE st on tr.temp_id = st.id
+	left join SYS_RULE_DEFINITION rd on rd.id=tr.rule_definition_id
+	where rd.id= #{ruleDefinitionId} and temp_id=#{templateId} and tr.id is not null
+  </select>
+</mapper>   

@@ -1,0 +1,24 @@
+<div class="form-module">
+	<div data-attach-point="sigle">
+		<table id="${uuid}_grid" 
+			data-options="custom:true,nowrap:false,border:false,striped:true,singleSelect:true,pagination:true,fitColumns:true"
+			data-attach-point="auditLog" style="width: 680px">
+			<thead>
+				<tr>
+					<th data-options="field:'actorname',width:8,align:'center' ">操作人</th>
+					<th
+						data-options="field:'createtime',width:10,align:'center',formatter:app.formatter.formatTimeStamp1">操作时间</th>
+					<th
+						data-options="field:'description',width:20,align:'center'">操作内容</th>
+					<th data-options="field:'result',width:6,align:'center',formatter:function(value,row,index){
+					if(value=='1'){
+                    	return '成功';
+                    }else if(value=='2'){
+                    	return '失败';
+                    }
+					}">状态</th>	
+				</tr>
+			</thead>
+		</table>
+	</div>
+</div>

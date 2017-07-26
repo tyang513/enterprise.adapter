@@ -1,0 +1,38 @@
+<div class="dialog">
+	<div data-attach-point="info"></div>
+	<br/>
+	<table id="${uuid}_grid" class="easyui-datagrid"
+		data-options="custom:true,nowrap:false,border:false,striped:true,singleSelect:true,fitColumns:true,method:'GET',rownumbers:true,toolbar:'#${uuid}_bar'"
+	data-attach-point="dataGrid" >
+		<thead>
+			<tr>
+				<th data-options="field:'taskcode', hidden:true">任务编号</th>
+				<th data-options="field:'taskname'">任务名称</th> 
+				<th
+					data-options="field:'starttime',width:180,align:'center',formatter:app.formatter.formatTimeStamp1">创建时间</th>
+				<th
+					data-options="field:'endtime',width:180,align:'center',formatter:app.formatter.formatTimeStamp1">完成时间</th>					
+				<th data-options="field:'assignername',width:90,align:'center'">处理人</th>
+				<th data-options="field:'type',width:80,align:'center' ,formatter:function(value,row,index){
+								if(value==2){
+				                    	return row.statusName;
+				                    }else if (value==1){
+				                    	if(row.approve==1)
+											return '同意';
+										else if(row.approve==0)
+											return '不同意';
+										else if(row.approve==8)
+											return '未审批';
+										else if(row.approve==2)
+											return '征求意见';
+										else if(row.approve==3)
+											return '转发处理';
+										else
+											return '待审批';
+				                    }
+			}">状态</th> 
+				<th data-options="field:'memo',width:230,align:'center'">备注</th>
+			</tr>
+		</thead>
+	</table>
+</div>

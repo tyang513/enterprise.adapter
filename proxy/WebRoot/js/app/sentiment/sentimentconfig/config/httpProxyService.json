@@ -1,0 +1,29 @@
+{
+	"httpProxy/list.do" : {
+		"type" : "post",
+		"url" : "httpProxy/list.do",
+		"dataType" : "json"
+	},
+	"httpProxy/save.do" : {
+		"type" : "post",
+		"url" : "httpProxy/save.do",
+		"dataType" : "json"
+	},
+	"httpProxy/saveData.do" : {
+		"type" : "POST",
+		"url" : "httpProxy/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"httpProxy/findById.do" : {
+		"type" : "post",
+		"url" : "httpProxy/findById.do",
+		"dataType" : "json"
+	},
+	"httpProxy/deleteById.do" : {
+		"type" : "post",
+		"url" : "httpProxy/deleteById.do",
+		"dataType" : "json"
+	}
+}

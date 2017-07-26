@@ -1,0 +1,29 @@
+<div class="dialog">
+	<form data-attach-point="editForm" class="ui-form" method="post">  
+		<input type="hidden" name="id" data-attach-point="id">
+		<input type="hidden" name=categoryId data-attach-point="categoryId">
+		<input type="hidden" name=categoryName data-attach-point="categoryName">
+		<div class="ui-edit">
+			<!-- <div class="fitem">
+				<label>类别：</label>
+				<input name="categoryId" type="text" maxlength=""  size="48" class="easyui-combotree"  data-attach-point="category" data-options="required:true" missingMessage="请填写类别id">
+				<span class="required">*</span>			</div> -->
+			<div class="fitem">
+				<label>类别名称：</label>
+				<input name="category" type="text" maxlength="64"  size="44"    class="easyui-combotree"  data-attach-point="category" data-options="required:true" missingMessage="请选择类别名称">
+				<span class="required">*</span>			</div>
+			<div class="fitem" data-attach-point="code" hidden="ture">
+				<label>类别编码：</label>
+				<input name="categoryCode" type="text" maxlength="64"  size="44"    class="easyui-validatebox"  data-attach-point="categoryCode" >
+			</div>
+			<div class="fitem">
+				<label>关键字：</label>
+				<input name="keyWord" type="text" maxlength="256"  size="44" class="easyui-validatebox" data-attach-point="keyWord" data-options="" missingMessage="请填写关键字">
+							</div>
+			<div class="fitem">
+				<label>状态：</label>
+				<input name="status" type="text" data-attach-point="statusCombobox"  size="44"  maxlength="" class="easyui-combobox" data-options="editable: false"  missingMessage="请填写状态">
+							</div>
+		</div>
+	</form>
+</div>

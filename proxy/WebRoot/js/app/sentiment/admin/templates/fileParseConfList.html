@@ -1,0 +1,27 @@
+<table id="${uuid}_grid" class="listgrid" 
+	data-options="border:false,striped:true,singleSelect:true,fit:true,fitColumns:true,pagination:true,toolbar:'#${uuid}_bar'"
+	data-attach-point="dataGrid">
+	<thead>
+		<tr>
+			<th data-options="field:'name',width:60,align:'center'" >名称</th>
+			<th data-options="field:'code',width:60,align:'center'" >代码</th>
+			<th data-options="field:'fileType',width:60,align:'center'" >文件类型</th>
+			<th data-options="field:'offsetRow',width:20,align:'center'" >偏移行</th>
+			<th data-options="field:'separatorChar',width:20,align:'center'" >分隔符</th>
+			<th data-options="field:'processClassName',width:120,align:'center'" >文件解析处理类名</th>
+			<th data-options="field:'toType',width:60,align:'center'" >目标类型</th>
+			<th data-options="field:'toTable',width:60,align:'center'" >目标表</th>
+			<!-- <th data-options="field:'attr1',width:60,align:'center'" >扩展属性</th>
+			<th data-options="field:'attr2',width:60,align:'center'" >扩展属性</th>
+			<th data-options="field:'attr3',width:60,align:'center'" >扩展属性</th>
+			<th data-options="field:'attr4',width:60,align:'center'" >扩展属性</th>
+			<th data-options="field:'attr5',width:60,align:'center'" >扩展属性</th>
+			<th data-options="field:'attr6',width:60,align:'center'" >扩展属性</th> -->
+			<th data-options="field:'ctime',width:40,align:'center',formatter:app.formatter.formatTime" >创建时间</th>
+		</tr>
+	</thead>
+</table>
+
+<div id="${uuid}_bar" class="app-fileParseConfSearchBar"
+	data-options="grid:'#${uuid}_grid'" data-attach-point="searchBar"
+	data-attach-event="fileparseconfsearchbaraction:_doAction"></div>

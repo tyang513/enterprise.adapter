@@ -1,0 +1,68 @@
+<div class="dialog">
+	<form data-attach-point="createmailTemplateForm">
+		<input name="id" type="hidden" data-attach-point="id" />
+		<div class="criteria-panel">
+			<div data-attach-point="ipt_code_Div">
+				<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;任务英文名：</label> <input class="easyui-validatebox" data-attach-point="ipt_code" name="ipt_code"
+					data-options="required:true" maxlength="128" />
+			</div>
+			<div data-attach-point="ipt_name_Div">
+				<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 任务中文名：</label> <input class="easyui-validatebox" data-attach-point="ipt_name" name="ipt_name"
+					data-options="required:true" maxlength="128" />
+			</div>
+			<div>
+				<label>&nbsp;&nbsp;超时时间（天）：</label> <input class="easyui-numberbox" data-attach-point="ipt_timeout" name="ipt_timeout"
+					data-options="required:true" maxlength="8" />
+			</div>
+			<div>
+				<label>&nbsp;&nbsp;提醒时间（天）：</label> <input class="easyui-numberbox" data-attach-point="ipt_remindinterval" name="ipt_remindinterval"
+					data-options="required:true,min:0,max:99999999" maxlength="8" />
+			</div>
+			<div>
+				<label>是否开始超时提醒：</label> <select class="easyui-combobox" style="width: 70px" editable="false" data-attach-point="ipt_timeoutremindflag"
+					name="ipt_timeoutremindflag" data-options="panelWidth:70">
+					<option value="1">开启</option>
+					<option value="0">关闭</option>
+				</select>
+			</div>
+<!-- 		<div>
+				<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;任务界面url：</label> <input class="easyui-validatebox" data-attach-point="ipt_pageurl" name="ipt_pageurl"
+					data-options="required:true" maxlength="512" />
+			</div>  -->	
+			<div>
+				<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;流程设置：</label> <input class="easyui-combobox" style="width: 168px" editable="false"
+					data-options="required:true" data-attach-point="ipt_processName" name="ipt_processName">
+			</div>
+			<!-- 
+					<div>
+						<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;角色设置：</label> 
+						<input class="easyui-combobox"  data-attach-point="ipt_roleName"  name="ipt_roleName"  style="width:168px"  data-options="mode:'remote',valueField:'rolename',textField:'roledesc', panelHeight:'auto'"/>
+					</div>
+					 
+					<div>
+						<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;角色设置：</label> 
+						<input class="easyui-validatebox"
+							data-attach-point="ipt_roleName"  name="ipt_roleName"  data-options="required:true" maxlength="128" />
+						<a data-attach-event="click:_selectRole" class="easyui-linkbutton">选择</a>
+					</div>		
+					-->
+			<div>
+				<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;角色设置：</label> <input class="easyui-combobox" style="width: 168px" editable="false"
+					data-options="required:true" data-attach-point="ipt_roleName" name="ipt_roleName">
+			</div>
+			<div>
+				<label>任务开始邮件设置：</label> <input class="easyui-validatebox" data-attach-point="ipt_taskstartemailtemplateid" name="ipt_taskstartemailtemplateid"
+					data-options="required:true" maxlength="128" /> <a data-attach-event="click:_selectMailTemplate_Start" class="easyui-linkbutton">选择</a>
+			</div>
+			<div>
+				<label>任务结束邮件设置：</label> <input class="easyui-validatebox" data-attach-point="ipt_taskendemailtemplateid" name="ipt_taskendemailtemplateid"
+					data-options="required:true" maxlength="128" /> <a data-attach-event="click:_selectMailTemplate_End" class="easyui-linkbutton">选择</a>
+			</div>
+			<div>
+				<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;任务描述：</label>
+				<textarea class="easyui-validatebox" style="width: 260px; height: 120px" data-options="required:true" data-attach-point="ipt_taskdescription"
+					name="ipt_taskdescription" rows="5" cols="60" maxlength="1024"></textarea>
+			</div>
+		</div>
+	</form>
+</div>

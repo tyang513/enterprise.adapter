@@ -1,0 +1,20 @@
+<table id="${uuid}_grid"
+	data-options="border:false,striped:true,singleSelect:true,fit:true,fitColumns:true,pagination:true,toolbar:'#${uuid}_bar'"
+	data-attach-point="dataGrid">
+	<thead>
+		<tr>
+			<th data-options="field:'scriptName',width:60,align:'center'" >脚本名称</th>
+			<th data-options="field:'scriptCode',width:60,align:'center'" >脚本代码</th>
+			<th data-options="field:'type',width:60,align:'center',formatter:app.formatter.formatterScriptType" >脚本类型</th>
+			<!-- <th data-options="field:'targetDate',width:60,align:'center'" >目标日期</th>  -->
+			<th data-options="field:'beginTime',width:60,align:'center',formatter:app.formatter.formatTimeStamp1" >开始时间</th>
+			<th data-options="field:'endTime',width:60,align:'center',formatter:app.formatter.formatTimeStamp1" >完成时间</th>
+			<th data-options="field:'time',width:60,align:'center',formatter:app.formatter.formatterScriptRunTime" >耗时(s)</th>
+			<th data-options="field:'param',width:60,align:'center'" >脚本参数</th>
+		</tr>
+	</thead>
+</table>
+
+<div id="${uuid}_bar" class="app-scriptRunRecordSearchBar"
+	data-options="grid:'#${uuid}_grid'" data-attach-point="searchBar"
+	data-attach-event="scriptrunrecordsearchbaraction:_doAction"></div>

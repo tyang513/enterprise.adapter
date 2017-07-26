@@ -1,0 +1,43 @@
+<div class="dialog">
+	<form enctype="multipart/form-data" method="post"
+		data-attach-point="uploadAttachmentForm">
+		<input name="sheetId" type="hidden" data-attach-point="sheetIdInput" />
+		<input name="sheetType" type="hidden" data-attach-point="sheetTypeInput" />
+		
+		<div class="fitem" data-attach-point="attachmentTypeDiv">
+			<label>附件类型：</label>
+			<input data-options="required:true" name="type" editable="false" data-attach-point="attachmentType" />
+			<span class="required">*</span>
+		</div>
+		<div class="fitem clearfloat" data-attach-point="uploadMessage" style="color: red;"></div>
+		<div class="fitem">
+			<label>附件路径：</label>
+			<input type="file" name="dataFile" size="30" data-attach-point="attachmentFile" style="width:131px;"/>
+			<span class="required">*</span>
+		</div>
+		<div class="fitem" data-attach-point="attachmentDiv">
+			<label>附件说明：</label>
+			<textarea cols="20" rows="2" class="easyui-validatebox"
+					name="description" data-options="validType:'maxLength[120]'" maxlength="120"
+					data-attach-point="description"></textarea>
+		</div>
+		<div data-attach-point="contentMessage" style="margin: 10px 0px 0px 20px; color: red;">提示：请注意附件格式</div>
+		<!-- <div class="content">
+			<div  data-attach-point="attachmentTypeDiv">
+				<span style="color: red;">*</span> 附件类型： <input 
+					data-options="required:true" name="type" editable="false"
+					data-attach-point="attachmentType" />
+			</div>
+			<div  >
+				<span style="color: red;">*</span> 附件路径： <input type="file"
+					name="dataFile" size="30" data-attach-point="attachmentFile" />
+			</div>
+			<div   data-attach-point="attachmentDiv">
+				&nbsp; 附件说明：
+				<textarea cols="30" rows="2" class="easyui-validatebox"
+					name="description" data-options="validType:'maxLength[120]'" maxlength="120"
+					data-attach-point="description"></textarea>
+			</div>
+		</div> -->
+	</form>
+</div>

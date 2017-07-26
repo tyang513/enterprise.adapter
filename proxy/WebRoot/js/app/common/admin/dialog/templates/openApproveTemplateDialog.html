@@ -1,0 +1,80 @@
+
+<div class="easyui-layout" data-options="fit:true">
+	
+	<div data-options="region:'north',border:false" style="height: 200px;">
+		<form data-attach-point="approvalTemplateForm" method="post">
+		<input type="hidden" data-attach-point="approvalChainJsonData" name="approvalChainJsonData">
+		<input type="hidden" data-attach-point="approvalTemplateForm_id" name="id">
+		<table>
+			<tr>
+				<td>模版代码：</td>
+				<td><input data-attach-point="approvalTemplateForm_code"
+					name="code" style="width: 190px;" class="easyui-validatebox"
+					type="text" data-options="required:true" /></td>
+			</tr>
+			<tr>
+				<td>模版名称：</td>
+				<td><input data-attach-point="approvalTemplateForm_name"
+					name="name" style="width: 190px;" class="easyui-validatebox"
+					type="text" data-options="required:true" /></td>
+			</tr>
+			<tr>
+				<td>系统：</td>
+				<td><input size="5" class="easyui-combobox"
+					data-attach-point="approvalTemplateForm_system" name="systemcode"
+					data-options="required:true,width:190,editable:false,valueField:'code',panelHeight:'auto',textField:'name',url:'businessSystem/findSubSystem.do'" />
+				</td>
+			</tr>
+			<tr>
+				<td>状态：</td>
+				<td>
+					<div style="text-align: left">
+						<select class="easyui-combobox"
+							style="width: 190px; height: auto" name="status"
+							data-options="required:true,editable:false,panelHeight:'auto'"
+							class="easyui-combobox"
+							data-attach-point="approvalTemplateForm_status">
+							<option value="1">未生效</option>
+							<option value="2">正常</option>
+							<option value="3">停用</option>
+						</select>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>描述：</td>
+				<td><textarea rows="4" cols="56" name="description"
+						data-attach-point="approvalTemplateForm_description"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>审批任务配置：</td>
+			</tr>
+		</table>
+		</form>
+	</div>
+	<div data-options="region:'center',border:false" >
+		<table id="dg_TemplateTask" class="easyui-datagrid" data-options="toolbar:'#${uuid}_bar',idField:'id',rownumbers:true,
+			fitColumns:true,singleSelect:true,multiSort:false,remoteSort:true,height:125" data-attach-point="approvalTemplate_TemplateTask">
+			<thead>
+				<tr>
+					<th data-options="field:'taskcode',width:160,sortable:true,editor:{type:'validatebox',options:{required:true}}">任务编码</th>
+					<th data-options="field:'taskname',width:160,sortable:true,editor:{type:'validatebox',options:{required:true}}">任务名称</th>
+					<th data-options="field:'approvername',width:160,sortable:true,formatter:'_approverNameformater'">审批人</th>
+					<th data-options="field:'approverumid',sortable:true,hidden:true"></th>
+				</tr>
+			</thead>
+		</table>
+		<div id="${uuid}_bar">
+			<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:'true'" 
+				data-attach-event="click:_onAddRow">新增</a>
+			<!--  <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:'true'" 
+				data-attach-event="click:_onSaveRow">保存</a>-->
+			<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:'true'" 
+				data-attach-event="click:_onCancelRow">取消</a>
+			<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:'true'" 
+				data-attach-event="click:_onDestroyRow">删除</a>
+		</div>
+	</div>
+
+</div>

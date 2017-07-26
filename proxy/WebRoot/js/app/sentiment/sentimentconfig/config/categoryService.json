@@ -1,0 +1,39 @@
+{
+	"category/list.do" : {
+		"type" : "post",
+		"url" : "category/list.do",
+		"dataType" : "json"
+	},
+	"category/save.do" : {
+		"type" : "post",
+		"url" : "category/save.do",
+		"dataType" : "json"
+	},
+	"category/saveData.do" : {
+		"type" : "POST",
+		"url" : "category/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"category/findById.do" : {
+		"type" : "post",
+		"url" : "category/findById.do",
+		"dataType" : "json"
+	},
+	"category/deleteById.do" : {
+		"type" : "post",
+		"url" : "category/deleteById.do",
+		"dataType" : "json"
+	},
+	"category/queryCategory.do" : {
+		"type" : "post",
+		"url" : "category/queryCategory.do",
+		"dataType" : "json"
+	},
+	"category/deleteAllById.do" : {
+		"type" : "post",
+		"url" : "category/deleteAllById.do",
+		"dataType" : "json"
+	}
+}

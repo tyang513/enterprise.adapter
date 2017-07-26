@@ -1,0 +1,45 @@
+{
+	"extendedAttriDefinition" : {
+		"title" : "子系统管理",
+		"buttons" : [ {
+			"text" : "查看",
+			"group" : "left",
+			"eventId" : "view"
+		},{
+			"text" : "新建",
+			"checkSelect" : false,
+			"group" : "left",
+			"eventId" : "create"
+		}, {
+			"text" : "修改",
+			"group" : "left",
+			"eventId" : "edit"
+		}, {
+			"text" : "删除",
+			"group" : "left",
+			"eventId" : "delete"
+		}, {
+			"text" : "导入",
+			"checkSelect" : false,
+			"group" : "left",
+			"eventId" : "leadIn"
+		}, {
+			"text" : "导出",
+			"checkSelect" : false,
+			"group" : "left",
+			"eventId" : "leadOut"
+		}, {
+			"text" : "搜索",
+			"checkSelect" : false,
+			"group" : "filter",
+			"eventId" : "search"
+		}, {
+			"text" : "重置",
+			"checkSelect" : false,
+			"selfHandle" : true,
+			"group" : "filter",
+			"eventId" : "reset"
+		}]
+	}
+
+}

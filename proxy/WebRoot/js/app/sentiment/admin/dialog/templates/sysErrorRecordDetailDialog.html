@@ -1,0 +1,25 @@
+<div class="dialog">
+	<form data-attach-point="editForm" class="ui-form" method="post">
+		<input type="hidden" name="id">
+		<div class="ui-edit">
+			<div class="fitem">
+				<label>任务id：</label> <input readonly="readonly" name="jobId" type="text" size="67"  maxlength="10" class="easyui-validatebox" data-options="">
+			</div>
+			<div class="fitem">
+				<label>目标日期：</label> <input readonly="readonly" name="targetDate" size="67" type="text" maxlength="10" class="easyui-validatebox" data-options="">
+			</div>
+			<div class="fitem">
+				<label>结算类别：</label> <input readonly="readonly" name="categoryCode" size="67" type="text" maxlength="20" class="easyui-validatebox" data-options="">
+			</div>
+			<div class="fitem">
+				<label>数据项：</label> <input readonly="readonly" name="data" type="text" size="67" maxlength="1024" class="easyui-validatebox" data-options="">
+			</div>
+			<div class="fitem">
+				<label>处理类名：</label> <input readonly="readonly" name="className" size="67" type="text" maxlength="256" class="easyui-validatebox" data-options="">
+			</div>
+			<div class="fitem">
+				<label>错误信息：</label> <textarea rows="5" cols="65" readonly="readonly" name="errorInfo" ></textarea>
+			</div>
+		</div>
+	</form>
+</div>

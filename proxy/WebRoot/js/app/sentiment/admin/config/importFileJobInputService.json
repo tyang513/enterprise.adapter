@@ -1,0 +1,29 @@
+{
+	"importFileJobInput/list.do" : {
+		"type" : "post",
+		"url" : "importFileJobInput/list.do",
+		"dataType" : "json"
+	},
+	"importFileJobInput/save.do" : {
+		"type" : "post",
+		"url" : "importFileJobInput/save.do",
+		"dataType" : "json"
+	},
+	"importFileJobInput/saveData.do" : {
+		"type" : "POST",
+		"url" : "importFileJobInput/saveData.do",
+		"dataType" : "json",
+		"contentType" : "application/json",
+		"JSONStringify" : true
+	},
+	"importFileJobInput/findById.do" : {
+		"type" : "post",
+		"url" : "importFileJobInput/findById.do",
+		"dataType" : "json"
+	},
+	"importFileJobInput/deleteById.do" : {
+		"type" : "post",
+		"url" : "importFileJobInput/deleteById.do",
+		"dataType" : "json"
+	}
+}
